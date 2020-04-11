@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  host: db
+  username: root
+  password: 123456
+  pool: 5
+development:
+  <<: *default
+  database: book_management_development
+test:
+  <<: *default
+  database: book_management_test
+production:
+  <<: *default
+  database: book_management_production
