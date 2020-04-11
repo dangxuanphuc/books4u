@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Management System</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_pack_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
     <%= favicon_link_tag "favicon.png" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+    <div id="fb-root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/propellerkit@1.3.1/dist/js/propeller.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ms_MY/sdk.js#xfbml=1&version=v6.0"></script>
   </body>
 </html>
