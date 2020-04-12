@@ -1,9 +1,7 @@
-User.create! email: "user-1@gmail.com",
-  password: "1234567", password_confirmation: "1234567"
-User.create! email: "user-2@gmail.com",
-  password: "1234567", password_confirmation: "1234567"
-User.create! email: "user-3@gmail.com",
-  password: "1234567", password_confirmation: "1234567"
+User.create! email: "dangxuanphuc1801@gmail.com",
+  password: "admin123", password_confirmation: "admin123"
+User.create! email: "user1@gmail.com",
+  password: "A@123456", password_confirmation: "A@123456"
 
 Publisher.create!([
   {name: "AlphaBook", description: "Vietnam's publisher"},
