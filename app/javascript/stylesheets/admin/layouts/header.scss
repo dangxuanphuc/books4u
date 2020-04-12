@@ -208,12 +208,6 @@ html {
   z-index: 100;
 }
 
-@media(max-width: 767px) {
-  .notification .dropdown-toggle {
-    margin-top: 18px;
-  }
-}
-
 .notification .notification-blank .dic {
   display: block;
   font-size: 58px;
@@ -223,4 +217,38 @@ html {
 
 .pmd-navbar .navbar-nav > .notification svg {
   margin-right: 0;
+}
+
+.material-icons {
+  &.media-left {
+    padding-right: 32px;
+    vertical-align: top;
+    display: table-cell;
+  }
+
+  &.media-right {
+    padding-left: 32px;
+    vertical-align: top;
+    display: table-cell;
+  }
+
+  &.media-middle {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.media-left, .media > .pull-left {
+  padding-right: 16px;
+}
+
+.media-body.pmd-word-break {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+@media(max-width: 767px) {
+  .notification .dropdown-toggle {
+    margin-top: 18px;
+  }
 }
