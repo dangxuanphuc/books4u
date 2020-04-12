@@ -8,18 +8,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <%= stylesheet_pack_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_pack_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
     <%= favicon_link_tag "favicon.png" %>
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-    <div class="wrapper">
-      <%= yield %>
+    <%= render "admin/layouts/header" %>
+    <%= render "admin/layouts/sidebar" %>
+    <div id="content" class="pmd-content">
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
     </div>
-    <%= render "layouts/footer" %>
-    <div id="fb-root"></div>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ms_MY/sdk.js#xfbml=1&version=v6.0"></script>
+    <%= render "admin/layouts/footer" %>
+    <%= javascript_pack_tag "admin", "data-turbolinks-track": "reload" %>
   </body>
 </html>
