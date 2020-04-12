@@ -9,8 +9,8 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to image_tag("https://res.cloudinary.com/phucdx/image/upload/v1586227747/Book_Management_System/favicon.png", height: "50"),
-        root_path, class: "navbar-brand logo-dark", alt: "Book Management System",
-        title: "Book Management System" %>
+        root_path, class: "navbar-brand logo-dark", alt: "#{t 'app_name'}",
+        title: "#{t 'app_name'}" %>
     </div>
     <div class="collapse navbar-collapse pmd-navbar-sidebar" id="bs-example-navbar-collapse-1">
       <div class="pmd-navbar-right-icon pull-right">
@@ -36,20 +36,29 @@
         <form class="search-form" method="get" id="searchform" action="/">
           <div class="form-group">
             <input class="form-control" type="text" size="put_a_size_here"
-              name="s" id="s" title="" placeholder="Search"/>
+              name="s" id="s" title="<%= t "layouts.header.search" %>"
+              placeholder="<%= t "layouts.header.what_are_you_looking_for" %>">
           </div>
         </form>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a class="pmd-ripple-effect" href="#">Link
+          <a class="pmd-ripple-effect" href="#">
+            <%= t "layouts.header.books" %>
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li><a class="pmd-ripple-effect" href="#">Link</a></li>
+        <li>
+          <a class="pmd-ripple-effect" href="#">
+            <%= t "layouts.header.blog" %>
+          </a>
+        </li>
         <li class="dropdown pmd-dropdown">
           <a data-toggle="dropdown" class="pmd-ripple-effect dropdown-toggle"
-            data-sidebar="true" href="#">Dropdown <span class="caret"></span></a>
+            data-sidebar="true" href="#">
+            <%= t "layouts.header.account" %>
+            <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li><a class="pmd-ripple-effect" href="#">Action</a></li>
             <li><a class="pmd-ripple-effect" href="#">Another action</a></li>
@@ -58,7 +67,9 @@
             <li><a class="pmd-ripple-effect" href="#">Separated link</a></li>
             <li class="divider"></li>
             <li>
-              <a class="pmd-ripple-effect" href="#">One more separated link</a>
+              <a class="pmd-ripple-effect" href="#">
+                <%= t "layouts.header.logout" %>
+              </a>
             </li>
           </ul>
         </li>
