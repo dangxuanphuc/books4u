@@ -2,3 +2,7 @@ email_max_length: 255
 search:
   autocomplete:
     limit: 10
+admin:
+  users:
+    index:
+      users_per_page: 5

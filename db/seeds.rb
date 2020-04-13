@@ -1,7 +1,11 @@
-User.create! email: "dangxuanphuc1801@gmail.com",
+User.create! name: "Dang Xuan Phuc",
+  email: "dangxuanphuc1801@gmail.com",
   password: "admin123", password_confirmation: "admin123"
-User.create! email: "user1@gmail.com",
-  password: "A@123456", password_confirmation: "A@123456"
+
+for i in 0..20
+  User.create! name: "user-#{i}", email: "user#{i}@gmail.com",
+    password: "A@1234567", password_confirmation: "A@1234567"
+end
 
 Publisher.create!([
   {name: "AlphaBook", description: "Vietnam's publisher"},

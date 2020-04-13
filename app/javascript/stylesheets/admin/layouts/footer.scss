@@ -7,7 +7,6 @@
 .admin-footer {
   background: $white none repeat scroll 0 0;
   border-top: 1px solid $black-10;
-  margin-top: -70px;
   padding-bottom: 14px;
   padding-top: 17px;
   position: relative;
@@ -116,8 +115,6 @@
 
 @media(max-width: 767px) {
   .admin-footer {
-    margin-top: -190px;
-
     .media-left {
       display: block;
     }
