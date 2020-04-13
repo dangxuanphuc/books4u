@@ -6,3 +6,5 @@ admin:
   users:
     index:
       users_per_page: 5
+  author:
+    per_page: 15

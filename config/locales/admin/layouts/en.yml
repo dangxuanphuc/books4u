@@ -1,3 +1,61 @@
 en:
   sidebar:
-    users_manager: "Users Maneger"
+    users_manager: "Users Manager"
+    authors_manager: "Authors Manager"
+    books_manager: "Books Manager"
+  flash:
+    author:
+      find_fail: "Author not found!"
+      create_success: "Created author successfullly!"
+      update_success: "Updated author successfully!"
+      destroy_success: "Deleted author successfully!"
+      destroy_fail: "Failed. Something's wrong."
+  button:
+    delete_warning: "Are you sure?"
+    clear: "Clear form"
+    delete: "Delete"
+    edit: "Edit"
+  admin:
+    link: " > "
+    authors:
+      index:
+        page_title: "Author manager"
+        link1: "Author manager"
+      edit:
+        page_title: Edit author
+        link1: Author manager
+        link2: Edit author
+      new:
+        page_title: Create author
+        link1: Author manager
+        link2: Create author
+      authors:
+        add_author: "Add author"
+        search: "Search"
+        input_keyword: "Search for author name or description"
+        name: "Name"
+        description: "Description"
+        id: "ID"
+        option: "Option"
+      form:
+        name: "Name"
+        description: "Description"
+        books: "Book by "
+        image: "Image link"
+      show:
+        page_title: "Author information"
+        link1: "Author manager"
+        link2: "Author information"
+        quick: "Quick edit"
+        id: "ID"
+        title: "Title"
+        categories: "Categories"
+        publisher: "Publisher"
+        pages: "Pages"
+        weight: "Weight"
+        dimension: "Dimension"
+        isbn: "ISBN"
+        series: "Series"
+        language: "Language"
+        public_date: "Public date"
+        option: "Option"
