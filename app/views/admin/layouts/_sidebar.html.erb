@@ -27,7 +27,6 @@
         <span class="media-body"><%= t "layouts.sidebar.dashboard" %></span>
       <% end %>
     </li>
-
     <li class="dropdown pmd-dropdown">
       <a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media"
         data-sidebar="true" href="javascript:void(0);">
@@ -41,6 +40,12 @@
         <li><a href="#">Range Slider</a></li>
         <li><a href="#">Select2</a></li>
       </ul>
+    </li>
+    <li>
+      <%= link_to admin_users_path, class: "pmd-ripple-effect active" do %>
+        <i class="material-icons media-left pmd-sm">account_box</i>
+        <span class="media-body"><%= t "sidebar.users_manager" %></span>
+      <% end %>
     </li>
   </ul>
 </aside>
