@@ -60,7 +60,7 @@
               <td><%= user.id %></td>
               <td>
                 <%= link_to "#{user.name}", "#",
-                  "data-turbolink": false,
+                  "data-turbolinks": false,
                   data: {toggle: "modal", target: "#modal-edit-user-#{user.id}"}%>
                 <div class="modal fade" id="modal-edit-user-<%= user.id %>"
                   role="dialog">

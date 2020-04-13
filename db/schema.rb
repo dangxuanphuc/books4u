@@ -89,7 +89,10 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
     t.integer "pages"
     t.string "weight"
     t.string "title", null: false
+    t.text "description"
     t.datetime "public_date"
+    t.float "rate"
+    t.integer "rate_count"
     t.bigint "publisher_id", null: false
     t.bigint "language_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -121,7 +124,6 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
     t.string "target_type", null: false
     t.integer "parent_id"
     t.string "content"
-    t.integer "type"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

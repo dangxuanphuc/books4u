@@ -5,7 +5,6 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.string :target_type, null: false
       t.integer :parent_id
       t.string :content
-      t.integer :type
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
