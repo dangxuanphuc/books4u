@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   root "static_pages#show", page: "home"
   get "/pages/:page" => "static_pages#show"
 
-  resources :search, only: :index
-
   namespace :admin do
     root "static_pages#show", page: "dashboard"
     get "/pages/:page" => "static_pages#show"
@@ -19,4 +17,6 @@ Rails.application.routes.draw do
       resources :books
     end
   end
+  resources :search, only: :index
+  resources :books
 end

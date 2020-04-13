@@ -57,3 +57,37 @@ Book.create!([
   {title: "情熱プログラマー ソフトウェア開発者の幸せな生き方",
     publisher_id: 1, language_id: 1, isbn: "4274067939", series_id: 1},
 ])
+
+Image.create!([
+  {target_id: 1, target_type: "Book",
+    url: File.open(Rails.root + "public/uploads/image/default-book.png")},
+  {target_id: 2, target_type: "Book",
+    url: File.open(Rails.root + "public/uploads/image/default-book.png")},
+  {target_id: 3, target_type: "Book",
+    url: File.open(Rails.root + "public/uploads/image/default-book.png")}
+])
+
+AuthorBook.create!([
+  {author_id: 1, book_id: 1},
+  {author_id: 1, book_id: 2},
+  {author_id: 2, book_id: 3},
+  {author_id: 1, book_id: 2},
+  {author_id: 2, book_id: 1}
+])
+
+Tag.create!([
+  {title: "rails"},
+  {title: "ruby"},
+  {title: "python"},
+  {title: "ui"},
+  {title: "ux"}
+])
+
+BookTag.create!([
+  {book_id: 1, tag_id: 1},
+  {book_id: 1, tag_id: 2},
+  {book_id: 2, tag_id: 2},
+  {book_id: 2, tag_id: 3},
+  {book_id: 3, tag_id: 1},
+  {book_id: 3, tag_id: 4}
+])
