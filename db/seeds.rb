@@ -1,29 +1,42 @@
 User.create! name: "Dang Xuan Phuc",
   email: "dangxuanphuc1801@gmail.com",
-  password: "admin123", password_confirmation: "admin123"
+  role: 1, avatar: "avatar.png",
+  password: "admin123",
+  password_confirmation: "admin123",
+  confirmed_at: Time.zone.now
 
-for i in 0..20
-  User.create! name: "user-#{i}", email: "user#{i}@gmail.com",
-    password: "A@1234567", password_confirmation: "A@1234567"
+20.times do |n|
+  User.create! name: "user-#{n}", email: "user#{n}@gmail.com",
+    role: 0, avatar: "avatar.png",
+    password: "A@1234567",
+    password_confirmation: "A@1234567",
+    confirmed_at: Time.zone.now
 end
+puts "Created #{User.count} users!"
 
 Publisher.create!([
   {name: "AlphaBook", description: "Vietnam's publisher"},
   {name: "Nha Nam", description: "Vietnam's publisher"},
 ])
+puts "Created #{Publisher.count} publishers!"
 
 Author.create!([
   {name:  "Cody Lindley"},
   {name: "和田 祐一郎"},
 ])
+puts "Created #{Author.count} authors!"
 
 Language.create!([
+  {alias: "vi", full_name: "Vietnamese"},
   {alias: "en", full_name: "English"},
+  {alias: "jp", full_name: "Japanese"}
 ])
+puts "Created #{Language.count} languages!"
 
 Series.create!([
-  {title: "IT", description: "HeadFirst"},
+  {title: "IT", description: "HeadFirst"}
 ])
+puts "Created #{Series.count} series!"
 
 Book.create!([
   {title: "開眼! JavaScript ―言語仕様から学ぶJavaScriptの本質",
@@ -55,8 +68,9 @@ Book.create!([
   {title: "Web API: The Good Parts",
     publisher_id: 1, language_id: 1, isbn: "4873116864", series_id: 1},
   {title: "情熱プログラマー ソフトウェア開発者の幸せな生き方",
-    publisher_id: 1, language_id: 1, isbn: "4274067939", series_id: 1},
+    publisher_id: 1, language_id: 1, isbn: "4274067939", series_id: 1}
 ])
+puts "Created #{Book.count} books!"
 
 Image.create!([
   {target_id: 1, target_type: "Book",
@@ -66,6 +80,7 @@ Image.create!([
   {target_id: 3, target_type: "Book",
     url: File.open(Rails.root + "public/uploads/image/default-book.png")}
 ])
+puts "Created #{Image.count} images!"
 
 AuthorBook.create!([
   {author_id: 1, book_id: 1},
@@ -82,6 +97,7 @@ Tag.create!([
   {title: "ui"},
   {title: "ux"}
 ])
+puts "Created #{Tag.count} tags!"
 
 BookTag.create!([
   {book_id: 1, tag_id: 1},

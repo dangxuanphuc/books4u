@@ -100,7 +100,6 @@
                 0
               <% end %>
               <i class="fa fa-heart" aria-hidden="true"></i>
-
               <% if b.comments %>
                 <%= b.comments.count %>
               <% else %>
@@ -116,6 +115,14 @@
           </div>
         </div>
       <% end %>
+    </div>
+  </div>
+
+  <div id="description" class="tab-pane fade">
+    <div class="tab-row">
+      <p class="description">
+        <%= book.description %>
+      </p>
     </div>
   </div>
 </div>

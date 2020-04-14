@@ -1,5 +1,8 @@
 class BooksController < ApplicationController
-  before_action :find_book
+  include ApplicationHelper
+  before_action only: :show do
+    find_book params[:id]
+  end
 
   def show; end
 
@@ -7,12 +10,5 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit :name
-  end
-
-  def find_book
-    @book = Book.find_by id: params[:id]
-
-    return if @book
-    redirect_to root_path
   end
 end

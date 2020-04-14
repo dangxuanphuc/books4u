@@ -19,7 +19,7 @@
     </div>
     <%= render "layouts/footer" %>
     <div id="fb-root"></div>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-eval": false %>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ms_MY/sdk.js#xfbml=1&version=v6.0"></script>
   </body>
 </html>

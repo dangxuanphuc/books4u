@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   end
   resources :search, only: :index
   resources :books
+  resources :borrows, only: :create
 end
