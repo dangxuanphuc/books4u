@@ -102,7 +102,10 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   end
 
   create_table "borrows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 0
+    t.text "note"
+    t.datetime "time_start"
+    t.datetime "time_end"
     t.bigint "user_id", null: false
     t.bigint "book_id", null: false
     t.datetime "created_at", precision: 6, null: false
