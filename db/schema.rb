@@ -158,9 +158,9 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "url", null: false
     t.integer "target_id", null: false
     t.string "target_type", null: false
+    t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -253,8 +253,10 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name", default: "", null: false
+    t.string "name"
     t.string "email", default: "", null: false
+    t.string "avatar"
+    t.integer "role"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

@@ -36,3 +36,22 @@ en:
       borrow: "Borrow this book?"
       tag: "Tag:"
       series: "Series:"
+  user:
+    edit:
+      save: "Save"
+      email: "Email"
+      current_password: "Current password"
+      name: "Name"
+      not_found: "User not found"
+      menu_item:
+        information: "Information"
+        blog: "Blog"
+        favorite_books: "Favorite Books"
+        history: "History"
+      profile:
+        title: "Profile"
+        info: "Personal Information"
+        role: "Role"
+        need_current_pass: "(we need your current password to confirm your changes)"
+        change_pass: "Change password"
+        repeat_pass: "Repeat password"
