@@ -59,5 +59,11 @@
         <span class="media-body"><%= t "sidebar.books_manager" %></span>
       <% end %>
     </li>
+    <li>
+      <%= link_to admin_categories_path, class:"pmd-ripple-effect active" do %>
+        <i class="material-icons media-left pmd-sm">collections_bookmark</i>
+        <span class="media-body"><%= t "sidebar.categories_manager" %></span>
+      <% end %>
+    </li>
   </ul>
 </aside>
