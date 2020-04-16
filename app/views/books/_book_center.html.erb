@@ -20,10 +20,11 @@
       <i class="far fa-star" aria-hidden="true"></i>
     <% end %>
   </div>
-  <p class="book-info-row">
-    <span><%= t "books.show.series" %></span>
-    <%= book.series.title %>
-  </p>
+  <% if book.series %>
+    <p class="book-info-row">
+      <span><%= t "books.show.series" %></span> <%= book.series.title %>
+    </p>
+  <% end %>
   <div class="book-info-row">
     <span><%= t "books.show.tag" %></span>
     <% book.tags.each do |t| %>
