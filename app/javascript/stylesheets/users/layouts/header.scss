@@ -1,6 +1,6 @@
 .wrapper {
   background: $frame;
-  padding-top: 92px;
+  padding-top: 80px;
 }
 
 .navbar {
@@ -9,14 +9,15 @@
   border-left: 0;
   border-right: 0;
   border-top: 3px solid $navbar-border-top;
-  left: 0;
+  height: 80px;
   position: absolute;
+  left: 0;
   right: 0;
   top: 0;
   z-index: 1000;
 
   .login {
-    margin-top: 12px;
+    margin-top: 20px;
   }
 
   .container {
@@ -29,7 +30,7 @@
   }
 
   .btn-user {
-    margin-top: 3px;
+    margin-top: 8px;
   }
 
   .autocomplete {
@@ -56,25 +57,30 @@
 
 .pmd-navbar .navbar-brand {
   position: relative;
+
+  img {
+    height: 65px;
+  }
 }
 
 .search-form {
   opacity: 0;
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 20px;
   transition: all ease-in-out .3s;
   width: 40px;
   z-index: -1;
+
   .form-control {
     background-color: $navbar-form-control-background;
+    color: $navbar-form-control-color;
     border: 0;
     border-radius: 48px;
     box-shadow: 0 2px 16px $navbar-form-control-box-shadow;
-    color: $navbar-form-control-color;
     font-size: 16px;
     height: auto;
-    padding: 8px 16px;
+    padding: 6px 24px;
     &:focus {
       color: $navbar-form-control-focus;
     }
@@ -117,7 +123,7 @@
 
 .pmd-navbar {
   .navbar-nav {
-    margin: 0;
+    margin: 7px 0;
   }
 
   .navbar-collapse {
@@ -125,7 +131,7 @@
   }
 
   &.navbar .btn.pmd-btn-fab {
-    margin: 8px 0;
+    margin: 15px 0;
     position: relative;
     z-index: 10;
   }
@@ -173,8 +179,7 @@
 .navbar-inverse .navbar-nav > .open > a {
   background-color: transparent;
 
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     background-color: transparent;
   }
 }
@@ -493,7 +498,7 @@
   }
 
   .navbar .search-form {
-    top: 12px;
+    top: 18px;
   }
 
   .pmd-navbar {
@@ -506,16 +511,11 @@
     }
 
     .navbar-nav {
-      margin: 4px 0;
+      margin: 6px 0;
     }
 
     &.navbar .btn.pmd-btn-fab, .btn.login {
       margin: 16px 0;
-    }
-
-    .navbar-brand > img {
-      max-width: none;
-      width: 160px;
     }
   }
 
@@ -548,7 +548,7 @@
   }
 
   .navbar .search-form {
-    top: 15px;
+    top: 22px;
   }
 
   .pmd-navbar {
@@ -562,11 +562,6 @@
 
     &.navbar .btn.pmd-btn-fab, .btn.login {
       margin: 20px 0;
-    }
-
-    .navbar-brand > img {
-      max-width: none;
-      width: 220px;
     }
 
     .navbar-nav > li > a {
