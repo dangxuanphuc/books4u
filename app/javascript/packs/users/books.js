@@ -1,3 +1,4 @@
+import 'propellerkit/components/datetimepicker/js/bootstrap-datetimepicker';
 import * as SimpleMDE from 'simplemde';
 
 $(document).on('turbolinks:load', function(){

@@ -20,6 +20,9 @@
     <%= render "layouts/footer" %>
     <div id="fb-root"></div>
     <%= javascript_pack_tag "application", "data-turbolinks-eval": false %>
+    <% if File.exist? Rails.root.join("app/assets/javascripts/users", params[:controller] + ".js") %>
+      <%= javascript_include_tag ("users/" + params[:controller]), "data-turbolinks-track": "reload" %>
+    <% end %>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ms_MY/sdk.js#xfbml=1&version=v6.0"></script>
   </body>
 </html>
