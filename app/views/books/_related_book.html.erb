@@ -6,7 +6,13 @@
         <%= link_to book_path(b) do %>
           <div class="item-book pmd-z-depth-2" data-url="<%= b.id %>">
             <div class="img-container">
-              <img src="<%= b.images.first %>">  <%# .url %>
+              <% if b.images.first.present? %>
+                <img src="<%= b.images.first.url %>" class="img-responsive"
+                  alt="<%= b.title %>">
+              <% else %>
+                <img src="<%= asset_path "default-book.png" %>" class="img-responsive"
+                  alt="<%= b.title %>">
+              <% end %>
               <span><%= b.title %></span>
             </div>
           </div>

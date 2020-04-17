@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   end
 
   resources :search, only: :index
-  resources :categories
+  resources :categories, only: %i(index show)
   resources :borrows, only: :create
+  resources :explorer, only: :index
 end
