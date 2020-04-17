@@ -1,0 +1,24 @@
+.explorer {
+  padding: 50px 0;
+
+  .item {
+    margin: 10px 0;
+
+    .box {
+      background-color: $comment-gray;
+      align-items: center;
+      border-radius: 3px;
+      display: flex;
+      height: 100px;
+      width: 100px;
+      justify-content: center;
+    }
+  }
+
+  .tags {
+    > a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+}
