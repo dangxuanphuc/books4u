@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root "static_pages#show", page: "dashboard"
     get "/pages/:page" => "static_pages#show"
 
-    resources :users
+    resources :users, except: %i(show edit)
 
     resources :authors do
       resources :books
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :books do
       resources :book_items
     end
-    resources :categories
+    resources :categories, except: %i(show edit)
 
     resources :publishers do
       resources :books
