@@ -125,7 +125,7 @@ puts "Created #{Category.count} categories!"
 
 Book.create!([
   {title: "開眼! JavaScript ―言語仕様から学ぶJavaScriptの本質",
-    public_date: "2013/6/19", pages: 192,
+    public_date: "2013/6/19", pages: 192, series_id: 1,
     dimension: "1.5 x 15 x 21 cm", publisher_id: 1,
     language_id: 2, isbn: "487311621X", description: "内容紹介
       本書は、JavaScriptの言語的特性で知っておくべきポイントをまとめた書籍です。
@@ -143,17 +143,17 @@ Book.create!([
       理解を中心に据えて、ひと通り経験した後に陥りがちな落とし穴であるthis、プロトタ
       イプチェーン(継承)、スコープチェーンなどをサンプルを使って解説した。"},
   {title: "達人に学ぶDB設計 徹底指南書 初級者で終わりたくないあなたへ",
-    isbn: "4774178020",
+    isbn: "4774178020", series_id: 2,
     publisher_id: 2, language_id: 2, pages: 360,
     dimension: "21 x 14.8 x 2.6 cm", public_date: "2012/3/16",
     description: ""},
   {title: "APIデザインケーススタディ ~Rubyの実例から学ぶ。問題に即したデザインと普遍の考え方
-    (WEB+DB PRESS plus)",
+    (WEB+DB PRESS plus)", series_id: 1,
     isbn: "4798145777", publisher_id: 3, language_id: 2, pages: 304,
     dimension: "21.2 x 14.5 x 1.5 cm", public_date: "2015/12/16",
     description: ""},
   {title: "情報処理教科書 ネットワークスペシャリスト 2016年版", isbn: "B01EH2RX42",
-    publisher_id: 2, language_id: 2, pages: 560,
+    publisher_id: 2, language_id: 2, pages: 560, series_id: 2,
     dimension: "21.1 x 15 x 2 cm", public_date: "2016/3/11",
     description: "内容紹介
     本書は、ネットワークスペシャリスト試験の受験対策書です。出題傾向を分析した、
@@ -170,7 +170,7 @@ Book.create!([
     本書の掲載分だけでなく、平成19~平成27年度試験の全問題とその解答・解説、
     および解答用紙をPDFファイルでWeb提供しています。"},
     {title: "ラズパイマガジン 2016年6月号 日経BPパソコンベストムック", isbn: "B01EH2RX42",
-    publisher_id: 4, language_id: 2, pages: 148,
+    publisher_id: 4, language_id: 2, pages: 148, series_id: 2,
     dimension: "80299 KB", public_date: "2016/4/18",
     description: "内容紹介
       ※この商品はタブレットなど大きいディスプレイを備えた端末で読むことに適しています。
@@ -189,7 +189,7 @@ Book.create!([
       方角を調べられるようにします。ファイルサーバーを作ったり、マークシートで動き
       を指示できる車を工作したりなどいろんなモノ作りに挑戦しましょう。"},
   {title: "手戻りなしの要件定義 実践マニュアル", isbn: "4822211878",
-    publisher_id: 4, language_id: 2, pages: 184,
+    publisher_id: 4, language_id: 2, pages: 184, series_id: 1,
     dimension: "23.4 x 18.2 x 1.2 cm", public_date: "2011/4/14",
     description: "内容紹介
       要件定義に必要な知識、スキルは多岐にわたります。要件定義自体の進め方に関する
@@ -207,7 +207,7 @@ Book.create!([
       本書を活用して、プロジェクトが手戻りなく進められる、「ぶれない要件」を固める力を
       磨いてください。"},
   {title: "SOFT SKILLS ソフトウェア開発者の人生マニュアル", isbn: "4822251551",
-    publisher_id: 4, language_id: 2, pages: 456,
+    publisher_id: 4, language_id: 2, pages: 456, series_id: 2,
     dimension: "21 x 15 x 2.6 cm", public_date: "2016/5/20",
     description: "ソフトウエア開発者専用に、「より良い人生」を送るため
       のノウハウ・スキルを網羅した、生き方バイブル本です。
@@ -233,7 +233,7 @@ Book.create!([
       だんだけどさあ」という枕で出てくるような話の多くを本書で覚えたことに気づきました。
       無意識のうちにいろいろな影響を受けているようです。この本、ただものではないですよ。"},
   {title: "OpenCV 3 プログラミングブック", isbn: "4839952965",
-    publisher_id: 7, language_id: 2, pages: 360,
+    publisher_id: 7, language_id: 2, pages: 360, series_id: 1,
     dimension: "23.7 x 18.2 x 2.4 cm", public_date: "2015/9/29",
     description: "内容紹介
       コンピュータビジョンと機械学習のためのライブラリOpenCV 3をわかりやすく解説。
@@ -263,14 +263,14 @@ Book.create!([
       本書はメタプログラミングに必要なすべての概念を明確に、平易に解説。
       Rubyの最も複雑な秘伝を簡単に身につけましょう。"},
   {title: "入門 コンピュータ科学 ITを支える技術と理論の基礎知識", isbn: "4048869574",
-    publisher_id: 2, language_id: 2, pages: 608,
+    publisher_id: 2, language_id: 2, pages: 608, series_id: 1,
     dimension: "23.2 x 18.4 x 3 cm", public_date: "2014/2/18",
     description: "内容（「BOOK」データベースより）
       きわめてオー  ソドックスなコンピュータ科学の教科書。コンピュータ科学が抽象化ツ
       ールの階層構造になっているという視点で統一的に記述されている。"},
   {title: "Python機械学習プログラミング 達人データサイエンティスト
     による理論と実践 (impress top gear)",
-    isbn: "4844380605",
+    isbn: "4844380605", series_id: 2,
     publisher_id: 2, language_id: 2, pages: 456,
     dimension: "21 x 14.8 x 2.6 cm", public_date: "2012/3/16",
     description: "内容紹介

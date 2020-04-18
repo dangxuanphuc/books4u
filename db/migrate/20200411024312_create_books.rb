@@ -11,8 +11,8 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.datetime :public_date
       t.float :rate
       t.integer :rate_count
-      t.references :publisher, null: false, foreign_key: true
-      t.references :language, null: false, foreign_key: true
+      t.references :publisher, null: true, foreign_key: true
+      t.references :language, null: true, foreign_key: true
 
       t.timestamps
     end

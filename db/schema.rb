@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
     t.datetime "public_date"
     t.float "rate"
     t.integer "rate_count"
-    t.bigint "publisher_id", null: false
-    t.bigint "language_id", null: false
+    t.bigint "publisher_id"
+    t.bigint "language_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["language_id"], name: "index_books_on_language_id"

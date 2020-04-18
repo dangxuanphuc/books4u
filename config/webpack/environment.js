@@ -6,7 +6,8 @@ environment.plugins.prepend('Provide',
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
-    Popper: ['popper.js', 'default']
+    Popper: ['popper.js', 'default'],
+    Chosen: ['chosen.js', 'default']
   })
 )
 
