@@ -1,0 +1,41 @@
+<div id="edit-book-item-modal" class="modal1">
+  <div class="modal-content col-xs-6 col-xs-offset-3">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h2 class="text-center"><%= t "admin.book_items.edit.page_title" %></h2>
+    </div>
+    <div class="modal-body">
+      <div class="modal-form">
+        <%= form_for [:admin, book, book_item] do |f| %>
+          <div class="form-group">
+            <%= f.hidden_field :book_id, id: "book_id_field" %>
+            <%= f.hidden_field :id, id: "book_item_id_field" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :location %>
+            <%= f.text_field :location,
+              class: "form-control", id: "book_item_location_field" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_field :description,
+              class: "form-control", id: "book_item_description_field" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :state %>
+            <%= f.select :state, supports.book_items.to_a,
+              class: "form-control", id: "book_item_state" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="reset" class="btn btn-default btn-delete-item pull-right">
+        <%= t "button.clear" %>
+      </button>
+      <div class="btn btn-success btn-save-item pull-right">
+        <%= t "button.save" %>
+      </div>
+    </div>
+  </div>
+</div>
