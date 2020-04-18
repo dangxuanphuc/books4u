@@ -1,13 +1,15 @@
 User.create! name: "Dang Xuan Phuc",
   email: "dangxuanphuc1801@gmail.com",
-  role: 1, avatar: "avatar.png",
+  role: "admin",
   password: "admin123",
   password_confirmation: "admin123",
   confirmed_at: Time.zone.now
 
 20.times do |n|
-  User.create! name: "user-#{n}", email: "user#{n}@gmail.com",
-    role: 0, avatar: "avatar.png",
+  name = Faker::Name.name
+  User.create! name: name,
+    email: "user#{n}@gmail.com",
+    role: "user",
     password: "A@1234567",
     password_confirmation: "A@1234567",
     confirmed_at: Time.zone.now

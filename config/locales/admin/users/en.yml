@@ -18,9 +18,6 @@ en:
         create_new_user: "Create new user"
         edit_user_infomation: "Edit user infomation"
         upload_new_avatar: "Upload new avatar"
-        name: "Name:"
-        email: "Email:"
-        user_name: "Username:"
         password: "New password:"
         confirm_password: "Confirm new password:"
         create: "Create"
@@ -29,3 +26,8 @@ en:
         add_new_user: "Add new user"
         input_text_search: "Input key word"
         number_user: "Number of users: "
+      users:
+        id: "ID"
+        name: "Name"
+        email: "Email"
+        role: "Role"

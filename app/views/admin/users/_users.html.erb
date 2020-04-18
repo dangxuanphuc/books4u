@@ -39,39 +39,44 @@
       <table cellspacing="0" cellpadding="0"
         class="table" id="table-bootstrap">
         <tbody>
-        <tr>
-          <th>
-            <%= sort_link data.search, :id, t(".id"),
-              {}, {remote: true, method: :get} %>
-          </th>
-          <th>
-            <%= sort_link data.search, :name, t(".name"),
-              {}, {remote: true, method: :get} %>
-          </th>
-          <th>
-            <%= sort_link data.search, :email, t(".email"),
-              {}, {remote: true, method: :get} %>
-          </th>
-        </tr>
-        <% if data.users_search.any? %>
-          <% data.users_search.each do |user| %>
-            <tr>
-              <td><%= user.id %></td>
-              <td>
-                <%= link_to "#{user.name}", "#",
-                  "data-turbolinks": false,
-                  data: {toggle: "modal", target: "#modal-edit-user-#{user.id}"}%>
-                <div class="modal fade" id="modal-edit-user-<%= user.id %>"
-                  role="dialog">
-                  <div class="modal-dialog user-modal-dialog">
-                    <%= render "user_modal", user: user %>
+          <tr>
+            <th>
+              <%= sort_link data.search, :id, t(".id"),
+                {}, {remote: true, method: :get} %>
+            </th>
+            <th>
+              <%= sort_link data.search, :name, t(".name"),
+                {}, {remote: true, method: :get} %>
+            </th>
+            <th>
+              <%= sort_link data.search, :email, t(".email"),
+                {}, {remote: true, method: :get} %>
+            </th>
+            <th>
+              <%= sort_link data.search, :role, t(".role"),
+                {}, {remote: true, method: :get} %>
+            </th>
+          </tr>
+          <% if data.users_search.any? %>
+            <% data.users_search.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td>
+                  <%= link_to user.name, "#",
+                    "data-turbolinks": false,
+                    data: {toggle: "modal", target: "#modal-edit-user-#{user.id}"}%>
+                  <div class="modal fade" id="modal-edit-user-<%= user.id %>"
+                    role="dialog">
+                    <div class="modal-dialog user-modal-dialog">
+                      <%= render "user_modal", user: user %>
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td><%= user.email %></td>
-            </tr>
+                </td>
+                <td><%= user.email %></td>
+                <td><%= user.role %></td>
+              </tr>
+            <% end %>
           <% end %>
-        <% end %>
         </tbody>
       </table>
     </div>
