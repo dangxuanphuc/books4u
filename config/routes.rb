@@ -32,4 +32,5 @@ Rails.application.routes.draw do
   resources :categories, only: %i(index show)
   resources :borrows, only: :create
   resources :explorer, only: :index
+  resources :tags, only: %i(index show)
 end
