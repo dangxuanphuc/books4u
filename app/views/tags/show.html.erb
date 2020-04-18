@@ -10,6 +10,8 @@
         <div class="col-sm-12">
           <h2 class="text-uppercase">
             <%= t "search.index.tag_suggestions" %>
+            <%= link_to t("explorer.index.see_all"), tags_path,
+              class: "pull-right text-capitalize" %>
           </h2>
         </div>
         <div class="col-sm-12 tags">
@@ -23,10 +25,21 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-9 tab-style-1-content">
+    <div class="col-sm-9 tab-style-1-content" data-turbolinks="false">
       <div class="row">
         <div class="col-sm-12">
-          <h2><%= t "categories.show.collection" %></h2>
+          <div class="row category-header">
+            <div class="col-sm-9">
+              <h2><%= t "categories.show.collection" %></h2>
+            </div>
+            <div class="col-sm-3">
+              <%= form_with url: tag_path(@tag), method: :get,
+                local: true, id: "form" do |f| %>
+                <%= f.select :sort, books_sort_params,
+                  {selected: params[:sort]}, {class: "form-control", id: "sort"} %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
