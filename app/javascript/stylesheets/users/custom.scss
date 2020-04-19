@@ -1,10 +1,12 @@
 @import '~bootstrap/dist/css/bootstrap.min';
-@import '@fortawesome/fontawesome-free';
 @import '~propellerkit/dist/css/propeller.min';
 @import '~propellerkit/components/datetimepicker/css/bootstrap-datetimepicker';
 @import '~propellerkit/components/datetimepicker/css/pmd-datetimepicker';
 @import '~owl.carousel/dist/assets/owl.carousel.min';
 @import '~simplemde/dist/simplemde.min';
+@import '~select2/dist/css/select2.min';
+@import '~select2-bootstrap-theme/dist/select2-bootstrap.min';
+@import '~propellerkit/components/select2/css/pmd-select2';
 @import 'color';
 @import 'books';
 @import 'search';
@@ -15,3 +17,5 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'books/comments';
+@import 'blog/posts';
+@import 'blog/dashboard';

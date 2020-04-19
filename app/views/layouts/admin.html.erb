@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_pack_tag "admin", media: "all", "data-turbolinks-track": "reload" %>
     <%= favicon_link_tag "favicon.png" %>
   </head>
@@ -22,5 +23,8 @@
     </div>
     <%= render "admin/layouts/footer" %>
     <%= javascript_pack_tag "admin", "data-turbolinks-track": "reload" %>
+    <% if File.exist? Rails.root.join("app/javascript/packs", params[:controller] + ".js") %>
+      <%= javascript_pack_tag (params[:controller]), "data-turbolinks-track": "reload" %>
+    <% end %>
   </body>
 </html>

@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "content"
     t.string "description"
+    t.integer "status", default: 0
     t.string "title", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

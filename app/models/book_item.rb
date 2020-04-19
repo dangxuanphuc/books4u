@@ -1,6 +1,7 @@
 class BookItem < ApplicationRecord
-  before_save :default_values
   enum state: ["Ready", "Not ready"]
+
+  before_save :default_values
 
   belongs_to :book
 
