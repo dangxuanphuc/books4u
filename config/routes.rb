@@ -24,8 +24,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books do
-    resource :comments, only: [:create]
+  resources :books, only: %i(index show) do
+    resource :comments, only: :create
   end
 
   resources :search, only: :index
@@ -33,4 +33,9 @@ Rails.application.routes.draw do
   resources :borrows, only: :create
   resources :explorer, only: :index
   resources :tags, only: %i(index show)
+
+  namespace :blog do
+    root "dashboard#index"
+    resources :posts, only: %i(index show create edit update destroy)
+  end
 end

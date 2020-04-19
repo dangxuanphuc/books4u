@@ -1,3 +1,3 @@
-$('#sort').change(function () {
+$('#sort').change(function() {
   $('#form').submit();
-})
+});

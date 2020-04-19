@@ -23,7 +23,7 @@
           {}, {multiple: true, size: 1, class:"chosen-select form-control",
           data: {placeholder: t(".choose_categories")}} %>
         <%= f.label :publisher %>
-        <i id="add-publisher" class="fas fa-plus-square pull-right"></i>
+        <i id="add-publisher" class="fa fa-plus-square pull-right"></i>
         <%= f.select :publisher_id, supports.publishers, {prompt:t(".choose_publisher")},
           {class: "form-control", id:"hide-select1"} %>
         <%= f.fields_for :publisher do |p| %>
@@ -34,7 +34,7 @@
         <%= f.select :language_id, supports.languages, {prompt:t(".choose_language")},
           {class: "form-control", id:"hide-select2"} %>
         <%= f.label :series %>
-        <i id="add-series" class="fas fa-plus-square pull-right"></i>
+        <i id="add-series" class="fa fa-plus-square pull-right"></i>
         <%= f.select :series_id, supports.series, {prompt:t(".choose_series")},
           {class:"form-control", id:"hide-select3"} %>
         <%= f.fields_for :series do |s| %>
