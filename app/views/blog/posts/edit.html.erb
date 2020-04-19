@@ -1,9 +1,9 @@
 <style>
-  .CodeMirror-fullscreen {
+  .CodeMirror-fullscreen, .editor-preview-side {
     top: 80px;
   }
 </style>
-<div class="container edit-blog">
+<div class="container edit-blog" data-turbolinks="false">
   <div class="row">
     <div class="col-sm-12">
       <%= form_with model: @blog,url: blog_post_path,
