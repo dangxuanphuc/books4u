@@ -9,16 +9,14 @@ Rails.application.routes.draw do
     get "/pages/:page" => "static_pages#show"
 
     resources :users, except: %i(show edit)
-
+    resources :requests
     resources :authors do
       resources :books
     end
-
     resources :books do
       resources :book_items
     end
     resources :categories, except: %i(show edit)
-
     resources :publishers do
       resources :books
     end
@@ -27,7 +25,6 @@ Rails.application.routes.draw do
   resources :books, only: %i(index show) do
     resource :comments, only: :create
   end
-
   resources :search, only: :index
   resources :categories, only: %i(index show)
   resources :borrows, only: :create
