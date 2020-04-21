@@ -1,33 +1,19 @@
 <style>
   .CodeMirror, .CodeMirror-scroll {
     min-height: 30px;
-    border-top: none;
   }
   <% if user_signed_in? %>
     .CodeMirror {
-      background: url("<%= current_user.avatar.thum40.url %>") no-repeat;
+      background-image: url("<%= current_user.avatar.thum40.url %>");
       background-position-x: 10px;
       background-position-y: 5px;
-      background-size: 40px 40px;
+      background-repeat: no-repeat;
       padding-left: 60px;
-      border-top: none;
     }
   <% end %>
 </style>
 
 <div class="col-sm-12 comment pmd-z-depth comment-input">
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-      <a href="" data-target="#write-0" role="tab" data-toggle="tab">
-        <%= t "books.show.write" %>
-      </a>
-    </li>
-    <li class="load-html" data="0">
-      <a href="" data-target="#preview-0" role="tab" data-toggle="tab">
-        <%= t "books.show.preview" %>
-      </a>
-    </li>
-  </ul>
   <%= form_with model: book.comments.new, url: book_comments_path(book),
     local: true do |f| %>
     <div class="tab-content">
@@ -43,4 +29,17 @@
       <%= t "books.show.comment" %>
     </button>
   <% end %>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+      <a href="" data-target="#write-0" role="tab" data-toggle="tab">
+        <%= t "books.show.write" %>
+      </a>
+    </li>
+    <li class="load-html" data="0">
+      <a data-target="#preview-0" role="tab" data-toggle="tab">
+        <%= t "books.show.preview" %>
+      </a>
+    </li>
+  </ul>
 </div>

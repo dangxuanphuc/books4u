@@ -36,13 +36,11 @@ class Book < ApplicationRecord
   scope :rate_in_month,
     ->{Rate.where("created_at > ?", month_ago).group(:book_id).pluck :book_id}
 
-  def find_same_author_book
-    AuthorBook.where(author_id: self.authors).pluck :book_id
-  end
-
-  def find_related_book
-    Book.where(id: self.find_same_author_book)
-      .or Book.where series_id: self.series_id
+  def related_books
+    id = self.id
+    Book.joins(:author_books).where("author_books.author_id":
+      AuthorBook.where(book_id: id).pluck(:author_id)).distinct(:id)
+      .where.not(id: id)
   end
 
   def parent_comments
