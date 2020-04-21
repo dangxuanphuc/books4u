@@ -1,4 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
+  def create
+    super
+    redirect_to root_path
+  end
+
   def edit; end
 
   protected
@@ -16,10 +21,12 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def respond_with resource, opts = {}
-    if params[:user][:avatar].present?
-      render json: resource.avatar
-    else
-      super
+    if user_signed_in?
+      if params[:user][:avatar].present?
+        render json: resource.avatar
+      else
+        super
+      end
     end
   end
 end
