@@ -1,3 +1,23 @@
 en:
-  app_name: "Book Management System"
+  app_name: "Books4U"
   design_by: "Phuc Dang Xuan"
+  user:
+    home:
+      slide:
+        slide1_title1: "Books For You"
+        slide1_title2: "Since April 2020"
+        slide2_title1: "BEST STORIES"
+        slide2_title2: "WE HAVE ALL THE"
+      guide:
+        books: "Books"
+        books_content: "Our company library system with thousands of books in many aspects is always ready for you anytime you need."
+        blogs: "Blogs"
+        blog_content: "Write your opinion or feeling about a book and share it to everybody. Sharing is caring."
+        borrow: "Borrow"
+        borrow_content: "You can borrow any book you want, if it not in our library yet, you can also create a request to update those book to our library."
+        feedback: "Feedback"
+        feedback_content: "Every page need your feedback to make it better. Give us your feedback to make our system AWESOME!"
+      recommend: "Recommend Book"
+      recommend_details: "You make like those books"
+      new_book: "New Book"
+      top_author: "Top Author"
