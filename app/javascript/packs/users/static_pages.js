@@ -47,6 +47,10 @@ $(document).ready(function() {
 
   if($('.home-page')[0]) {
     $('.wrapper').css('margin-top', '0');
+    $('.navbar-fixed-top').css({
+      'background': 'linear-gradient(#ffffff,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0))',
+      'box-shadow': 'none'
+    });
   }
 
   $(window).scroll(function() {
