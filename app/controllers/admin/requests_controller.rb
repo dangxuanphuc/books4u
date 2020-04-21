@@ -13,9 +13,11 @@ class Admin::RequestsController < AdminController
 
   def update
     @new_value = update_requests_params
-    if @new_value[:status] == "rejected"
+    status = @new_value[:status]
+
+    if status == "rejected"
       update_request
-    elsif @new_value[:status] != "rejected" &&
+    elsif status != "rejected" &&
       (BookItem.available_books @request[:book_id] > 0)
       update_request
     end
