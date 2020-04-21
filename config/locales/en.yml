@@ -21,3 +21,7 @@ en:
       recommend_details: "You make like those books"
       new_book: "New Book"
       top_author: "Top Author"
+    read_online:
+      flash:
+        danger:
+          not_found_ebooks: "Ebook not found"
