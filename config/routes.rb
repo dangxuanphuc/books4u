@@ -35,4 +35,5 @@ Rails.application.routes.draw do
     root "dashboard#index"
     resources :posts, only: %i(index show create edit update destroy)
   end
+  resources :read_online, only: :show
 end

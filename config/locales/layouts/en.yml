@@ -47,10 +47,10 @@ en:
       publisher: "Published by:"
       public_date: "Published at:"
       weight: "Weight:"
+      watch_online: "Watch Online"
     book_right:
       borrow: "Borrow"
       login: "Login"
-
   user:
     edit:
       save: "Save"
