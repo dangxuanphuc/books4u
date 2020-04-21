@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default navbar-fixed-top pmd-navbar pmd-z-depth"
-  data-turbolinks="false">
+<nav class="navbar navbar-fixed-top pmd-navbar navbar-inverse
+  <%= params[:controller] == 'static_pages' ? 'static-pages' : nil %>">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed pmd-ripple-effect pmd-navbar-toggle"
@@ -9,9 +9,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to image_tag("https://res.cloudinary.com/phucdx/image/upload/v1586227747/Book_Management_System/favicon.png", height: "50"),
+      <%= link_to image_tag("https://res.cloudinary.com/phucdx/image/upload/v1586227747/Books4U/favicon.png", height: "50"),
         root_path, class: "navbar-brand logo-dark", alt: "#{t 'app_name'}",
-        title: "#{t 'app_name'}" %>
+        title: "#{t 'app_name'}", "data-turbolinks": "false" %>
     </div>
     <div class="collapse navbar-collapse pmd-navbar-sidebar" id="bs-example-navbar-collapse-1">
       <div class="pmd-navbar-right-icon pmd-user-info pull-right pmd-dropdown">
@@ -32,11 +32,11 @@
             <li class="divider"></li>
             <li>
               <%= link_to t("layouts.sidebar.logout"), destroy_user_session_path,
-                method: :delete%>
+                "data-turbolinks": false, method: :delete %>
             </li>
           </ul>
         <% else %>
-          <%= link_to new_user_session_path,
+          <%= link_to new_user_session_path, "data-turbolinks": "false",
             class: "btn btn-primary pmd-ripple-effect login center-block" do %>
             <i class="material-icons small">lock</i>
             <%= t "layouts.header.login" %>
@@ -79,13 +79,15 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to explorer_index_path, class: "pmd-ripple-effect" do %>
+          <%= link_to explorer_index_path, "data-turbolinks": "false",
+            class: "pmd-ripple-effect" do %>
             <%= t "layouts.header.books" %>
             <span class="sr-only">(current)</span>
           <% end %>
         </li>
         <li>
-          <%= link_to blog_root_path, class: "pmd-ripple-effect" do %>
+          <%= link_to blog_root_path, "data-turbolinks": "false",
+            class: "pmd-ripple-effect" do %>
             <%= t "layouts.header.blog" %>
             <span class="sr-only">(current)</span>
           <% end %>

@@ -1,19 +1,19 @@
 en:
   admin:
     link: " > "
-    book_manage: Book manage
+    book_manager: Book manager
     books:
       index:
-        page_title: Book manage
-        link1: Book manage
+        page_title: Book manager
+        link1: Book manager
         link2: Book information
       edit:
         page_title: Edit book
-        link1: Book manage
+        link1: Book manager
         link2: Edit book
       new:
         page_title: Create book
-        link1: Book manage
+        link1: Book manager
         link2: Create book
       book:
         add_book: Add book

@@ -26,6 +26,16 @@ class Book < ApplicationRecord
 
   validates :title, presence: true
 
+  today = Date.today
+  week_ago = today - 1.week
+  month_ago = today - 1.month
+
+  scope :new_book, ->limit{Book.where("created_at > ?", week_ago).limit limit}
+  scope :top_rated_book, ->limit{Book.order(:rate).limit limit}
+  scope :popular_book, ->limit{Book.where(id: rate_in_month).limit limit}
+  scope :rate_in_month,
+    ->{Rate.where("created_at > ?", month_ago).group(:book_id).pluck :book_id}
+
   def find_same_author_book
     AuthorBook.where(author_id: self.authors).pluck :book_id
   end
