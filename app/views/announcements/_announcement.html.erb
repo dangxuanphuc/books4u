@@ -1,0 +1,14 @@
+<li class="list-group-item unread"
+  id="announcement-<%= announcement.id %>">
+  <%= link_to announcement, "data-turbolinks": false, remote: true do %>
+    <div class="media-body">
+      <span class="list-group-item-heading">
+        <%= announcement.title %>
+      </span>
+      <span class="list-group-item-text">
+        <%= time_ago_in_words announcement.created_at %>
+        <%= t "books.show.ago" %>
+      </span>
+    </div>
+  <% end %>
+</li>
