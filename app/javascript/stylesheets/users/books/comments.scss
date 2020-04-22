@@ -6,7 +6,7 @@
       padding: 8px 12px 6px;
 
       &:hover {
-        background: $brown-light2;
+        background: $brown-primary;
       }
     }
 
@@ -48,14 +48,14 @@
         padding: 5px 15px;
 
         &:hover {
-          background: $brown-light2;
+          background: $brown-primary;
         }
       }
     }
 
     .active {
       a {
-        background: $brown-light2;
+        background: $brown-primary;
       }
     }
   }

@@ -25,9 +25,9 @@
     }
 
     .btn-send-req {
-      background: $brown-light2;
+      background: $brown-primary;
       color: $white;
-      box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+      box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
       margin: 10px 0 0;
       transition: .6s;
       width: 100%;
@@ -42,7 +42,7 @@
   .book-image {
     background: $white;
     border-radius: 2px;
-    box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+    box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
     height: 26vw;
     padding: 3px;
     width: 100%;
@@ -96,16 +96,16 @@
   }
 
   .tag {
-    background: $brown-light4;
+    background: $brown-lighter;
     color: $white;
     border-radius: 3px;
-    box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+    box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
     display: inline;
     padding: 4px 6px;
     transition: .4s;
 
     &:hover {
-      background: $brown-light3;
+      background: $brown-light;
     }
   }
 
@@ -144,7 +144,7 @@
     padding: 20px 5px;
 
     .nav-tabs {
-      background: $brown-light4;
+      background: $brown-lighter;
 
       a {
         background: $comment-gray;
@@ -158,14 +158,14 @@
         transition: .4s;
 
         &:hover {
-          background: $brown-light2;
+          background: $brown-primary;
         }
 
         .active {
           background: transparent;
 
           a {
-            background: $brown-light;
+            background: $brown-dark;
             color: $white;
             border: 0;
           }
@@ -190,7 +190,7 @@
         transition: .7s;
 
         &:hover {
-          background: $brown-light2;
+          background: $brown-primary;
           color: $white;
           padding: 0 10px;
         }
@@ -255,7 +255,7 @@
     padding: 0 20px 20px;
 
     .book-borrow-col {
-      background: $brown-light3;
+      background: $brown-light;
       padding: 30px 30px 120px;
       position: relative;
 
@@ -284,7 +284,7 @@
   }
 
   .relate-book {
-    background: $brown-light4;
+    background: $brown-lighter;
     color: $white;
     margin: 5px 20px;
 
@@ -384,7 +384,7 @@
         }
 
         img {
-          box-shadow: -10px 4px 20px $shadow1, 2px 4px 20px $shadow2;
+          box-shadow: -10px 4px 20px $shadow-light, 2px 4px 20px $shadow-normal;
           height: 90%;
           left: 13%;
           position: absolute;
@@ -443,7 +443,7 @@
 
     img {
       border: 1px $black;
-      box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+      box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
       width: 100%;
       height: 200px;
       margin-right: 0;
@@ -453,7 +453,7 @@
   .modal-book-img {
     background: $white;
     border-radius: 2px;
-    box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+    box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
     padding: 2px;
   }
 
@@ -463,7 +463,7 @@
 
   .modal-borrow-info {
     border: 1px solid $frame;
-    box-shadow: 0 2px 4px $shadow1, 0 3px 6px $shadow2;
+    box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
     height: 350px;
     padding: 0 5px 0 25px;
 
@@ -487,8 +487,8 @@
     transition: .5s;
 
     &:hover {
-      background: $brown-light2;
-      box-shadow: 0 4px 8px $shadow1, 0 4px 8px $shadow2;
+      background: $brown-primary;
+      box-shadow: 0 4px 8px $shadow-light, 0 4px 8px $shadow-normal;
       margin-top: -2px;
     }
   }
@@ -503,7 +503,7 @@
     color: $white;
 
     &:hover {
-      color: $brown-light4;
+      color: $brown-lighter;
     }
   }
 
