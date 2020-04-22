@@ -276,8 +276,30 @@
       @media screen and (max-width: 767px) {
         .end-triangle {
           border-bottom: 90px solid $white;
-          border-left: 180px solid transparent;
+          border-left: 165px solid transparent;
           border-right: 200px solid transparent;
+        }
+      }
+
+      @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        .end-triangle {
+          border-bottom: 120px solid $white;
+          border-left: 120px solid transparent;
+          border-right: 120px solid transparent;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .book-borrow-col {
+        background: $brown-light;
+        padding: 10px 10px 100px;
+        position: relative;
+
+        .end-triangle {
+          border-bottom: 60px solid $white;
+          border-left: 100px solid transparent;
+          border-right: 100px solid transparent;
         }
       }
     }
@@ -501,6 +523,7 @@
 
   a {
     color: $white;
+    font-size: 5vh;
 
     &:hover {
       color: $brown-lighter;
@@ -508,9 +531,19 @@
   }
 
   .text-capitalize {
-    font-size: 4em;
+    font-size: 7vh;
     font-weight: bold;
     padding: 0 15px;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1025px) {
+    a {
+      font-size: 3vh;
+    }
+
+    .text-capitalize {
+      font-size: 4vh;
+    }
   }
 }

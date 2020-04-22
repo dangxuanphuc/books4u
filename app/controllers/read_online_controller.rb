@@ -9,6 +9,6 @@ class ReadOnlineController < ApplicationController
     @ebooks = Book.find_by(id: params[:id]).pdf_ebooks
 
     return @ebooks
-    flash[:danger] = t "read_online.flash.danger.not_found_ebooks"
+    flash[:danger] = t "read_online.flash.danger.not_found_ebook"
   end
 end
