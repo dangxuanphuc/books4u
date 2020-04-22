@@ -1,0 +1,19 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <% load_announcements.each do |announcement| %>
+    <span class="announcement"
+      id="announcement-<%= announcement.id %>">
+      <h2>
+        <%= link_to announcement, "data-turbolinks": false,
+          class: "announcement-item", remote: true do %>
+          <div class="announcement-content">
+            <%= announcement.title %>
+          </div>
+        <% end %>
+      </h2>
+      <div class="announcement-time">
+        <%= time_ago_in_words announcement.created_at %>
+        <%= t "books.show.ago" %>
+      </div><hr>
+    </span>
+  <% end %>
+</div>

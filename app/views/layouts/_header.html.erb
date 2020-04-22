@@ -43,6 +43,47 @@
           <% end %>
         <% end %>
       </div>
+      <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications info-notification">
+        <a href="javascript:void(0)" title="<%= t "layouts.header.announcements" %>"
+           class="dropdown-toggle pmd-ripple-effect btn-user"
+           data-toggle="dropdown" role="button" aria-expanded="true">
+          <div class="material-icons pmd-sm">
+            info_outline
+          </div>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth"
+          role="menu">
+          <div class="pmd-card-title">
+            <div class="media-body media-middle">
+              <%= link_to t("announcements.view_all"), announcements_path,
+                "data-turbolinks": false, class: "pull-right" %>
+              <h3 class="pmd-card-title-text">
+                <%= t "layouts.header.announcements" %>
+              </h3>
+            </div>
+          </div>
+          <ul class="list-group pmd-list-avatar pmd-card-list">
+            <% load_announcements.each do |announcement| %>
+              <li class="list-group-item unread"
+                id="announcement-<%= announcement.id %>">
+                <%= link_to announcement, "data-turbolinks": false,
+                  remote: true do %>
+                  <div class="media-body">
+                    <span class="list-group-item-heading">
+                      <%= announcement.title %>
+                    </span>
+                    <span class="list-group-item-text">
+                      <%= time_ago_in_words announcement.created_at %>
+                      <%= t "books.show.ago" %>
+                    </span>
+                  </div>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
       <div class="pmd-navbar-right-icon pull-right">
         <a class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect search-toggle"
           href="javascript:void(0);">
@@ -97,3 +138,4 @@
   </div>
   <div class="pmd-sidebar-overlay"></div>
 </nav>
+<%= render "announcements/announcement_modal", announcement: nil %>

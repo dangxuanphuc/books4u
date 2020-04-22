@@ -1,0 +1,135 @@
+.announcements {
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 $navbar-custom-background, 0 2px 10px 0
+  $navbar-custom-background !important;
+  margin-top: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: fixed;
+  right: 20px;
+  width: 350px;
+}
+
+.unread-announcement {
+  background-color: $menu-item-announcement-background !important;
+}
+
+.fa-info {
+  cursor: pointer;
+  font-size: 20px !important;
+  position: relative;
+}
+
+.announcement-index {
+  margin: 10px 0;
+  padding-top: 10px;
+}
+
+.header-announcements {
+  margin: 0 30px;
+}
+
+.close-icon {
+  font-size: 1.25em;
+}
+
+.info-notification {
+  margin-left: 4px !important;
+  padding: 0 !important;
+}
+
+.notifications {
+  padding-right: 10px;
+
+  .pmd-dropdown-menu-container {
+    top: 75px;
+  }
+
+  .notification-blank {
+    opacity: .7;
+    padding: 120px 16px;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    position: relative;
+    width: 320px;
+  }
+
+  a {
+    overflow: visible;
+    position: relative;
+
+    &.dropdown-toggle {
+      margin-top: 28px;
+    }
+  }
+
+  .list-group-item {
+    background: $alabaster-approx;
+    border-top: 1px solid $cararra-approx;
+    cursor: pointer;
+    float: left;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    a {
+      border: 0;
+      overflow-x: hidden;
+    }
+
+    .list-group-item-text {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: normal;
+    }
+
+    .list-group-item-date {
+      color: $black-44;
+      display: block;
+      font-size: 13px;
+    }
+
+    > a {
+      margin-top: 0;
+      padding: 16px;
+      right: 0;
+    }
+
+    &.unread {
+      background: $white;
+    }
+
+    &:hover {
+      background: $wild-sand-approx;
+    }
+  }
+
+  .pmd-list-avatar {
+    display: inline;
+  }
+
+  &.open .pmd-dropdown-menu-container::after {
+    content: "";
+    border-bottom: 6px solid $white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: inline-block;
+    position: absolute;
+    right: 24px;
+    top: -6px;
+  }
+
+  .nav-dropdown h3 a {
+    margin-top: 0;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
