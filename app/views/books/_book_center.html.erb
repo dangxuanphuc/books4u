@@ -3,9 +3,11 @@
   <p class="book-author">
     <% book.authors.each_with_index do |a, index| %>
       <% if index == book.authors.count - 1 %>
-        <%= link_to a.name, "", "data-turbolinks": "false" %>
+        <%= link_to a.name, author_path(a),
+          "data-turbolinks": "false" %>
       <% else %>
-        <%= link_to a.name, "", "data-turbolinks": "false" %>,
+        <%= link_to a.name, author_path(a),
+          "data-turbolinks": "false" %>,
       <% end %>
     <% end %>
   </p>
@@ -22,13 +24,15 @@
   </div>
   <% if book.series %>
     <p class="book-info-row">
-      <span><%= t "books.show.series" %></span> <%= book.series.title %>
+      <span><%= t "books.show.series" %></span>
+      <%= book.series.title %>
     </p>
   <% end %>
   <div class="book-info-row">
     <span><%= t "books.show.tag" %></span>
     <% book.tags.each do |t| %>
-      <%= link_to t.title, tag_path(t), "data-turbolinks": "false", class: "tag" %>
+      <%= link_to t.title, tag_path(t),
+        "data-turbolinks": "false", class: "tag" %>
     <% end %>
   </div>
   <p class="book-info-row">
@@ -49,7 +53,7 @@
   </p>
   <p class="book-info-row">
     <span><%= t "books.show.public_date" %></span>
-    <%= book.public_date %>
+    (<%= book.public_date %>)
   </p>
 
   <% if book.pdf_ebooks.present? %>

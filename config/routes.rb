@@ -36,4 +36,5 @@ Rails.application.routes.draw do
     resources :posts, only: %i(index show create edit update destroy)
   end
   resources :read_online, only: :show
+  resources :authors, only: :show
 end

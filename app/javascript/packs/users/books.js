@@ -101,19 +101,19 @@ $(document).on('turbolinks:load', function(){
     item: 7,
     responsive: {
       0 : {
-        items: 2,
+        items: 2
       },
       421 : {
-        items: 3,
+        items: 3
       },
       706 : {
-        items: 4,
+        items: 4
       },
       876 : {
-        items: 5,
+        items: 5
       },
       1366 : {
-        items: 7,
+        items: 7
       }
     }
   });
