@@ -1,4 +1,3 @@
-import 'bxslider/dist/jquery.bxslider.min'
 import 'owl.carousel/dist/owl.carousel.min';
 
 $(document).ready(function() {
@@ -12,7 +11,7 @@ $(document).ready(function() {
     mouseDrag: false,
     touchDrag: false,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 5000
   });
 
   $('.hero-home .fa-angle-up').click(function() {
@@ -33,7 +32,7 @@ $(document).ready(function() {
         items: 2
       },
       768: {
-        items: 4,
+        items: 4
       },
       1440: {
         items: 5
