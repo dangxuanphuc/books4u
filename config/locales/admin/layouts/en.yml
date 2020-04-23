@@ -31,7 +31,7 @@ en:
         page_title: Create author
         link1: Author manager
         link2: Create author
-      authors:
+      author:
         add_author: "Add author"
         search: "Search"
         input_keyword: "Search for author name or description"

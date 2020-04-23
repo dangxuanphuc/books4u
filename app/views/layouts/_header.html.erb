@@ -13,25 +13,35 @@
         root_path, class: "navbar-brand logo-dark", alt: "#{t 'app_name'}",
         title: "#{t 'app_name'}", "data-turbolinks": "false" %>
     </div>
-    <div class="collapse navbar-collapse pmd-navbar-sidebar" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pmd-navbar-sidebar"
+      id="bs-example-navbar-collapse-1">
       <div class="pmd-navbar-right-icon pmd-user-info pull-right pmd-dropdown">
         <% if user_signed_in? %>
-          <a href="javascript:void(0);" class="btn-user dropdown-toggle media pmd-ripple-effect" data-toggle="dropdown" aria-expanded="false" data-turbolinks="false">
+          <a href="javascript:void(0);"
+            class="btn-user dropdown-toggle media pmd-ripple-effect"
+            data-toggle="dropdown" aria-expanded="false"
+            data-turbolinks="false">
             <div class="media-left">
               <img src="<%= current_user.avatar.thum40.url %>"
-                width="40" height="40" alt="avatar" class="avatar pmd-z-depth">
+                width="40" height="40" alt="avatar"
+                class="avatar pmd-z-depth">
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
-              <%= link_to t("user.edit.profile.title"), edit_user_registration_path,
+              <%= link_to t("user.edit.profile.title"),
+                edit_user_registration_path,
                 class: "pmd-ripple-effect" %>
             </li>
-            <li><%= link_to t("blog.posts.index.my_blog"), blog_posts_path,
+            <li><%= link_to t("blog.posts.index.my_blog"),
+              blog_posts_path, class: "pmd-ripple-effect" %></li>
+            <li><%= link_to t("requests.index.request_title"),
+              requests_path, "data-turbolinks":"false",
               class: "pmd-ripple-effect" %></li>
             <li class="divider"></li>
             <li>
-              <%= link_to t("layouts.sidebar.logout"), destroy_user_session_path,
+              <%= link_to t("layouts.sidebar.logout"),
+                destroy_user_session_path,
                 "data-turbolinks": false, method: :delete %>
             </li>
           </ul>
@@ -45,8 +55,8 @@
       </div>
       <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications info-notification">
         <a href="javascript:void(0)" title="<%= t "layouts.header.announcements" %>"
-           class="dropdown-toggle pmd-ripple-effect btn-user"
-           data-toggle="dropdown" role="button" aria-expanded="true">
+          class="dropdown-toggle pmd-ripple-effect btn-user"
+          data-toggle="dropdown" role="button" aria-expanded="true">
           <div class="material-icons pmd-sm">
             info_outline
           </div>
