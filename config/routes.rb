@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'not_found/show'
   devise_for :users, controllers: {registrations: "registrations"}
 
   root "static_pages#show", page: "home"
@@ -40,4 +39,5 @@ Rails.application.routes.draw do
   resources :authors, only: :show
   resources :announcements, only: %i(index show)
   resource :not_found, only: :show
+  resources :requests, only: %i(index create update)
 end

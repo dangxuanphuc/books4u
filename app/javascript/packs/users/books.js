@@ -2,7 +2,7 @@ import 'propellerkit/components/datetimepicker/js/bootstrap-datetimepicker';
 import 'owl.carousel/dist/owl.carousel.min';
 import * as SimpleMDE from 'simplemde';
 
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load', function() {
   $('#datepicker-start').datetimepicker({
     minDate: new Date()
   });

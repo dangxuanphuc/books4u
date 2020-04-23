@@ -8,6 +8,7 @@ admin:
       users_per_page: 5
   author:
     per_page: 15
+    description: 70
   categories:
     index:
       categories_per_page: 6

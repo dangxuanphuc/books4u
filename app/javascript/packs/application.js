@@ -1,7 +1,6 @@
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
-import 'jquery/dist/jquery.min';
 import * as moment from 'moment';
 import 'bootstrap/dist/js/bootstrap.min';
 import '../stylesheets/users/custom';
@@ -12,3 +11,5 @@ require('turbolinks').start()
 require('@rails/activestorage').start()
 require('channels')
 require('packs/users/layouts/header')
+require('packs/users/books')
+require('packs/users/book_requests')
