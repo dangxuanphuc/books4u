@@ -1,6 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap.min';
 @import '~propellerkit/dist/css/propeller.min';
 @import '~chosen-jquery/lib/chosen';
+@import 'select2/dist/css/select2.min';
+@import 'select2-bootstrap-theme/dist/select2-bootstrap.min';
+@import 'propellerkit/components/select2/css/pmd-select2';
 @import 'color';
 @import 'layouts/header';
 @import 'layouts/sidebar';
@@ -9,3 +12,4 @@
 @import 'users';
 @import 'categories';
 @import 'books';
+@import 'request';
