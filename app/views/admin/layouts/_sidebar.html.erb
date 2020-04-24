@@ -1,61 +1,83 @@
 <div class="pmd-sidebar-overlay"></div>
-<aside id="basicSidebar" class="pmd-sidebar sidebar-default pmd-sidebar-slide-push pmd-sidebar-left
-  pmd-sidebar-open bg-fill-darkblue sidebar-with-icons" role="navigation"
-  data-turbolinks="false">
+<aside id="basicSidebar" class="pmd-sidebar sidebar-default
+  pmd-sidebar-slide-push pmd-sidebar-left pmd-sidebar-open
+  bg-fill-darkblue sidebar-with-icons" role="navigation">
   <ul class="nav pmd-sidebar-nav text-left">
-    <li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
-      <a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media"
+    <li class="dropdown pmd-dropdown pmd-user-info
+      visible-xs visible-md visible-sm visible-lg">
+      <a aria-expanded="false" data-toggle="dropdown"
+        class="btn-user dropdown-toggle media"
         data-sidebar="true" aria-expandedhref="javascript:void(0);">
         <div class="media-left">
           <img src="https://res.cloudinary.com/phucdx/image/upload/v1586267915/Books4U/user-icon.png"
             alt="Administrator">
         </div>
-        <div class="media-body media-middle">Administrator</div>
-        <div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
+        <div class="media-body media-middle">
+          <%= t "layouts.header.administrator" %>
+        </div>
+        <div class="media-right media-middle">
+          <i class="dic-more-vert dic"></i>
+        </div>
       </a>
       <ul class="dropdown-menu">
-        <li><a href="#"><%= t "layouts.sidebar.edit_profile" %></a></li>
         <li>
-          <%= link_to t("layouts.sidebar.logout"), destroy_user_session_path,
-            method: :delete%>
+          <%= link_to t("layouts.sidebar.logout"),
+            destroy_user_session_path,
+            "data-turbolinks": "false", method: :delete %>
         </li>
       </ul>
     </li>
     <li>
-      <%= link_to admin_root_path, class: "pmd-ripple-effect active" do %>
+      <%= link_to admin_root_path, class: "pmd-ripple-effect active",
+        "data-turbolinks": false do %>
         <i class="material-icons media-left pmd-sm">dashboard</i>
         <span class="media-body"><%= t "layouts.sidebar.dashboard" %></span>
       <% end %>
     </li>
     <li>
-      <%= link_to admin_users_path, class: "pmd-ripple-effect active" do %>
-        <i class="material-icons media-left pmd-sm">account_box</i>
-        <span class="media-body"><%= t "sidebar.users_manager" %></span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to admin_authors_path, class:"pmd-ripple-effect active" do %>
-        <i class="material-icons media-left pmd-sm">perm_identity</i>
-        <span class="media-body"><%= t "sidebar.authors_manager" %></span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to admin_books_path, class:"pmd-ripple-effect active" do %>
+      <%= link_to admin_books_path, class:"pmd-ripple-effect active",
+        "data-turbolinks": false do %>
         <i class="material-icons media-left pmd-sm">library_books</i>
         <span class="media-body"><%= t "sidebar.books_manager" %></span>
       <% end %>
     </li>
     <li>
-      <%= link_to admin_categories_path, class:"pmd-ripple-effect active" do %>
+      <%= link_to admin_authors_path, class:"pmd-ripple-effect active",
+        "data-turbolinks": false do %>
+        <i class="material-icons media-left pmd-sm">perm_identity</i>
+        <span class="media-body"><%= t "sidebar.authors_manager" %></span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_users_path, class: "pmd-ripple-effect active",
+        "data-turbolinks": false do %>
+        <i class="material-icons media-left pmd-sm">account_box</i>
+        <span class="media-body"><%= t "sidebar.users_manager" %></span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_categories_path, class: "pmd-ripple-effect active",
+        "data-turbolinks": false do %>
         <i class="material-icons media-left pmd-sm">collections_bookmark</i>
         <span class="media-body"><%= t "sidebar.categories_manager" %></span>
       <% end %>
     </li>
-    <li>
-      <%= link_to admin_requests_path, class: "pmd-ripple-effect active" do %>
+    <li class="dropdown pmd-dropdown">
+      <a aria-expanded="false" data-toggle="dropdown"
+        class="btn-user dropdown-toggle media"
+        data-sidebar="true" href="javascript:void(0);">
         <i class="material-icons media-left pmd-sm">speaker_notes</i>
-        <span class="media-body"><%= t "sidebar.requests_manager" %></span>
-      <% end %>
+        <span class="media-body">Request</span>
+        <div class="media-right media-bottom">
+          <i class="dic-more-vert dic"></i>
+        </div>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to t("sidebar.borrow_books"), admin_requests_path,
+            class: "pmd-ripple-effect active", "data-turbolinks": false %>
+        </li>
+      </ul>
     </li>
   </ul>
 </aside>

@@ -1,29 +1,30 @@
 $(document).on('click', '.save-user', function() {
   var userId = $(this).data('id');
   var idEmailTextField = '#text-field-mail-' + userId;
-  var idPasswordField = '#text-field-password-' + userId;
-  var idPasswordConfirmField = '#text-field-password-confirm-' + userId;
+  var idNameTextField = '#text-field-name-' + userId;
+  var idRoleTextField = '#role-user-id-' + userId;
   var newEmail = $(idEmailTextField).val();
-  var newPassword = $(idPasswordField).val();
-  var newPasswordConfirm = $(idPasswordConfirmField).val();
+  var newName = $(idNameTextField).val();
+  var newRole = $(idRoleTextField).val();
   var url = '/admin/users/' + userId;
 
   $.ajax({
-    type:'PATCH',
+    type: 'PATCH',
     url: url,
     data: {
       user: {
         id: userId,
         email: newEmail,
-        password: newPassword,
-        password_confirmation: newPasswordConfirm,
+        name: newName,
+        role: newRole
       }
     },
     success: function() {
-      $('#users-list-view').load(document.URL + ' #users-list');
+      location.reload();
     }
   });
 });
+
 
 $(document).on('click', '.delete-user', function() {
   var userId = $(this).data('id');
@@ -38,18 +39,18 @@ $(document).on('click', '.delete-user', function() {
       }
     },
     success: function() {
-      $('#users-list-view').load(document.URL + ' #users-list');
+      location.reload();
     }
   });
 });
 
 $(document).on('click', '.create-user', function() {
   var idEmailTextField = '#text-field-mail-';
-  var idPasswordField = '#text-field-password-';
-  var idPasswordConfirmField = '#text-field-password-confirm-';
+  var idNameTextField = '#text-field-name-';
+  var idRoleTextField = '#role-user-id-';
   var newEmail = $(idEmailTextField).val();
-  var newPassword = $(idPasswordField).val();
-  var newPasswordConfirm = $(idPasswordConfirmField).val();
+  var newName = $(idNameTextField).val();
+  var newRole = $(idRoleTextField).val();
   var url = '/admin/users';
 
   $.ajax({
@@ -58,8 +59,8 @@ $(document).on('click', '.create-user', function() {
     data: {
       user: {
         email: newEmail,
-        password: newPassword,
-        password_confirmation: newPasswordConfirm,
+        name: newName,
+        role: newRole
       }
     },
     success: function() {

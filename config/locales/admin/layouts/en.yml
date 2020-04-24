@@ -4,7 +4,8 @@ en:
     authors_manager: "Authors Manager"
     books_manager: "Books Manager"
     categories_manager: "Categories Manager"
-    requests_manager: "Requests Maneger"
+    requests_manager: "Requests Manager"
+    borrow_books: "Borrow books"
   flash:
     author:
       find_fail: "Author not found!"
