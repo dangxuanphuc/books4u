@@ -2,7 +2,8 @@ en:
   layouts:
     header:
       administrator: "Administrator"
-      books: "Books Explorer"
+      books: "Books"
+      explore: "Explore"
       blog: "Blog"
       account: "Account"
       profile: "My Profile"
