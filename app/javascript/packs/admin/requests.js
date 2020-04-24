@@ -14,15 +14,15 @@ $(document).on('click', '.change-status', function() {
     },
     success: function() {
       if(status == 'approved') {
-        $(statusId).empty().append("\<div class='alert alert-success' role='alert'>\
-        <a class='alert-link'>\
+        $(statusId).empty().append('\<div class="alert alert-success" role="alert">\
+        <a class="alert-link">\
         Approved\
-        </a>" );
+        </a></div>');
       } else {
-        $(statusId).empty().append("\<div class='alert alert-danger' role='alert'>\
-        <a class='alert-link'>\
+        $(statusId).empty().append('\<div class="alert alert-danger" role="alert">\
+        <a class="alert-link">\
         Reject\
-        </a>" );
+        </a></div>');
       }
     }
   });
