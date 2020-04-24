@@ -1,4 +1,4 @@
-<div class="book-borrow book-part" data-turbolinks="false">
+<div class="book-borrow book-part">
   <p class="borrow-title"><%= t ".books" %></p>
   <p class="borrow-title bolder"><%= t ".borrow" %></p>
   <div class="frame">
@@ -25,7 +25,7 @@
           <%= t "books.show.send_req" %>
         </div>
       <% else %>
-        <%= link_to new_user_session_path do %>
+        <%= link_to new_user_session_path, "data-turbolinks": false do %>
           <div class="btn btn-lg text-center btn-primary col-sm-10
             col-sm-offset-1 btn-send-req unsigned">
             <%= t(".login") %>
@@ -35,4 +35,5 @@
     </div>
     <div class="hidden current-book-id" id="<%= book.id %>"></div>
   </div>
+  <br>
 </div>
