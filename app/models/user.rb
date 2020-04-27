@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :blogs
   has_many :requests
+  has_many :notifications
 
   mount_uploader :avatar, AvatarUploader
 
