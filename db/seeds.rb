@@ -582,7 +582,7 @@ Category.create!([
   {title: "Mobile", description: "The Mobile Book features the most important
     things that you need to know as a designer, developer or mobile strategist
     for your websites."},
-  {title: "Android", parent_id: 3 , description: "See what's new with Android
+  {title: "Android", description: "See what's new with Android
     - from phones to watches and more. Visit the official site to
     explore and learn."},
   {title: "iOS", parent_id: 3 , description: "If there is one piece of
@@ -592,7 +592,7 @@ Category.create!([
     piece of glass and doing things they never thought possible. Whether
     it's setting calendar appointments, looking at restaurant menus, or reading
     movie reviews, the iPhone has been a big part of it all."},
-  {title: "Windown Phone", parent_id: 3 , description: "Informationvine.com connects
+  {title: "Window Phone", parent_id: 3 , description: "Informationvine.com connects
     you to the best results from across the web. Search & Find Now · Find Relevant
     Information · Learn More · Quick & Easy Answers"},
   {title: "Web", description: "We develop cross-platform Web app for reading
