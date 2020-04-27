@@ -15,12 +15,10 @@
     </div>
     <div class="collapse navbar-collapse pmd-navbar-sidebar"
       id="bs-example-navbar-collapse-1">
-      <div class="pmd-navbar-right-icon pmd-user-info pull-right pmd-dropdown">
-        <% if user_signed_in? %>
-          <a href="javascript:void(0);"
-            class="btn-user dropdown-toggle media pmd-ripple-effect"
-            data-toggle="dropdown" aria-expanded="false"
-            data-turbolinks="false">
+      <% if user_signed_in? %>
+        <div class="pmd-navbar-right-icon pmd-user-info pull-right pmd-dropdown">
+          <a href="javascript:void(0);" class="btn-user dropdown-toggle media pmd-ripple-effect"
+            data-toggle="dropdown" aria-expanded="false" data-turbolinks="false">
             <div class="media-left">
               <img src="<%= current_user.avatar.thum40.url %>"
                 width="40" height="40" alt="avatar"
@@ -30,14 +28,19 @@
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
               <%= link_to t("user.edit.profile.title"),
-                edit_user_registration_path,
+                edit_user_registration_path, "data-turbolinks": false,
                 class: "pmd-ripple-effect" %>
             </li>
             <li><%= link_to t("blog.posts.index.my_blog"),
-              blog_posts_path, class: "pmd-ripple-effect" %></li>
-            <li><%= link_to t("requests.index.request_title"),
-              requests_path, "data-turbolinks": false,
+              blog_posts_path, "data-turbolinks": "false",
               class: "pmd-ripple-effect" %></li>
+            <li><%= link_to t("requests.index.request_title"),
+              requests_path, "data-turbolinks": "false",
+              class: "pmd-ripple-effect" %></li>
+            <li><%= link_to t("layouts.header.feedback"), '',
+              "data-turbolinks": "false", class: "pmd-ripple-effect",
+              "data-target": "#complete-dialog", "data-toggle": "modal",
+              id: "feedback-button" %></li>
             <li class="divider"></li>
             <li>
               <%= link_to t("layouts.sidebar.logout"),
@@ -45,162 +48,163 @@
                 "data-turbolinks": false, method: :delete %>
             </li>
           </ul>
-        <% else %>
-          <%= link_to new_user_session_path, "data-turbolinks": false,
-            class: "btn btn-primary pmd-ripple-effect login center-block" do %>
-            <i class="material-icons small">lock</i>
-            <%= t "layouts.header.login" %>
-          <% end %>
+        </div>
+        <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications">
+          <a href="javascript:void(0)" title="Notification"
+            class="dropdown-toggle pmd-ripple-effect btn-user"
+            data-toggle="dropdown" role="button" aria-expanded="true">
+            <div
+              <% if unread_notifications_count > 0 %>
+                data-badge="<%= unread_notifications_count %>"
+              <% end %>
+              class="material-icons pmd-sm pmd-badge pmd-badge-overlap">
+              notifications_none
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth"
+            role="menu">
+            <div class="pmd-card-title">
+              <div class="media-body media-middle">
+                <%= link_to t("notifications.index.all_notifications"),
+                  notifications_path, class: "pull-right" %>
+                <h3 class="pmd-card-title-text">
+                  <%= t "layouts.header.notifications" %>
+                </h3>
+              </div>
+            </div>
+            <ul class="list-group pmd-list-avatar pmd-card-list">
+              <li class="list-group-item" style="display:none">
+                <p class="notification-blank">
+                  <span class="dic dic-notifications-none"></span>
+                  <span><%= t "notifications.index.dont_have_notification" %></span>
+                </p>
+              </li>
+              <% my_notifications.each do |notification| %>
+                <li class="list-group-item <%= "unread" unless notification.read? %>">
+                  <a href="javascript:void(0)">
+                    <div class="media-body">
+                      <span class="list-group-item-heading">
+                        <%= notification.content %>
+                      </span>
+                      <span class="list-group-item-text">
+                        <%= time_ago_in_words notification.created_at %>
+                        <%= t "books.show.ago" %>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications info-notification">
+          <a href="javascript:void(0)" title="<%= t "layouts.header.announcements" %>"
+            class="dropdown-toggle pmd-ripple-effect btn-user"
+            data-toggle="dropdown" role="button" aria-expanded="true">
+            <div class="material-icons pmd-sm">
+              info_outline
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth"
+            role="menu">
+            <div class="pmd-card-title">
+              <div class="media-body media-middle">
+                <%= link_to t("announcements.view_all"), announcements_path,
+                  "data-turbolinks": false, class: "pull-right" %>
+                <h3 class="pmd-card-title-text">
+                  <%= t "layouts.header.announcements" %>
+                </h3>
+              </div>
+            </div>
+            <ul class="list-group pmd-list-avatar pmd-card-list">
+              <% load_announcements.each do |announcement| %>
+                <li class="list-group-item unread"
+                  id="announcement-<%= announcement.id %>">
+                  <%= link_to announcement, "data-turbolinks": false,
+                    remote: true do %>
+                    <div class="media-body">
+                      <span class="list-group-item-heading">
+                        <%= announcement.title %>
+                      </span>
+                      <span class="list-group-item-text">
+                        <%= time_ago_in_words announcement.created_at %>
+                        <%= t "books.show.ago" %>
+                      </span>
+                    </div>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="pmd-navbar-right-icon pull-right">
+          <a class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect search-toggle"
+            href="javascript:void(0);">
+            <i class="material-icons md-light pmd-sm pmd-svg-icon ic_search">
+              <svg viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+              <g>
+                <path d="M29.646,27.896l-4.405-4.437c1.03-1.374,1.656-3.124,1.656-4.999c0-4.655-3.781-8.436-8.437-8.436
+                  c-4.654,0-8.436,3.78-8.436,8.436c0,4.654,3.781,8.436,8.436,8.436c1.875,0,3.625-0.625,4.999-1.656l4.405,4.406
+                  c0.5,0.499,1.281,0.499,1.781,0C30.146,29.178,30.146,28.365,29.646,27.896z M18.461,24.396c-3.28,0-5.936-2.655-5.936-5.936
+                  c0-3.281,2.655-5.936,5.936-5.936s5.937,2.655,5.937,5.936C24.397,21.741,21.741,24.396,18.461,24.396z"/>
+              </g>
+            </svg>
+            <svg viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24,22.222L22.222,24L16,17.777L9.777,24L8,22.222L14.223,16
+                  L8,9.777L9.777,8L16,14.223L22.222,8L24,9.777L17.777,16L24,22.222z"/>
+              </g>
+            </svg>
+            </i>
+          </a>
+          <form class="search-form" method="get" id="searchform"
+            action="<%= search_index_path %>">
+            <div class="form-group">
+              <input class="form-control" type="text" size="put_a_size_here"
+                name="query" id="search" title="<%= t "layouts.header.search" %>"
+                placeholder="<%= t "layouts.header.what_are_you_looking_for" %>"
+                autocomplete="off">
+            </div>
+            <div class="autocomplete pmd-z-depth-1" id="autocomplete"></div>
+            <div id="searching" class="hidden">
+              <h3 class="text-center"><%= t "layouts.header.searching" %>...</h3>
+            </div>
+          </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to explorer_index_path, class: "pmd-ripple-effect",
+              "data-turbolinks": false do %>
+              <%= t "layouts.header.explore" %>
+              <span class="sr-only">(current)</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to categories_path, class: "pmd-ripple-effect",
+              "data-turbolinks": false do %>
+              <%= t "layouts.header.books" %>
+              <span class="sr-only">(current)</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to blog_root_path, class: "pmd-ripple-effect",
+              "data-turbolinks": false do %>
+              <%= t "layouts.header.blog" %>
+              <span class="sr-only">(current)</span>
+            <% end %>
+          </li>
+        </ul>
+      <% else %>
+        <%= link_to new_user_session_path, "data-turbolinks": false,
+          class: "btn btn-primary pmd-ripple-effect login center-block
+          pmd-navbar-right-icon pmd-user-info pull-right pmd-dropdown" do %>
+          <i class="material-icons small">lock</i>
+          <%= t "layouts.header.login" %>
         <% end %>
-      </div>
-
-      <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications">
-        <a href="javascript:void(0)" title="Notification"
-          class="dropdown-toggle pmd-ripple-effect btn-user"
-          data-toggle="dropdown" role="button" aria-expanded="true">
-          <div
-            <% if unread_notifications_count > 0 %>
-              data-badge="<%= unread_notifications_count %>"
-            <% end %>
-            class="material-icons pmd-sm pmd-badge pmd-badge-overlap">
-            notifications_none
-          </div>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth"
-          role="menu">
-          <div class="pmd-card-title">
-            <div class="media-body media-middle">
-              <%= link_to t("notifications.index.all_notifications"),
-                notifications_path, class: "pull-right" %>
-              <h3 class="pmd-card-title-text">
-                <%= t "layouts.header.notifications" %>
-              </h3>
-            </div>
-          </div>
-          <ul class="list-group pmd-list-avatar pmd-card-list">
-            <li class="list-group-item" style="display:none">
-              <p class="notification-blank">
-                <span class="dic dic-notifications-none"></span>
-                <span><%= t "notifications.index.dont_have_notification" %></span>
-              </p>
-            </li>
-            <% my_notifications.each do |notification| %>
-              <li class="list-group-item <%= "unread" unless notification.read? %>">
-                <a href="javascript:void(0)">
-                  <div class="media-body">
-                    <span class="list-group-item-heading">
-                      <%= notification.content %>
-                    </span>
-                    <span class="list-group-item-text">
-                      <%= time_ago_in_words notification.created_at %>
-                      <%= t "books.show.ago" %>
-                    </span>
-                  </div>
-                </a>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-      <div class="pmd-navbar-right-icon pull-right pmd-dropdown notifications info-notification">
-        <a href="javascript:void(0)" title="<%= t "layouts.header.announcements" %>"
-          class="dropdown-toggle pmd-ripple-effect btn-user"
-          data-toggle="dropdown" role="button" aria-expanded="true">
-          <div class="material-icons pmd-sm">
-            info_outline
-          </div>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth"
-          role="menu">
-          <div class="pmd-card-title">
-            <div class="media-body media-middle">
-              <%= link_to t("announcements.view_all"), announcements_path,
-                "data-turbolinks": false, class: "pull-right" %>
-              <h3 class="pmd-card-title-text">
-                <%= t "layouts.header.announcements" %>
-              </h3>
-            </div>
-          </div>
-          <ul class="list-group pmd-list-avatar pmd-card-list">
-            <% load_announcements.each do |announcement| %>
-              <li class="list-group-item unread"
-                id="announcement-<%= announcement.id %>">
-                <%= link_to announcement, "data-turbolinks": false,
-                  remote: true do %>
-                  <div class="media-body">
-                    <span class="list-group-item-heading">
-                      <%= announcement.title %>
-                    </span>
-                    <span class="list-group-item-text">
-                      <%= time_ago_in_words announcement.created_at %>
-                      <%= t "books.show.ago" %>
-                    </span>
-                  </div>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-      <div class="pmd-navbar-right-icon pull-right">
-        <a class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect search-toggle"
-          href="javascript:void(0);">
-          <i class="material-icons md-light pmd-sm pmd-svg-icon ic_search">
-            <svg viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-            <g>
-              <path d="M29.646,27.896l-4.405-4.437c1.03-1.374,1.656-3.124,1.656-4.999c0-4.655-3.781-8.436-8.437-8.436
-                c-4.654,0-8.436,3.78-8.436,8.436c0,4.654,3.781,8.436,8.436,8.436c1.875,0,3.625-0.625,4.999-1.656l4.405,4.406
-                c0.5,0.499,1.281,0.499,1.781,0C30.146,29.178,30.146,28.365,29.646,27.896z M18.461,24.396c-3.28,0-5.936-2.655-5.936-5.936
-                c0-3.281,2.655-5.936,5.936-5.936s5.937,2.655,5.937,5.936C24.397,21.741,21.741,24.396,18.461,24.396z"/>
-            </g>
-          </svg>
-          <svg viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-            <g>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24,22.222L22.222,24L16,17.777L9.777,24L8,22.222L14.223,16
-                L8,9.777L9.777,8L16,14.223L22.222,8L24,9.777L17.777,16L24,22.222z"/>
-            </g>
-          </svg>
-          </i>
-        </a>
-        <form class="search-form" method="get" id="searchform"
-          action="<%= search_index_path %>">
-          <div class="form-group">
-            <input class="form-control" type="text" size="put_a_size_here"
-              name="query" id="search" title="<%= t "layouts.header.search" %>"
-              placeholder="<%= t "layouts.header.what_are_you_looking_for" %>"
-              autocomplete="off">
-          </div>
-          <div class="autocomplete pmd-z-depth-1" id="autocomplete"></div>
-          <div id="searching" class="hidden">
-            <h3 class="text-center"><%= t "layouts.header.searching" %>...</h3>
-          </div>
-        </form>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to explorer_index_path, class: "pmd-ripple-effect",
-            "data-turbolinks": false do %>
-            <%= t "layouts.header.explore" %>
-            <span class="sr-only">(current)</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to categories_path, class: "pmd-ripple-effect",
-            "data-turbolinks": false do %>
-            <%= t "layouts.header.books" %>
-            <span class="sr-only">(current)</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to blog_root_path, class: "pmd-ripple-effect",
-            "data-turbolinks": false do %>
-            <%= t "layouts.header.blog" %>
-            <span class="sr-only">(current)</span>
-          <% end %>
-        </li>
-      </ul>
+      <% end %>
     </div>
   </div>
   <div class="pmd-sidebar-overlay"></div>
 </nav>
 <%= render "announcements/announcement_modal", announcement: nil %>
+<%= render "feedback/modal" %>
