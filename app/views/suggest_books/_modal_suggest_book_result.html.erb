@@ -18,7 +18,7 @@
           <h4><%= t "books.suggest_book.sender" %>
             <%= current_user.name %>
           </h4>
-          <h4><%= t "books.suggest_book.receiver" %>
+          <h4><%= t "books.suggest_book.receiver" %></h4>
           <% supports.load_users.each do |user| %>
             <%= user.name %>
             <%= t "books.suggest_book.semicolon" %>

@@ -4,11 +4,10 @@
   }
   <% if user_signed_in? %>
     .CodeMirror {
-      background-image: url("<%= current_user.avatar.thum40.url %>");
+      background: url("<%= current_user.avatar.thum40.url %>") no-repeat;
       background-position-x: 10px;
       background-position-y: 5px;
       background-size: 40px 40px;
-      background-repeat: no-repeat;
       padding-left: 60px;
     }
   <% end %>

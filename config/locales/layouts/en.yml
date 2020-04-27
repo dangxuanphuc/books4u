@@ -50,6 +50,7 @@ en:
       pages: "Number of pages:"
       publisher: "Published by:"
       public_date: "Published at:"
+      dimension: "Dimension:"
       weight: "Weight:"
       watch_online: "Watch Online"
     suggest_book:

@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-sm-6 col-sm-offset-1 book-info-container">
           <h2><%= link_to author.name, author,
-            "data-turbolinks": "false" %></h2>
+            "data-turbolinks": false %></h2>
           <% if author.description.present? %>
             <p title="<%= author.description %>">
               <%= author.description.truncate(
@@ -25,7 +25,7 @@
                 <div class="book-item-info">
                   <p class="book-title" title="<%= b.title %>">
                     <%= link_to b.title.truncate(Settings.user.home.truncate.item_book_title),
-                      b, "data-turbolinks": "false" %>
+                      b, "data-turbolinks": false %>
                   </p>
                   <div class="star-in-item">
                     <% (1..(load_rate b.rate).first).each do %>
@@ -42,28 +42,32 @@
                     <% b.authors.each_with_index do |a, index| %>
                       <% if index == b.authors.count - 1 %>
                         <%= link_to a.name, a,
-                          "data-turbolinks": "false" %>
+                          "data-turbolinks": false %>
                       <% else %>
                         <%= link_to a.name, a,
-                          "data-turbolinks": "false" %>,
+                          "data-turbolinks": false %>,
                       <% end %>
                     <% end %>
                   </p>
                   <p class="book-category">
                     <%= link_to b.categories.first.title,
                       b.categories.first,
-                      "data-turbolinks": "false" %>
+                      "data-turbolinks": false %>
                   </p>
                 </div>
                 <img src="<%= b.images.first.try(:url).try(:thumb).try(:url) %>"
                   class="img-responsive pmd-z-depth-1">
+                <% if b.new_book? %>
+                  <div class="new-tag"><%= t "books.show.new_tag" %></div>
+                <% end %>
               </div>
             <% end %>
             <div class="book-shelf"></div>
           </div>
         </div>
         <div class="col-sm-3 img-container col-sm-offset-1">
-          <img src="<%= author.avatar.try :url %>" class="img-responsive">
+          <img src="<%= author.avatar.try :url %>"
+            class="img-responsive author-img">
         </div>
       </div>
     <% end %>

@@ -83,7 +83,8 @@ $(document).ready(function() {
           items: 4
         },
         1440: {
-          items: 5
+          items: 4,
+          margin: 15
         }
       }
     });
