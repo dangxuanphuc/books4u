@@ -41,4 +41,5 @@ Rails.application.routes.draw do
   resources :announcements, only: %i(index show)
   resource :not_found, only: :show
   resources :requests, only: %i(index create update)
+  resources :notifications, only: :index
 end
