@@ -1,5 +1,11 @@
 class Blog::PostsController < ApplicationController
-  before_action :find_blog, only: %i(show edit update destroy)
+  before_action :find_blog, only: %i(edit update destroy) do
+    find_blog current_user.blogs
+  end
+
+  before_action :find_blog, only: :show do
+    find_blog Blog.published
+  end
 
   def index
     param! :status, String,
@@ -48,8 +54,8 @@ class Blog::PostsController < ApplicationController
       :description, :title, :status, book_ids: []
   end
 
-  def find_blog
-    @blog = current_user.blogs.find_by id: params[:id]
+  def find_blog blog
+    @blog = blog.find_by id: params[:id]
 
     return if @blog
     redirect_to blog_root_path

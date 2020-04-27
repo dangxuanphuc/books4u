@@ -6,7 +6,7 @@
       padding: 8px 12px 6px;
 
       &:hover {
-        background: $brown-primary;
+        background: $main-color-primary;
       }
     }
 
@@ -48,14 +48,14 @@
         padding: 5px 15px;
 
         &:hover {
-          background: $brown-primary;
+          background: $main-color-primary;
         }
       }
     }
 
     .active {
       a {
-        background: $brown-primary;
+        background: $main-color-primary;
       }
     }
   }
@@ -97,6 +97,7 @@
       letter-spacing: -.003em;
       line-height: 1.65;
       margin-bottom: .5em;
+      padding: 0 5px;
       text-align: left;
       word-wrap: break-word;
     }

@@ -32,7 +32,7 @@
         <h2><%= t "user.home.guide.books" %></h2>
         <p><%= t "user.home.guide.books_content" %></p>
         <p><%= link_to t("home.guide.start_explore"), explorer_index_path,
-          "data-turbolinks": "false" %></p>
+          "data-turbolinks": false %></p>
       </div>
       <div class="col-sm-3 home-guide-box">
         <h2 class="heading-bottom">
@@ -42,13 +42,13 @@
           <%= t "user.home.guide.blog_content" %>
         </p>
         <p><%= link_to t("home.guide.start_explore"), blog_root_path,
-          "data-turbolinks": "false" %></p>
+          "data-turbolinks": false %></p>
       </div>
       <div class="col-sm-3 home-guide-box">
         <h2><%= t "user.home.guide.borrow" %></h2>
         <p><%= t "user.home.guide.borrow_content" %></p>
-        <p><%= link_to t("home.guide.choose_book"), explorer_index_path,
-          "data-turbolinks": "false" %></p>
+        <p><%= link_to t("home.guide.choose_book"), categories_path,
+          "data-turbolinks": false %></p>
       </div>
       <div class="col-sm-3 home-guide-box">
         <h2 class="heading-bottom">
@@ -58,7 +58,7 @@
           <%= t "user.home.guide.feedback_content" %>
         </p>
         <p><%= link_to t("home.guide.feedback_link"), "",
-          "data-turbolinks": "false" %></p>
+          "data-turbolinks": false %></p>
       </div>
     </div>
   </div>

@@ -78,8 +78,8 @@
         z-index: 9999;
 
         a {
-          background: $concrete;
-          color: $fuscous-gray-approx;
+          background: $white;
+          color: $black;
           float: left;
           width: 34px;
           height: 34px;
@@ -89,6 +89,7 @@
           text-align: center;
 
           &:hover {
+            background: $main-color-light;
             color: $white;
           }
         }

@@ -3,7 +3,7 @@
     <p class="book-title" title="<%= b.title %>">
       <%= link_to b.title.truncate(
         Settings.user.home.truncate.item_book_title), book_path(b),
-        "data-turbolinks": "false" %></p>
+        "data-turbolinks": false %></p>
     <div class="star-in-item">
       <% (1..(load_rate b.rate).first).each do %>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -14,7 +14,6 @@
       <% (1..(load_rate b.rate).last).each do %>
         <i class="fa fa-star-o" aria-hidden="true"></i>
       <% end  %>
-      <%= b.rate_count %>
     </div>
     <p class="book-author">
       <% b.authors.each_with_index do |a, index| %>
@@ -31,4 +30,9 @@
   </div>
   <img src="<%= b.images.first.url.thumb %>"
     class="img-responsive">
+  <% if b.new_book? %>
+    <div class="new-tag">
+      <%= t "books.show.new_tag" %>
+    </div>
+  <% end %>
 </div>

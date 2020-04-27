@@ -606,7 +606,7 @@ body {
 }
 
 .btn-primary {
-  background: $brown-lighter;
+  background: $main-color-lighter;
 }
 
 .login-card, .signup-card,
@@ -620,4 +620,8 @@ body {
 
 .style-panel-top {
   margin-top: 20px;
+}
+
+.pmd-dropdown-menu-container {
+  min-width: 110px;
 }
