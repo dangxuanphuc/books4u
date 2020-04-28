@@ -1169,7 +1169,7 @@ Book.create!([
     faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
     cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
     urna mattis in. Pellentesque ut lorem arcu."},
-  {title: "Data Visualization Toolkit: Using JavaScript, Rails, and Postgres to Present Data and Geospatial Information",
+  {title: "Data Visualization Toolkit",
     isbn: "0134464435", publisher_id: 1, series_id: 4,
     language_id: 2, pages: 252, rate: 4.5, rate_count: 8,
     dimension: "23.7 x 18.2 x 2.4 cm", public_date: "2016/08/04",

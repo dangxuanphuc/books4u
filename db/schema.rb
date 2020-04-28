@@ -146,7 +146,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   end
 
   create_table "feedbacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "state"
+    t.integer "state", default: 0
     t.text "content"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -180,9 +180,11 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "content"
-    t.integer "type"
     t.boolean "read", default: false
     t.string "link_to"
+    t.string "raw"
+    t.string "target"
+    t.integer "target_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
