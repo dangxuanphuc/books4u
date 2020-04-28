@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :books, only: %i(index show) do
-    resources :comments, only: :create do
+    resources :comments, only: %i(create destroy) do
       resources :votes, only: %i(create destroy)
     end
     resource :suggest_books, only: :create
@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   resources :read_online, only: :show
   resources :authors, only: :show
   resources :announcements, only: %i(index show)
-  resource :not_found, only: :show
+  resources :not_found, only: :index
   resources :requests, only: %i(index create update)
   resources :notifications, only: %i(index update)
   patch "/make_all_as_read" => "make_all_as_read#update"

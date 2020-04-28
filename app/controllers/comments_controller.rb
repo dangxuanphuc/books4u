@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_book, only: %i(create)
+  before_action :load_book, only: %i(create destroy)
+  before_action :find_comment, only: :destroy
 
   def create
     comment = @book.comments.new comment_params.merge user_id: current_user.id
@@ -9,6 +10,11 @@ class CommentsController < ApplicationController
     else
       flash[:danger] = "Something went wrong"
     end
+  end
+
+  def destroy
+    @comment.destroy
+    render json: {}, status: :ok
   end
 
   private
@@ -21,7 +27,10 @@ class CommentsController < ApplicationController
     @book = Book.find_by id: params[:book_id]
 
     return @book
-    flash[:danger] = "Book not found"
-    redirect_back
+    redirect_to not_found_index_path
+  end
+
+  def find_comment
+    @comment = @book.comments.find_by id: params[:id]
   end
 end
