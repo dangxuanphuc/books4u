@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   end
 
   resources :books, only: %i(index show) do
-    resource :comments, only: :create
+    resources :comments, only: :create do
+      resources :votes, only: %i(create destroy)
+    end
     resource :suggest_books, only: :create
   end
   resources :search, only: :index

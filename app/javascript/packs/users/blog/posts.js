@@ -3,7 +3,7 @@ import 'select2/dist/js/select2.min';
 import 'propellerkit/components/select2/js/pmd-select2';
 
 $(document).ready(function() {
-  var element = $('textarea');
+  var element = $('textarea#editor');
 
   if(element.length > 0){
     var editorOptions = {
