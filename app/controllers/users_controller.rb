@@ -2,7 +2,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :find_user
 
-  def show; end
+  def show
+    @type = params[:type]
+    if @type == "blog"
+      @posts = current_user.blogs.published
+        .page(params[:page]).per Settings.blog.dashboard.limit
+    end
+  end
 
   private
 
