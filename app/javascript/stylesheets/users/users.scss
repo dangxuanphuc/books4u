@@ -1,0 +1,35 @@
+.sidebar {
+  .menu-portfolio-item {
+    a {
+      color: $white;
+
+      &:hover {
+        border: 0;
+        color: $black;
+      }
+    }
+  }
+}
+
+.blog-book-title {
+  background: $main-color-light;
+  color: $white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px $shadow-light, 0 3px 6px $shadow-normal;
+  display: -webkit-inline-box;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  transition: .4s;
+
+  .blog-book-title-text {
+    color: $white;
+    padding: 2px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  &:hover {
+    background: $main-color-light;
+  }
+}
