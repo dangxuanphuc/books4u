@@ -4,20 +4,30 @@ import * as SimpleMDE from 'simplemde';
 import 'select2/dist/js/select2.min';
 
 $(document).on('click', '.rate', function() {
-  var point = $(this).index();
-  $.ajax({
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-CSRF-Token',
-        $('meta[name="csrf-token"]').attr('content'));
-    },
-    type: 'POST',
-    url: '/book/',
-    data: {
-      point: point
-    },
-    success: function() {
-    }
-  });
+  var score = $(this).index() + 1;
+  var book = $('.current-book-id').attr('id');
+  var is_rate = $('#is_rate').val();
+
+  if(is_rate) {
+    $.ajax({
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token',
+          $('meta[name="csrf-token"]').attr('content'));
+      },
+      type: 'POST',
+      url: '/books/' + book + '/rate',
+      data: {
+        rate: {
+          score: score
+        }
+      },
+      success: function() {
+        $('#rate').load(document.URL + ' #rate');
+      }
+    });
+  } else {
+    alert('No rate');
+  }
 });
 
 $(document).on('click', '.fa-thumbs-o-up', function() {
