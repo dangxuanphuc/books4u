@@ -39,6 +39,23 @@ function search(query) {
   }
 }
 
+$('.notify.unread').hover(function() {
+  var id = $(this).attr('data');
+  var element = this;
+  $.ajax({
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader('X-CSRF-Token',
+        $('meta[name="csrf-token"]').attr('content'));
+    },
+    type: 'PATCH',
+    url: '/notifications/' + id,
+    success: function(data) {
+      $(element).removeClass('unread');
+      $('.notifi-count').attr('data-badge', data.unread);
+    }
+  });
+});
+
 $(document).ready(function() {
   $('.announcement-icon').on('click', function() {
     $('.announcements').toggleClass('hide');
@@ -53,6 +70,8 @@ $(document).ready(function() {
     $('.feedback-done').hide();
     $('#feedback-cancel').show();
     $('.feedback-state').hide();
+    $('#feedback-content').val('').show();
+    $('.feedback-content').hide().text('');
   });
 
   $('#feedback-create').on('click', function() {
@@ -80,9 +99,14 @@ $(document).ready(function() {
       },
       success: function() {
         state.show().css('color', '#259b24').text(message_success);
+        $('#feedback-content').hide();
+        $('.feedback-content').show().text(content);
         $('#feedback-create').hide();
         $('#feedback-cancel').hide();
         $('.feedback-done').show();
+        setTimeout(function() {
+          $('#complete-dialog').modal('hide');
+        }, 3000);
       }
     });
   });

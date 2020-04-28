@@ -8,10 +8,13 @@
       background-color: $comment-gray;
       align-items: center;
       border-radius: 3px;
+      color: $white;
       display: flex;
+      font-weight: bold;
       height: 100px;
       width: 100px;
       justify-content: center;
+      text-shadow: 1px 1px 1px $black;
     }
   }
 
