@@ -1,100 +1,109 @@
 en:
   admin:
-    link: " > "
-    book_manager: Book manager
+    book_manager: "Book management"
     books:
       index:
-        page_title: Book manager
-        link1: Book manager
-        link2: Book information
+        page_title: "Book management"
+        link1: "Book management"
+        link2: "Book information"
       edit:
-        page_title: Edit book
-        link1: Book manager
-        link2: Edit book
+        page_title: "Edit book"
+        link1: "Book management"
+        link2: "Edit book"
       new:
-        page_title: Create book
-        link1: Book manager
-        link2: Create book
+        page_title: "Create book"
+        link1: "Book management"
+        link2: "Create book"
       book:
-        add_book: Add book
-        search: Search
-        input_keyword: Search for book title
-        quick: Quick edit
-        id: Id
-        cover: Cover
-        title: Title
-        author: Author
-        categories: Categories
-        publisher: Publisher
-        pages: Pages
-        weight: Weight
-        dimension: Dimension
-        isbn: ISBN
-        series: Series
-        language: Language
-        public_date: Public date
-        option: Option
+        add_book: "Add book"
+        search: "Search"
+        input_keyword: "Search for book title"
+        quick: "Quick edit"
+        id: "ID"
+        cover: "Cover"
+        title: "Title"
+        author: "Author"
+        categories: "Categories"
+        publisher: "Publisher"
+        pages: "Pages"
+        weight: "Weight"
+        dimension: "Dimension"
+        isbn: "ISBN"
+        series: "Series"
+        language: "Language"
+        public_date: "Public date"
+        option: "Option"
+        read_more: "View details"
       form:
-        name: Name
-        description: Description
-        books: "Book by "
-        image: Image link
-        create: Create
-        save: Save
-        upload_image: Upload image
-        new_publisher: Input new publisher
-        new_series: Input new series
-        choose_language: Choose a language
-        choose_series: Choose a series
-        choose_publisher: Choose a publisher
-        choose_categories: Choose some categories
-        choose_authors: Choose some authors
-        add_new: " Add new"
-        choose_state: Choose a state
+        name: "Name"
+        description: "Description"
+        books: "Book by author "
+        image: "Image link"
+        create: "Create"
+        save: "Save"
+        upload_image: "Upload image"
+        new_publisher: "Input new publisher"
+        new_series: "Input new series"
+        choose_language: "Choose a language"
+        choose_series: "Choose a series"
+        choose_publisher: "Choose a publisher"
+        choose_categories: "Choose some categories"
+        choose_authors: "Choose some authors"
+        add_new: " Create new"
+        choose_state: "Choose a state"
+        new_author: " Add new author"
+        choose_tags: "Choose some tags"
+        image_field: "Change image"
+        choose_book: "Choose books"
       show:
-        page_title: Book information
-        link1: Book manage
-        link2: Book information
-        quick: Quick edit
-        image: Cover
-        id: Id
-        title: Title
-        categories: Categories
-        author: Authors
-        publisher: Publisher
-        pages: Pages
-        weight: Weight
-        dimension: Dimension
-        isbn: ISBN
-        series: Series
-        language: Language
-        public_date: Public date
-        option: Option
-        state: State
-        location: Location
-        description: Description
-        edit_book: Edit
-        delete_book: Delete
-        create_items: Create items
+        page_title: "Book information"
+        link1: "Book management"
+        link2: "Book information"
+        quick: "Quick edit"
+        image: "Cover"
+        id: "ID"
+        title: "Title"
+        categories: "Categories"
+        author: "Authors"
+        publisher: "Publisher"
+        pages: "Pages"
+        weight: "Weight"
+        dimension: "Dimension"
+        isbn: "ISBN"
+        series: "Series"
+        language: "Language"
+        public_date: "Public date"
+        option: "Option"
+        state: "State"
+        location: "Location"
+        description: "Description"
+        edit_book: "Edit"
+        delete_book: "Delete"
+        create_items: "Create items"
+        search: "Search"
+        input_keyword: "Search by"
+        list_items: "LIST BOOK ITEMS"
     book_items:
       edit:
-        page_title: Edit book item
+        page_title: "Edit book item"
       new:
-        page_title: Create book item
+        page_title: "Create book item"
   flash:
     book:
-      find_fail: Book not found!
-      create_success: Created book successfullly!
-      update_success: Updated book successfully!
-      destroy_success: Deleted book successfully!
-      destroy_fail: Failed. Something's wrong.
+      find_fail: "Book not found!"
+      create_success: "Created book successfullly!"
+      update_success: "Updated book successfully!"
+      destroy_success: "Deleted book successfully!"
+      destroy_fail: "Failed. Something's wrong."
     book_items:
-      find_fail: Book item not found!
-      create_success: Created book item successfullly!
-      update_success: Updated book item successfully!
-      destroy_success: Deleted book item successfully!
-      delete_success: Deleted book item successfully!
-      destroy_fail: Failed. Something's wrong.
+      find_fail: "Book item not found!"
+      create_success: "Created book item successfullly!"
+      update_success: "Updated book item successfully!"
+      destroy_success: "Deleted book item successfully!"
+      delete_success: "Deleted book item successfully!"
+      destroy_fail: "Failed. Something's wrong."
   button:
-    close: close
-    save: Save
+    close: "close"
+    save: "Save"
+    clear_form: "Clear"
+    cancel: "Cancel"

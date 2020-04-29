@@ -1,9 +1,7 @@
 <div id="author-show" data-turbolinks="false">
   <ol class="breadcrumb text-left">
-    <li class="active">
-      <%= link_to t(".link1"), admin_authors_path %><%= t "admin.link" %>
-      <%= link_to t(".link2"), admin_author_path(@author) %>
-    </li>
+    <li><%= link_to t(".link"), admin_authors_path %></li>
+    <li class="active"><%= @author.name %></li>
   </ol>
   <h1 class="section-title" id="services">
     <span><%= t ".page_title" %></span>
@@ -15,19 +13,8 @@
           <div data-provides="fileinput" class="fileinput fileinput-new col-lg-3">
             <div data-trigger="fileinput"
               class="fileinput-preview thumbnail img-circle img-responsive">
-              <% if @author.images.first.present? %>
-                <img src="<%= @author.images.first.try :url %>" class="book-image">
-              <% else %>
-                <img src="<%= asset_path "avatar_default.jpg" %>" class="book-image">
-              <% end %>
-              <div class="image-others">
-                <div class="owl-carousel owl-theme">
-                  <% @author.images.each do |i| %>
-                    <img src="<%= i.try :url %>" class="book-image-others"
-                      id="image-other<%= i.id %>">
-                  <% end %>
-                </div>
-              </div>
+              <img src="<%= @author.try :avatar %>" class="book-image"
+                onerror="this.src='https://res.cloudinary.com/phucdx/image/upload/v1586698771/Books4U/avatar.png';">
             </div>
           </div>
           <div class="col-lg-9 custom-col-9">
@@ -49,8 +36,13 @@
                       <%= t "admin.authors.author.name" %>
                     </label>
                     <div class="col-sm-9">
-                      <p class="form-control-static">
-                        <strong><%= @author.name %></strong>
+                      <p class="form-control-static form-in-place">
+                        <strong>
+                          <%= best_in_place [:admin, @author], :name,
+                            as: :input, ok_button: t("button.save"),
+                            cancel_button: t("button.cancel"),
+                            html_attrs: {class: "form-control"} %>
+                        </strong>
                       </p>
                     </div>
                   </div>
@@ -59,18 +51,20 @@
                       <%= t "admin.authors.author.description" %>
                     </label>
                     <div class="col-sm-9">
-                      <p class="form-control-static">
-                        <strong><%= @author.description %></strong>
+                      <p class="form-control-static form-in-place">
+                        <strong>
+                          <%= best_in_place [:admin, @author], :description,
+                            as: :textarea, ok_button: t("button.save"),
+                            cancel_button: t("button.cancel"),
+                            html_attrs: {class: "form-control"} %>
+                        </strong>
                       </p>
                     </div>
                   </div>
                   <div class="form-group btns margin-bot-30">
-                    <div class="col-sm-10 col-sm-offset-2">
-                      <%= link_to t(".quick"), edit_admin_author_path(@author),
-                        remote: true, class:"quick-edit btn btn-success pmd-ripple-effect" %>
-                      <div id="myModal" class="modal fade" role="dialog" aria-hidden="true"></div>
+                    <div class="col-sm-9 col-sm-offset-3">
                       <%= link_to t("button.edit"), edit_admin_author_path(@author),
-                        class: "btn btn-primary pmd-ripple-effect"%>
+                        class: "btn btn-success pmd-ripple-effect"%>
                       <%= link_to t("button.delete"), admin_author_path(@author),
                         class: "btn btn-danger pmd-ripple-effect",
                         method: :delete, data: {confirm: t("button.delete_warning")} %>
@@ -83,8 +77,8 @@
         </div>
       </div>
       <div class="author-show col-xs-12">
-        <h2><%= t "admin.authors.form.books" %><%= @author.name %></h2>
         <div class="col-xs-12">
+          <h2><%= t "admin.authors.form.books" %><%= @author.name %></h2>
           <table class="table table-bordered">
             <tr>
               <th><%= t ".id" %></th>
@@ -104,10 +98,8 @@
                 </td>
                 <td>
                   <% book.categories.each do |cate| %>
-                    <% unless book.categories.last %>
-                      <%= link_to cate.title, admin_category_path(cate) %>
-                    <% end %>
-                    <%= link_to cate.title, admin_category_path(cate) %>,
+                    <%= link_to cate.title, admin_category_path(cate) %>
+                    <% unless cate == book.categories.last %>&#44;<% end %>
                   <% end %>
                 </td>
                 <td>

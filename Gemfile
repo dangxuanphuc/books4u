@@ -8,6 +8,7 @@ gem "best_in_place"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-kaminari-views"
 gem "carrierwave", "~> 2.0"
+gem "cocoon"
 gem "config"
 gem "devise"
 gem "figaro"

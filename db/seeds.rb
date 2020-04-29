@@ -713,7 +713,7 @@ Book.create!([
     faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
     cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
     urna mattis in. Pellentesque ut lorem arcu."},
-  {title: "Agile Principles, Patterns, and Practices in C#: AGILE PRIN PATTS PRACTS C#_1",
+  {title: "Agile Principles, Patterns, and Practices in C#",
     isbn: "0131857258", publisher_id: 3, series_id: 1,
     language_id: 2, pages: 771,
     dimension: "21 x 14.8 x 2.6 cm", public_date: "2006/06/20",
@@ -1184,6 +1184,8 @@ puts "Created #{Book.count} books!"
 Image.create!([
   {target_id: 1, target_type: "Book",
     url: File.open(Rails.root + "public/uploads/image/1.jpg")},
+  {target_id: 1, target_type: "Book",
+    url: File.open(Rails.root + "public/uploads/image/1.1.jpg")},
   {target_id: 2, target_type: "Book",
     url: File.open(Rails.root + "public/uploads/image/2.jpg")},
   {target_id: 3, target_type: "Book",
@@ -1202,6 +1204,8 @@ Image.create!([
     url: File.open(Rails.root + "public/uploads/image/9.jpg")},
   {target_id: 10, target_type: "Book",
     url: File.open(Rails.root + "public/uploads/image/10.jpg")},
+  {target_id: 10, target_type: "Book",
+    url: File.open(Rails.root + "public/uploads/image/10.1.jpeg")},
   {target_id: 11, target_type: "Book",
     url: File.open(Rails.root + "public/uploads/image/11.jpg")},
   {target_id: 12, target_type: "Book",
@@ -1620,7 +1624,7 @@ end
 
 100.times do |n|
   BookItem.create! book_id: (i%13 + 1), location: "Sequence number 2 on the left.",
-    state: "Ready", description: "New books, not damaged."
+    state: :ready, description: "New books, not damaged."
 end
 
 Blog.create!([
@@ -1700,3 +1704,47 @@ Announcement.create!([
     feeds on Books4U is https://books4u/rss, which you can see at RESOURCES in
     the footer at the bottom of the page."}
 ])
+
+Ebook.create!([
+  {format: "pdf", book_id: 1,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/1.pdf"},
+  {format: "pdf", book_id: 2,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/2.pdf"},
+  {format: "pdf", book_id: 3,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/3.pdf"},
+  {format: "pdf", book_id: 4,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/4.pdf"},
+  {format: "pdf", book_id: 5,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/5.pdf"},
+  {format: "pdf", book_id: 8,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/8.pdf"},
+  {format: "pdf", book_id: 9,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/9.pdf"},
+  {format: "pdf", book_id: 12,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/12.pdf"},
+  {format: "pdf", book_id: 15,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/15.pdf"},
+  {format: "pdf", book_id: 17,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/17.pdf"},
+  {format: "pdf", book_id: 18,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/18.pdf"},
+  {format: "pdf", book_id: 19,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/19.pdf"},
+  {format: "pdf", book_id: 20,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/20.pdf"},
+  {format: "pdf", book_id: 34,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/34.pdf"},
+  {format: "pdf", book_id: 45,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/45.pdf"},
+  {format: "pdf", book_id: 50,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/50.pdf"},
+  {format: "pdf", book_id: 55,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/55.pdf"},
+  {format: "pdf", book_id: 56,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/56.pdf"},
+  {format: "pdf", book_id: 57,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/57.pdf"},
+  {format: "pdf", book_id: 58,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/58.pdf"}
+])
+puts "Created #{Ebook.count} ebooks!"

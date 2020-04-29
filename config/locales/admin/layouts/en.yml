@@ -19,19 +19,18 @@ en:
     delete: "Delete"
     edit: "Edit"
   admin:
-    link: " > "
     authors:
       index:
-        page_title: "Author manager"
-        link1: "Author manager"
+        page_title: "Author management"
+        link1: "Author management"
       edit:
-        page_title: Edit author
-        link1: Author manager
-        link2: Edit author
+        page_title: "Edit author"
+        link1: "Author management"
+        link2: "Edit author"
       new:
-        page_title: Create author
-        link1: Author manager
-        link2: Create author
+        page_title: "Create author"
+        link1: "Author management"
+        link2: "Create author"
       author:
         add_author: "Add author"
         search: "Search"
@@ -47,8 +46,7 @@ en:
         image: "Image link"
       show:
         page_title: "Author information"
-        link1: "Author manager"
-        link2: "Author information"
+        link: "Author management"
         quick: "Quick edit"
         id: "ID"
         title: "Title"
