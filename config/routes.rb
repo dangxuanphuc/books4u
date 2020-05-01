@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   resources :search, only: :index
   resources :users, only: :show
   resources :categories, only: %i(index show)
-  resources :borrows, only: :create
+  resources :borrows, only: %i(create update)
   resources :explorer, only: :index
   resources :tags, only: %i(index show)
 
