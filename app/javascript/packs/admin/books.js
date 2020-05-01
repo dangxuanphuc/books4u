@@ -4,7 +4,7 @@ import 'chosen-jquery/lib/chosen.jquery'
 import 'javascripts/cocoon';
 import 'javascripts/best_in_place';
 
-$(document).on('click', '#btn-create-item', function() {
+$(document).on('click', '.btn-create-item', function() {
   var book_id = $(this).attr('value');
   var book_item_location = $('#book_item_location_field-').val();
   var book_item_state = $('select[name="book_item[state]"]').val();
