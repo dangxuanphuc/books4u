@@ -579,8 +579,15 @@
     }
 
     span {
+      background: transparent !important;
+      color: $black !important;
       margin-bottom: 10px;
-      padding-left: 10px;
+      margin-left: 10px !important;
+    }
+
+    p {
+      color: $black !important;
+      margin-top: 5px !important;
     }
   }
 
@@ -640,4 +647,9 @@
       font-size: 4vh;
     }
   }
+}
+
+.unsigned {
+  background: $white !important;
+  color: $black !important;
 }

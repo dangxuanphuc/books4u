@@ -44,7 +44,8 @@
                     <img src="<%= book.images.first.try(:url).try(:thumb).try(:url) %>"
                       class="book-image-others">
                   </td>
-                  <td><%= link_to book.title, admin_book_path(book) %></td>
+                  <td><%= link_to book.title, admin_book_path(book),
+                    "data-turbolinks": false %></td>
                   <td><%= book.isbn %></td>
                   <td>
                     <%= book.publisher.try :name %>
