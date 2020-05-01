@@ -4,7 +4,11 @@ class RegistrationsController < Devise::RegistrationsController
     redirect_to root_path
   end
 
-  def edit; end
+  def edit
+    @borrow = Borrow.where(user_id: current_user.id).order(id: :desc)
+    @support = Supports::Requests.new request: current_user.requests,
+      param: params, new_request: Request.new
+  end
 
   protected
 

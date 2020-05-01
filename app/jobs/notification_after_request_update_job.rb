@@ -18,12 +18,12 @@ class NotificationAfterRequestUpdateJob < ApplicationJob
 
     if obj.approved?
       notify.raw = notify.content = I18n.t "notifications.job.request.approved"
-    elsif obj.reject?
+    elsif obj.rejected?
       notify.raw = notify.content = I18n.t "notifications.job.request.reject"
     else
       notify.raw = notify.content = I18n.t "notifications.job.request.cancel"
     end
-    
+
     notify.save
   end
 end
