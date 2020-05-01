@@ -174,7 +174,7 @@ $(document).ready(function() {
 
   editors['comment-0'] = new SimpleMDE(editorOptions);
 
-  $('li.load-html').click(function(){
+  $('li.load-html').click(function() {
     var id = $(this).attr('data');
     $('#preview-' + id).html(editors['comment-' + id]
       .options.previewRender(editors['comment-' + id].value()));

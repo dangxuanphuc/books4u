@@ -1,9 +1,7 @@
 <ol class="breadcrumb text-left">
-  <li class="active">
-    <%= link_to t(".link1"), admin_books_path %><%= t "admin.link" %>
-    <%= link_to @book.title, admin_book_path(@book) %><%= t "admin.link" %>
-    <%= link_to t(".link2"), edit_admin_book_path(@book) %>
-  </li>
+  <li><%= link_to t(".link1"), admin_books_path %></li>
+  <li><%= link_to @book.title, admin_book_path(@book) %></li>
+  <li class="active"><%= t ".link2" %></li>
 </ol>
 <h1 class="section-title text-center" id="services">
   <span><%= t ".page_title" %></span>
