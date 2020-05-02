@@ -1,7 +1,7 @@
 class CreateFeedbacks < ActiveRecord::Migration[6.0]
   def change
     create_table :feedbacks do |t|
-      t.integer :state, default: 0
+      t.integer :state
       t.text :content
       t.references :user, null: false, foreign_key: true
 

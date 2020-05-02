@@ -30,7 +30,6 @@ Rails.application.routes.draw do
     resource :rate, only: :create
   end
   resources :search, only: :index
-  resources :users, only: :show
   resources :categories, only: %i(index show)
   resources :borrows, only: %i(create update)
   resources :explorer, only: :index

@@ -3,7 +3,7 @@ $('.search-toggle').click(function() {
     $(this).removeClass('active');
     $('.search-form').removeClass('open');
 
-    setTimeout (function(){
+    setTimeout (function() {
       $('.navbar-nav').removeClass('hide');
     }, 300);
   }
