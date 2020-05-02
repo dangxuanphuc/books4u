@@ -1,9 +1,9 @@
 class Blog::PostsController < ApplicationController
-  before_action :find_blog, only: %i(edit update destroy) do
+  before_action only: %i(edit update destroy) do
     find_blog current_user.blogs
   end
 
-  before_action :find_blog, only: :show do
+  before_action only: :show do
     find_blog Blog.published
   end
 
@@ -33,7 +33,11 @@ class Blog::PostsController < ApplicationController
 
   def update
     if @blog.update_attributes blog_params
-      redirect_to blog_post_path @blog
+      if @blog.published?
+        redirect_to blog_post_path @blog
+      else
+        redirect_to blog_posts_path(status: :draft)
+      end
     else
       redirect_to edit_blog_post_path @blog
     end
@@ -58,6 +62,6 @@ class Blog::PostsController < ApplicationController
     @blog = blog.find_by id: params[:id]
 
     return if @blog
-    redirect_to blog_root_path
+    redirect_to not_found_index_path
   end
 end
