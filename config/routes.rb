@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "/pages/:page" => "static_pages#show"
 
     resources :users, except: %i(show edit)
-    resources :requests
+    resources :borrows
     resources :authors do
       resources :books
     end

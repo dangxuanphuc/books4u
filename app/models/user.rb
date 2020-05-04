@@ -5,11 +5,12 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable,
     :confirmable, :lockable, :trackable
 
-  has_many :blogs
-  has_many :requests
-  has_many :notifications
-  has_many :book_marks
-  has_many :books, through: :book_marks
+  has_many :blogs, dependent: :destroy
+  has_many :requests, dependent: :destroy
+  has_many :notifications, dependent: :destroy
+  has_many :book_marks, dependent: :destroy
+  has_many :books, through: :book_marks, dependent: :destroy
+  has_many :borrows, dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
 

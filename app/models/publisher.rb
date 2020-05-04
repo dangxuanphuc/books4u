@@ -1,4 +1,4 @@
 class Publisher < ApplicationRecord
-  has_many :images, as: :target
-  has_many :books
+  has_many :images, as: :target, dependent: :destroy
+  has_many :books, dependent: :destroy
 end

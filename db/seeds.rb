@@ -582,38 +582,38 @@ Category.create!([
   {title: "Mobile", description: "The Mobile Book features the most important
     things that you need to know as a designer, developer or mobile strategist
     for your websites."},
-  {title: "Android", description: "See what's new with Android
+  {title: "Android", parent_id: 2, description: "See what's new with Android
     - from phones to watches and more. Visit the official site to
     explore and learn."},
-  {title: "iOS", parent_id: 3 , description: "If there is one piece of
+  {title: "iOS", parent_id: 2, description: "If there is one piece of
     technology that is ubiquitous in the blind community today, it would
     have to be the iPhone. Ever since the release of the iPhone 3GS, people
     with little or no vision have been moving their fingers across a smooth
     piece of glass and doing things they never thought possible. Whether
     it's setting calendar appointments, looking at restaurant menus, or reading
     movie reviews, the iPhone has been a big part of it all."},
-  {title: "Window Phone", parent_id: 3 , description: "Informationvine.com connects
+  {title: "Window Phone", parent_id: 2, description: "Informationvine.com connects
     you to the best results from across the web. Search & Find Now · Find Relevant
     Information · Learn More · Quick & Easy Answers"},
   {title: "Web", description: "We develop cross-platform Web app for reading
     ebooks, and also publish high- quality ebooks, especially textbooks."},
-  {title: "PHP", parent_id: 7 , description: "PHP Book includes 250+ functions,
+  {title: "PHP", parent_id: 6, description: "PHP Book includes 250+ functions,
     2 indexes, MySQL, and Regular Expressions. Also available: free PDF of the
     PHP reference book."},
-  {title: "Python", parent_id: 7 , description: "Learn python and how to use it
-    to analyze, visualize and present data! On-Demand Courses · 30-Day
-    Guarantee · Lifetime Accessaffordable prices & classes on virtually
-    every topic."},
   {title: "AI", description: "Are you searching for some best books to get
     acquainted with the basics of AI? Here is a list of 20 free books on
     Artificial Intelligence."},
+  {title: "Python", parent_id: 7, description: "Learn python and how to use it
+    to analyze, visualize and present data! On-Demand Courses · 30-Day
+    Guarantee · Lifetime Accessaffordable prices & classes on virtually
+    every topic."},
   {title: "Design", description: "We asked some of the world's top design
     schools to share their favorite books. Here's what they ... A history
     book and design philosophy book in one."},
-  {title: "UI", parent_id: 11 , description: "While not a short read, this book
+  {title: "UI", parent_id: 10, description: "While not a short read, this book
     is a solid resource for UX and interaction designers at all experience levels
     and I definitely think it's worth."},
-  {title: "UX", parent_id: 11 , description: "Free UX Consultation · SF Bay
+  {title: "UX", parent_id: 10, description: "Free UX Consultation · SF Bay
     Area Based · 13 Yrs and 400+ Projects · Award Winning UX Agency Types: UX
     Strategy, UI Design, Frontend Developement"},
   {title: "Agile", description: "Discover the best Agile Project Management
@@ -625,7 +625,7 @@ Category.create!([
   {title: "Other", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi."},
-  {title: "Ruby on Rails", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
+  {title: "Ruby on Rails", parent_id: 6, description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi."},
 ])
@@ -1421,8 +1421,8 @@ BookCategory.create!([
   {category_id: 15, book_id: 23},
   {category_id: 13, book_id: 24},
   {category_id: 15, book_id: 25},
-  {category_id: 8, book_id: 26},
   {category_id: 9, book_id: 26},
+  {category_id: 8, book_id: 26},
   {category_id: 15, book_id: 26},
   {category_id: 15, book_id: 27},
   {category_id: 15, book_id: 28},
@@ -1437,32 +1437,32 @@ BookCategory.create!([
   {category_id: 12, book_id: 35},
   {category_id: 15, book_id: 35},
   {category_id: 15, book_id: 36},
-  {category_id: 8, book_id: 37},
+  {category_id: 9, book_id: 37},
   {category_id: 15, book_id: 37},
   {category_id: 15, book_id: 37},
   {category_id: 15, book_id: 38},
   {category_id: 15, book_id: 39},
-  {category_id: 8, book_id: 40},
   {category_id: 9, book_id: 40},
+  {category_id: 8, book_id: 40},
   {category_id: 15, book_id: 40},
-  {category_id: 9, book_id: 41},
+  {category_id: 8, book_id: 41},
   {category_id: 15, book_id: 41},
-  {category_id: 8, book_id: 42},
   {category_id: 9, book_id: 42},
-  {category_id: 9, book_id: 43},
-  {category_id: 8, book_id: 44},
-  {category_id: 8, book_id: 45},
+  {category_id: 8, book_id: 42},
+  {category_id: 8, book_id: 43},
+  {category_id: 9, book_id: 44},
   {category_id: 9, book_id: 45},
-  {category_id: 8, book_id: 46},
+  {category_id: 8, book_id: 45},
   {category_id: 9, book_id: 46},
-  {category_id: 9, book_id: 47},
-  {category_id: 9, book_id: 48},
-  {category_id: 9, book_id: 49},
-  {category_id: 9, book_id: 50},
-  {category_id: 9, book_id: 51},
-  {category_id: 9, book_id: 52},
-  {category_id: 9, book_id: 53},
-  {category_id: 9, book_id: 54},
+  {category_id: 8, book_id: 46},
+  {category_id: 8, book_id: 47},
+  {category_id: 8, book_id: 48},
+  {category_id: 8, book_id: 49},
+  {category_id: 8, book_id: 50},
+  {category_id: 8, book_id: 51},
+  {category_id: 8, book_id: 52},
+  {category_id: 8, book_id: 53},
+  {category_id: 8, book_id: 54},
   {category_id: 16, book_id: 55},
   {category_id: 16, book_id: 56},
   {category_id: 16, book_id: 57},
@@ -1604,7 +1604,7 @@ BookTag.create!([
 for i in 1..100
   a = i%4
   if a == 0
-    Borrow.create! book_id: i%10 + 1, user_id: i%19 + 1, status: "not_approved",
+    Borrow.create! book_id: i%10 + 1, user_id: i%19 + 1, status: "not_approved_yet",
       time_start: Time.now - 2.days,
       time_end: Time.now + i.days
   elsif a == 1

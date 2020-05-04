@@ -4,10 +4,9 @@ class BookItem < ApplicationRecord
   before_save :default_values
 
   belongs_to :book
+  has_many :borrows, dependent: :destroy
 
-  scope :available_books, ->(id) {
-    where(book_id: id, state: :ready).count
-  }
+  scope :available_books, ->(id){where(book_id: id, state: :ready)}
 
   def default_values
     self.state ||= "Ready"

@@ -120,9 +120,11 @@ ActiveRecord::Schema.define(version: 2020_05_04_030406) do
     t.datetime "time_end"
     t.bigint "user_id", null: false
     t.bigint "book_id", null: false
+    t.bigint "book_item_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_borrows_on_book_id"
+    t.index ["book_item_id"], name: "index_borrows_on_book_item_id"
     t.index ["user_id"], name: "index_borrows_on_user_id"
   end
 
@@ -320,6 +322,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_030406) do
   add_foreign_key "book_tags", "tags"
   add_foreign_key "books", "languages"
   add_foreign_key "books", "publishers"
+  add_foreign_key "borrows", "book_items"
   add_foreign_key "borrows", "books"
   add_foreign_key "borrows", "users"
   add_foreign_key "comments", "users"
