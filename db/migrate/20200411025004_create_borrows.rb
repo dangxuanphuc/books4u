@@ -7,6 +7,7 @@ class CreateBorrows < ActiveRecord::Migration[6.0]
       t.datetime :time_end
       t.references :user, null: false, foreign_key: true
       t.references :book, null: false, foreign_key: true
+      t.references :book_item, foreign_key: true
 
       t.timestamps
     end

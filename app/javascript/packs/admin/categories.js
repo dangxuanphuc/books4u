@@ -1,20 +1,24 @@
+import 'select2/dist/js/select2.min';
+import 'propellerkit/components/select2/js/pmd-select2';
+
+$('.category-book').select2({
+  tags: false,
+  theme: 'bootstrap'
+});
+
 $(document).on('click', '.save-category', function() {
   var categoryId = $(this).data('id');
-  var classCheckbox = '.books-checked-at-category-' + categoryId;
+  var currentPage = $(this).data('curent-page');
+  var idCheckbox = '#category-books-' + categoryId;
   var idTextFieldTitle = '#text-field-category-title-' + categoryId;
-  var idTextFieldParentId = '#text-field-category-parent-' + categoryId;
+  var idSelectBoxParentId = '#text-field-category-parent-' + categoryId;
   var idTextFieldDescription = '#text-field-category-description-' + categoryId;
   var url = '/admin/categories/' + categoryId;
   var title = $(idTextFieldTitle).val();
-  var parentId = $(idTextFieldParentId).val();
+  var parentId = $(idSelectBoxParentId).val();
   var description = $(idTextFieldDescription).val();
-  var checkbox = 'input' + classCheckbox + ':checked';
-
-  var listBook = $(checkbox)
-    .map(function() {
-      return this.value;
-    })
-    .get();
+  var listBook = $(idCheckbox).val();
+  var newhref = location.pathname + '?page=' + currentPage;
 
   $.ajax({
     type: 'PATCH',
@@ -29,7 +33,7 @@ $(document).on('click', '.save-category', function() {
       }
     },
     success: function() {
-      $('#categories-list-view').load(document.URL + ' #categories-list');
+      window.location.href = newhref;
     }
   });
 });
@@ -37,6 +41,8 @@ $(document).on('click', '.save-category', function() {
 $(document).on('click', '.delete-category', function() {
   var categoryId = $(this).data('id');
   var url = '/admin/categories/' + categoryId;
+  var currentPage = $(this).data('curent-page');
+  var newhref = location.pathname + '?page=' + currentPage;
 
   $.ajax({
     type: 'DELETE',
@@ -47,13 +53,13 @@ $(document).on('click', '.delete-category', function() {
       }
     },
     success: function() {
-      $('#categories-list-view').load(document.URL + ' #categories-list');
+      window.location.href = newhref;
     }
   });
 });
 
 $(document).on('click', '.create-category', function() {
-  var classCheckbox = '.books-checked-at-category-';
+  var idCheckbox = '#category-books-';
   var idTextFieldTitle = '#text-field-category-title-';
   var idTextFieldParentId = '#text-field-category-parent-';
   var idTextFieldDescription = '#text-field-category-description-';
@@ -61,13 +67,7 @@ $(document).on('click', '.create-category', function() {
   var title = $(idTextFieldTitle).val();
   var parentId = $(idTextFieldParentId).val();
   var description = $(idTextFieldDescription).val();
-  var checkbox = 'input' + classCheckbox + ':checked';
-
-  var listBook = $(checkbox)
-    .map(function() {
-      return this.value;
-    })
-    .get();
+  var listBook = $(idCheckbox).val();
 
   $.ajax({
     type: 'POST',

@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   has_many :images, as: :target
   has_many :suggest_books
   has_many :rates
-  has_many :borrows
+  has_many :borrows, dependent: :destroy
   has_many :book_items, dependent: :destroy
   has_many :author_books, inverse_of: :book
   has_many :book_tags

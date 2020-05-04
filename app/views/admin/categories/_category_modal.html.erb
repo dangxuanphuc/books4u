@@ -3,45 +3,40 @@
     <button type="button" class="close" data-dismiss="modal">&times;</button>
     <% if category.id.blank? %>
       <h4 class="modal-title">
-        <%= t "admin.users.index.create_new_user" %>
+        <%= t "admin.categories.index.add_new_category" %>
       </h4>
     <% else %>
       <h4 class="modal-title">
-        <%= t "admin.users.index.edit_user_infomation" %>
+        <%= t "admin.categories.index.edit_category" %>
       </h4>
     <% end %>
   </div>
   <div class="modal-body">
-    <div class="pmd-card pmd-z-depth pmd-card-custom-form col-xs-12">
+    <div class="pmd-card pmd-z-depth pmd-card-custom-form">
       <div class="pmd-card-body">
         <%= form_for [:admin, category] do |f| %>
           <div class="form-group">
-            <%= f.label :title, "title", class:"label2"%>
+            <%= f.label :title, "#{t 'admin.categories.index.title'}", class:"label2" %>
             <%= f.text_field :title, class: "form-control",
-              id: "text-field-category-title-#{category.id}"%>
-          </div>
-          <div class="gorm-group">
-            <%= f.label :parent_id, "Category parent id", class:"label2"%>
-            <%= f.text_field :parent_id, class: "form-control",
-              id: "text-field-category-parent-#{category.id}"%>
+              id: "text-field-category-title-#{category.id}" %>
           </div>
           <div class="form-group">
-            <%= f.label :description, "description", class:"form-label" %>
-            <%= f.text_area :description, class: "form-control",
+            <%= f.label :parent_id, "#{t 'admin.categories.index.parent_category'}", class:"label2" %>
+            <%= f.collection_select :parent_id,
+              data.load_list_parent_available(category.id), :id, :title, {},
+              {id: "text-field-category-parent-#{category.id}", class: "form-control"} %><br>
+          </div>
+          <div class="form-group">
+            <%= f.label :description, "#{t 'admin.categories.index.description'}", class:"form-label" %>
+            <%= f.text_area :description, class: "form-control category-description",
               id: "text-field-category-description-#{category.id}"%>
           </div>
           <div class="form-group">
-            <%= f.label :books, t(".books"), class:"form-label" %>
-            <div class="col-xs-12">
-              <% books.each do |book| %>
-                <div class="col-xs-6 col-sm-6 choose">
-                  <%= check_box_tag "category[book_ids][]", book.id,
-                    category.books.include?(book),
-                    class: "books-checked-at-category-#{category.id}" %>
-                  <%= label_tag :book_ids, book.title %>
-                </div>
-              <% end %>
-            </div>
+            <%= f.label :books, t("admin.categories.index.books"), class:"form-label" %>
+            <%= f.collection_select :book_ids, data.books, :id, :title,
+              {}, {multiple: true, size: 1, class: "chosen-select2 form-control category-book",
+              id: "category-books-#{category.id}",
+              data: {placeholder: t("admin.categories.index.choice_book")}} %>
           </div>
         <% end %>
       </div>
@@ -50,16 +45,19 @@
   <div class="modal-footer">
     <% if category.id.blank? %>
       <button type="button" class="btn btn-success create-category"
-        data-dismiss="modal">
+        data-dismiss="modal"
+        data-curent-page="<%= data.current_page %>">
         <%= t "admin.users.index.create" %>
       </button>
     <% else %>
       <button type="button" class="btn btn-success save-category"
-        data-dismiss="modal" data-id="<%= category.id %>">
+        data-dismiss="modal" data-id="<%= category.id %>"
+        data-curent-page="<%= data.current_page %>">
         <%= t "admin.users.index.save" %>
       </button>
       <button type="button" class="btn btn-danger delete-category"
-        data-dismiss="modal" data-id="<%= category.id %>">
+        data-dismiss="modal" data-id="<%= category.id %>"
+        data-curent-page="<%= data.current_page %>">
         <%= t "admin.users.index.delete" %>
       </button>
     <% end %>
