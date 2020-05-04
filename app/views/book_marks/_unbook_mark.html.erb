@@ -1,0 +1,4 @@
+<%= link_to book_book_marks_path(book), remote: true, method: :post,
+  "data-turbolinks": false, title: t("book_mark.book_mark") do %>
+  <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+<% end %>

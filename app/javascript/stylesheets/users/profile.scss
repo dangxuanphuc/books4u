@@ -342,30 +342,34 @@
   list-style: none;
   padding: 30px 10px;
   text-align: center;
-}
 
-.portfolio li {
-  border: 0;
-  color: $white;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 2px 8px;
-  padding: 8px 12px;
-  text-transform: capitalize;
-}
+  li {
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 2px 8px;
+    padding: 8px 12px;
+    text-transform: capitalize;
 
-.portfolio li:hover {
-  border: 0;
-  color: $black;
-}
+    &:hover {
+      border: 0;
+      color: $black;
+    }
+  }
 
-.portfolio .active {
-  background-color: $side-bar-active;
-  border-radius: 20px;
-  box-shadow: 0 1px 2px 0 $menu-profile-box-shadow-background;
-  color: $white;
-  padding: 5px 20px;
+  .active {
+    background-color: $side-bar-active;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px 0 $menu-profile-box-shadow-background;
+    color: $white;
+    padding: 5px 20px;
+  }
+
+  a {
+    color: $white;
+  }
 }
 
 .profile-edit {

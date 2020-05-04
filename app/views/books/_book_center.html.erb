@@ -34,6 +34,9 @@
     <% else %>
       (0)
     <% end %>
+    <div class="bookmark-icon">
+      <%= render "book_marks/book_mark_form", book: book, book_mark: book_mark %>
+    </div>
   </div>
   <% if book.series %>
     <p class="book-info-row">
@@ -99,7 +102,6 @@
       <% end %>
     </div>
   </div>
-
   <div class="row book-btn-row">
     <% if book.pdf_ebooks.present? %>
       <%= link_to t("books.show.watch_online"),

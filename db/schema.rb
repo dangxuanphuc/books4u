@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_11_030025) do
+ActiveRecord::Schema.define(version: 2020_05_04_030406) do
 
   create_table "announcements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "title"
@@ -74,6 +74,15 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_book_items_on_book_id"
+  end
+
+  create_table "book_marks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_book_marks_on_book_id"
+    t.index ["user_id"], name: "index_book_marks_on_user_id"
   end
 
   create_table "book_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -146,7 +155,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   end
 
   create_table "feedbacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "state", default: 0
+    t.integer "state"
     t.text "content"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -305,6 +314,8 @@ ActiveRecord::Schema.define(version: 2020_04_11_030025) do
   add_foreign_key "book_categories", "books"
   add_foreign_key "book_categories", "categories"
   add_foreign_key "book_items", "books"
+  add_foreign_key "book_marks", "books"
+  add_foreign_key "book_marks", "users"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
   add_foreign_key "books", "languages"
