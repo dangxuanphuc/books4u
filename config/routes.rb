@@ -28,8 +28,10 @@ Rails.application.routes.draw do
     end
     resource :suggest_books, only: :create
     resource :rate, only: :create
+    resources :book_marks, only: %i(create destroy)
   end
   resources :search, only: :index
+  resources :users, only: :show
   resources :categories, only: %i(index show)
   resources :borrows, only: %i(create update)
   resources :explorer, only: :index

@@ -3,10 +3,17 @@ class UsersController < ApplicationController
   before_action :find_user
 
   def show
-    @type = params[:type]
-    if @type == "blog"
+    type = params[:type]
+    per_page = params[:page]
+    case type
+    when "blog"
       @posts = current_user.blogs.published
-        .page(params[:page]).per Settings.blog.dashboard.limit
+        .page(per_page).per Settings.blog.dashboard.limit
+    when "book_mark"
+      @books = current_user.books.page(per_page)
+        .per Settings.book_mark.limit
+    when "borrow"
+      @borrow = Borrow.where(user_id: current_user.id).order(id: :desc)
     end
   end
 
