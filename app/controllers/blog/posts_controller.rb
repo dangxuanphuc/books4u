@@ -1,4 +1,5 @@
 class Blog::PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action only: %i(edit update destroy) do
     find_blog current_user.blogs
   end
