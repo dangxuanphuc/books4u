@@ -14,6 +14,8 @@ class UsersController < ApplicationController
         .per Settings.book_mark.limit
     when "borrow"
       @borrow = Borrow.where(user_id: current_user.id).order(id: :desc)
+        .page(per_page).per Settings.profile.borrow
+    # when "info"
     end
   end
 

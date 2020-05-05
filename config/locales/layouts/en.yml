@@ -92,8 +92,8 @@ en:
         favorite_books: "Favorite Books"
         history: "History"
         borrow: "Borrow"
-        purchase: "Purchase"
-        donate: "Donate"
+        purchase: "Other"
+        feedback: "Feedback"
       profile:
         title: "Profile"
         info: "Personal Information"
