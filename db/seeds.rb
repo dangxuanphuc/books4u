@@ -1637,7 +1637,8 @@ Blog.create!([
     sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
     dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
     aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
-    Praesent tempus dapibus est a tincidunt. In eu dui mi."},
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
   {user_id: 1,
     title: "A MIND AT PLAY: HOW CLAUDE SHANNON INVENTED THE INFORMATION AGE",
     description: "Of the free internet and its discontents, who are many and powerful. ",
@@ -1647,7 +1648,8 @@ Blog.create!([
     sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
     dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
     aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
-    Praesent tempus dapibus est a tincidunt. In eu dui mi."},
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
   {user_id: 1,
     title: "THE DARKENING WEB: THE WAR FOR CYBERSPACE",
     description: 'The life of the man called "the father of information theory"',
@@ -1657,7 +1659,8 @@ Blog.create!([
     sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
     dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
     aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
-    Praesent tempus dapibus est a tincidunt. In eu dui mi."},
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
   {user_id: 1,
     title: "EVERYTHING ALL AT ONCE: HOW NERDS SOLVE PROBLEMS",
     description: "Decoding the Secrets of the Air Around Us",
@@ -1667,7 +1670,8 @@ Blog.create!([
     sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
     dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
     aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
-    Praesent tempus dapibus est a tincidunt. In eu dui mi."},
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
   {user_id: 1,
     title: "WHY: WHAT MAKES US CURIOUS?",
     description: "The concept of curiosity is a tough nut to crack. Livio is not shy about admitting its difficulties, and he makes an admirable effort to explain complex and still-not-well-understood ideas",
@@ -1677,7 +1681,92 @@ Blog.create!([
     sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
     dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
     aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
-    Praesent tempus dapibus est a tincidunt. In eu dui mi."}
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 2,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 2,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 3,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 4,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 5,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 5,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1},
+  {user_id: 6,
+    title: "LOREM IPSUM DOLOR SIT AMET",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam.",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
+    orci, viverra sit amet lectus vitae, vulputate mollis diam. Praesent auctor,
+    tellus quis mollis lobortis, enim magna gravida tellus, eu congue orci tellus
+    sit amet ex. Nunc in tincidunt urna. Orci varius natoque penatibus et magnis
+    dis parturient montes, nascetur ridiculus mus. Nam quis velit non nunc hendrerit
+    aliquet. Aliquam sagittis arcu in arcu iaculis, ut vulputate eros ultricies.
+    Praesent tempus dapibus est a tincidunt. In eu dui mi.",
+    status: 1}
 ])
 
 BlogBook.create!([

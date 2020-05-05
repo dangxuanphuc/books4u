@@ -9,12 +9,13 @@
       <div class="col-sm-9">
         <ul>
           <li>
-            <%= link_to t("blog.dashboard.index.newest"), blog_root_path, "data-turbolinks": false,
-              class: "hover" %>
+            <%= link_to t("blog.dashboard.index.newest"), blog_root_path,
+              "data-turbolinks": false, class: "hover" %>
           </li>
           <% if user_signed_in? %>
             <li>
-              <%= link_to t("blog.posts.index.my_blog"), blog_posts_path %>
+              <%= link_to t("blog.posts.index.my_blog"), blog_posts_path,
+                "data-turbolinks": false %>
             </li>
           <% end %>
         </ul>
@@ -70,8 +71,22 @@
         <%= paginate @posts, theme: "twitter-bootstrap-3" %>
       </div>
     </div>
-    <div class="col-sm-3">
-      <h3>Hot Author</h3>
+    <div class="col-sm-3 hot-authors">
+      <h1 class="text-center text-uppercase">
+        <%= t "blog.dashboard.index.hot_authors" %>
+      </h1><hr>
+      <div class="row">
+        <% @top_bloggers.each do |user| %>
+          <div class="col-sm-12">
+            <img src="<%= user.avatar.thum40 %>" alt="<%= user.name %>"
+              class="img-responsive img-avt center-block">
+            <h2 class="text-center">
+              <%= user.name %> &#40;<%= user.blogs.size %>
+              <i class="fa fa-newspaper-o"></i>&#41;
+            </h2><hr>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
