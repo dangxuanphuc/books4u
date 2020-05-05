@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_030406) do
     t.integer "parent_id"
     t.string "title"
     t.text "description"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

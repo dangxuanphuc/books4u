@@ -578,56 +578,67 @@ Category.create!([
     important feature about this book is that it covers Java SE5 and as the author
     states the code is also tested against a release candidate of Java SE6. Fairly
     new topics like Generics, Concurrency and Annotations are covered so well that
-    it gives the reader fundamental to deep knowledge of each concept."},
+    it gives the reader fundamental to deep knowledge of each concept.",
+    image: File.open(Rails.root + "public/uploads/categories/java.jpg")},
   {title: "Mobile", description: "The Mobile Book features the most important
     things that you need to know as a designer, developer or mobile strategist
-    for your websites."},
+    for your websites.",
+    image: File.open(Rails.root + "public/uploads/categories/mobile.jpg")},
   {title: "Android", parent_id: 2, description: "See what's new with Android
     - from phones to watches and more. Visit the official site to
-    explore and learn."},
+    explore and learn.",
+    image: File.open(Rails.root + "public/uploads/categories/android.jpg")},
   {title: "iOS", parent_id: 2, description: "If there is one piece of
     technology that is ubiquitous in the blind community today, it would
     have to be the iPhone. Ever since the release of the iPhone 3GS, people
     with little or no vision have been moving their fingers across a smooth
     piece of glass and doing things they never thought possible. Whether
     it's setting calendar appointments, looking at restaurant menus, or reading
-    movie reviews, the iPhone has been a big part of it all."},
-  {title: "Window Phone", parent_id: 2, description: "Informationvine.com connects
-    you to the best results from across the web. Search & Find Now · Find Relevant
-    Information · Learn More · Quick & Easy Answers"},
+    movie reviews, the iPhone has been a big part of it all.",
+    image: File.open(Rails.root + "public/uploads/categories/ios.jpg")},
   {title: "Web", description: "We develop cross-platform Web app for reading
-    ebooks, and also publish high- quality ebooks, especially textbooks."},
+    ebooks, and also publish high- quality ebooks, especially textbooks.",
+    image: File.open(Rails.root + "public/uploads/categories/web.jpg")},
   {title: "PHP", parent_id: 6, description: "PHP Book includes 250+ functions,
     2 indexes, MySQL, and Regular Expressions. Also available: free PDF of the
-    PHP reference book."},
+    PHP reference book.",
+    image: File.open(Rails.root + "public/uploads/categories/php.jpg")},
   {title: "AI", description: "Are you searching for some best books to get
     acquainted with the basics of AI? Here is a list of 20 free books on
-    Artificial Intelligence."},
+    Artificial Intelligence.",
+    image: File.open(Rails.root + "public/uploads/categories/ai.jpg")},
   {title: "Python", parent_id: 7, description: "Learn python and how to use it
     to analyze, visualize and present data! On-Demand Courses · 30-Day
     Guarantee · Lifetime Accessaffordable prices & classes on virtually
-    every topic."},
+    every topic.",
+    image: File.open(Rails.root + "public/uploads/categories/python.jpg")},
   {title: "Design", description: "We asked some of the world's top design
     schools to share their favorite books. Here's what they ... A history
-    book and design philosophy book in one."},
+    book and design philosophy book in one.",
+    image: File.open(Rails.root + "public/uploads/categories/design.jpg")},
   {title: "UI", parent_id: 10, description: "While not a short read, this book
     is a solid resource for UX and interaction designers at all experience levels
-    and I definitely think it's worth."},
+    and I definitely think it's worth.",
+    image: File.open(Rails.root + "public/uploads/categories/ui.jpg")},
   {title: "UX", parent_id: 10, description: "Free UX Consultation · SF Bay
     Area Based · 13 Yrs and 400+ Projects · Award Winning UX Agency Types: UX
-    Strategy, UI Design, Frontend Developement"},
+    Strategy, UI Design, Frontend Developement",
+    image: File.open(Rails.root + "public/uploads/categories/ux.jpg")},
   {title: "Agile", description: "Discover the best Agile Project Management
     in Best Sellers. Find the top 100 most popular items in Amazon Books
-    Best Sellers."},
+    Best Sellers.",
+    image: File.open(Rails.root + "public/uploads/categories/agile.jpg")},
   {title: "Linux", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
-    ullamcorper risus suscipit mollis. Phasellus a magna mi."},
+    ullamcorper risus suscipit mollis. Phasellus a magna mi.",
+    image: File.open(Rails.root + "public/uploads/categories/linux.jpg")},
   {title: "Other", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi."},
   {title: "Ruby on Rails", parent_id: 6, description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
-    ullamcorper risus suscipit mollis. Phasellus a magna mi."},
+    ullamcorper risus suscipit mollis. Phasellus a magna mi.",
+    image: File.open(Rails.root + "public/uploads/categories/rails.jpg")},
 ])
 puts "Created #{Category.count} categories!"
 
@@ -1390,88 +1401,88 @@ AuthorBook.create!([
 ])
 
 BookCategory.create!([
-  {category_id: 15, book_id: 1},
-  {category_id: 15, book_id: 2},
-  {category_id: 13, book_id: 2},
-  {category_id: 6, book_id: 3},
+  {category_id: 14, book_id: 1},
+  {category_id: 14, book_id: 2},
+  {category_id: 12, book_id: 2},
+  {category_id: 5, book_id: 3},
+  {category_id: 10, book_id: 3},
   {category_id: 11, book_id: 3},
-  {category_id: 12, book_id: 3},
-  {category_id: 15, book_id: 4},
-  {category_id: 15, book_id: 5},
-  {category_id: 15, book_id: 6},
-  {category_id: 13, book_id: 7},
-  {category_id: 15, book_id: 8},
-  {category_id: 15, book_id: 9},
+  {category_id: 14, book_id: 4},
+  {category_id: 14, book_id: 5},
+  {category_id: 14, book_id: 6},
+  {category_id: 12, book_id: 7},
+  {category_id: 14, book_id: 8},
+  {category_id: 14, book_id: 9},
   {category_id: 3, book_id: 10},
-  {category_id: 13, book_id: 10},
-  {category_id: 6, book_id: 11},
-  {category_id: 13, book_id: 11},
-  {category_id: 15, book_id: 12},
-  {category_id: 13, book_id: 13},
-  {category_id: 15, book_id: 14},
-  {category_id: 15, book_id: 15},
-  {category_id: 15, book_id: 16},
-  {category_id: 14, book_id: 17},
-  {category_id: 14, book_id: 18},
-  {category_id: 14, book_id: 19},
-  {category_id: 14, book_id: 20},
-  {category_id: 6, book_id: 21},
-  {category_id: 6, book_id: 22},
-  {category_id: 13, book_id: 22},
-  {category_id: 15, book_id: 23},
-  {category_id: 13, book_id: 24},
-  {category_id: 15, book_id: 25},
-  {category_id: 9, book_id: 26},
+  {category_id: 12, book_id: 10},
+  {category_id: 5, book_id: 11},
+  {category_id: 12, book_id: 11},
+  {category_id: 14, book_id: 12},
+  {category_id: 12, book_id: 13},
+  {category_id: 14, book_id: 14},
+  {category_id: 14, book_id: 15},
+  {category_id: 14, book_id: 16},
+  {category_id: 13, book_id: 17},
+  {category_id: 13, book_id: 18},
+  {category_id: 13, book_id: 19},
+  {category_id: 13, book_id: 20},
+  {category_id: 5, book_id: 21},
+  {category_id: 5, book_id: 22},
+  {category_id: 12, book_id: 22},
+  {category_id: 14, book_id: 23},
+  {category_id: 12, book_id: 24},
+  {category_id: 14, book_id: 25},
   {category_id: 8, book_id: 26},
-  {category_id: 15, book_id: 26},
-  {category_id: 15, book_id: 27},
-  {category_id: 15, book_id: 28},
-  {category_id: 15, book_id: 29},
-  {category_id: 15, book_id: 30},
-  {category_id: 15, book_id: 31},
-  {category_id: 15, book_id: 32},
-  {category_id: 15, book_id: 33},
-  {category_id: 13, book_id: 34},
-  {category_id: 6, book_id: 35},
+  {category_id: 7, book_id: 26},
+  {category_id: 14, book_id: 26},
+  {category_id: 14, book_id: 27},
+  {category_id: 14, book_id: 28},
+  {category_id: 14, book_id: 29},
+  {category_id: 14, book_id: 30},
+  {category_id: 14, book_id: 31},
+  {category_id: 14, book_id: 32},
+  {category_id: 14, book_id: 33},
+  {category_id: 12, book_id: 34},
+  {category_id: 5, book_id: 35},
+  {category_id: 10, book_id: 35},
   {category_id: 11, book_id: 35},
-  {category_id: 12, book_id: 35},
-  {category_id: 15, book_id: 35},
-  {category_id: 15, book_id: 36},
-  {category_id: 9, book_id: 37},
-  {category_id: 15, book_id: 37},
-  {category_id: 15, book_id: 37},
-  {category_id: 15, book_id: 38},
-  {category_id: 15, book_id: 39},
-  {category_id: 9, book_id: 40},
+  {category_id: 14, book_id: 35},
+  {category_id: 14, book_id: 36},
+  {category_id: 8, book_id: 37},
+  {category_id: 14, book_id: 37},
+  {category_id: 14, book_id: 37},
+  {category_id: 14, book_id: 38},
+  {category_id: 14, book_id: 39},
   {category_id: 8, book_id: 40},
-  {category_id: 15, book_id: 40},
-  {category_id: 8, book_id: 41},
-  {category_id: 15, book_id: 41},
-  {category_id: 9, book_id: 42},
+  {category_id: 7, book_id: 40},
+  {category_id: 14, book_id: 40},
+  {category_id: 7, book_id: 41},
+  {category_id: 14, book_id: 41},
   {category_id: 8, book_id: 42},
-  {category_id: 8, book_id: 43},
-  {category_id: 9, book_id: 44},
-  {category_id: 9, book_id: 45},
+  {category_id: 7, book_id: 42},
+  {category_id: 7, book_id: 43},
+  {category_id: 8, book_id: 44},
   {category_id: 8, book_id: 45},
-  {category_id: 9, book_id: 46},
+  {category_id: 7, book_id: 45},
   {category_id: 8, book_id: 46},
-  {category_id: 8, book_id: 47},
-  {category_id: 8, book_id: 48},
-  {category_id: 8, book_id: 49},
-  {category_id: 8, book_id: 50},
-  {category_id: 8, book_id: 51},
-  {category_id: 8, book_id: 52},
-  {category_id: 8, book_id: 53},
-  {category_id: 8, book_id: 54},
-  {category_id: 16, book_id: 55},
-  {category_id: 16, book_id: 56},
-  {category_id: 16, book_id: 57},
-  {category_id: 16, book_id: 58},
-  {category_id: 16, book_id: 59},
-  {category_id: 13, book_id: 60},
-  {category_id: 16, book_id: 60},
-  {category_id: 6, book_id: 61},
-  {category_id: 16, book_id: 61}
+  {category_id: 7, book_id: 46},
+  {category_id: 7, book_id: 47},
+  {category_id: 7, book_id: 48},
+  {category_id: 7, book_id: 49},
+  {category_id: 7, book_id: 50},
+  {category_id: 7, book_id: 51},
+  {category_id: 7, book_id: 52},
+  {category_id: 7, book_id: 53},
+  {category_id: 7, book_id: 54},
+  {category_id: 15, book_id: 55},
+  {category_id: 15, book_id: 56},
+  {category_id: 15, book_id: 57},
+  {category_id: 15, book_id: 58},
+  {category_id: 15, book_id: 59},
+  {category_id: 12, book_id: 60},
+  {category_id: 15, book_id: 60},
+  {category_id: 5, book_id: 61},
+  {category_id: 15, book_id: 61}
 ])
 
 Tag.create!([

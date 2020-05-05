@@ -7,7 +7,7 @@ $(document).on('click', '.save-user', function() {
   var newName = $(idNameTextField).val();
   var newRole = $(idRoleTextField).val();
   var url = '/admin/users/' + userId;
-  var currentPage = $(this).data('curent-page');
+  var currentPage = $(this).data('current-page');
   var newhref = location.pathname + '?page=' + currentPage;
 
   $.ajax({
@@ -31,7 +31,7 @@ $(document).on('click', '.save-user', function() {
 $(document).on('click', '.delete-user', function() {
   var userId = $(this).data('id');
   var url = '/admin/users/' + userId;
-  var currentPage = $(this).data('curent-page');
+  var currentPage = $(this).data('current-page');
   var newhref = location.pathname + '?page=' + currentPage;
 
   $.ajax({
