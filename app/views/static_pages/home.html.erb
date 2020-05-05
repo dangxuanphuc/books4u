@@ -58,7 +58,8 @@
           <%= t "user.home.guide.feedback_content" %>
         </p>
         <p><%= link_to t("home.guide.feedback_link"), "",
-          "data-turbolinks": false %></p>
+          class: "btn-feedback-home", "data-target": "#complete-dialog",
+          "data-toggle": "modal", "data-turbolinks": false %></p>
       </div>
     </div>
   </div>
