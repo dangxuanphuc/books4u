@@ -24,3 +24,5 @@ en:
       status: "Status:"
       available_book_item: "Available"
       unavailable_book_item: "Unavailable"
+      requesting: "Requesting"
+      sorry_you_already_have_a_request_being_processed: "Sorry!!! You already have a request being processed."

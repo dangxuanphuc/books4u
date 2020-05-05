@@ -32,24 +32,28 @@
             <%= t "books.show.modal.status" %>
             <% case req.status %>
             <% when "approved" %>
-              <span class="approve">
+              <span class="approve status-btn">
                 <%= t "books.show.modal.approved" %>
               </span>
             <% when "cancel" %>
-              <span class="cancel">
+              <span class="cancel status-btn">
                 <%= t "books.show.modal.cancel" %>
               </span>
             <% when "rejected" %>
-              <span class="reject">
+              <span class="reject status-btn">
                 <%= t "books.show.modal.reject" %>
               </span>
             <% else %>
-              <span class="not-approve">
+              <span class="not-approve status-btn">
                 <%= t "books.show.modal.not_approved" %>
               </span>
             <% end %>
           </h4>
-          <p class="message"><%= t "books.show.modal.admin_message" %></p>
+          <p class="message">
+            <strong>
+              <%= t "books.show.modal.admin_message" %>
+            </strong>
+          </p>
         </div>
       </div>
       <div class="modal-footer"></div>

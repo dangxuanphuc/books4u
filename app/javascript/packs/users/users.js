@@ -23,7 +23,7 @@ $(document).ready(function() {
 });
 
 $('.filter').click(function() {
-  $(this).parent().find('.active').removeClass('active');
+  $(this).parent().parent().children().find('.active').removeClass('active');
   $(this).addClass('active');
   $('.dropdown-item').css('transform', 'scale(0)');
 });
@@ -33,7 +33,7 @@ $('#history-btn').on('click', function() {
 });
 
 $('.dropdown-item').click(function() {
-  $(this).parent().find('.active-child').removeClass('active-child');
+  $(this).parent().parent().children().find('.active-child').removeClass('active-child');
   $('.borrow-part, .donate-part, .feedback-part').css({'transform': 'scale(0)',
     'height': '0'});
   var div = $(this).attr('data-trigger');
@@ -55,12 +55,13 @@ $(document).on('click', '.not-approve', function() {
 
 $(document).on('click', '.cancel-back', function() {
   $(this).css({'display': 'none'});
-  $(this).prev().css({'display':'none'}).prev().css({'display': 'inline'});
+  $(this).prev().css({'display': 'none'}).prev().css({'display': 'inline'});
 });
 
 $(document).on('click', '.cancel-ok', function() {
   var request_id = $(this).parent().parent().find('#request-name').attr('data-id');
   var url = '/borrows/' + request_id;
+
   $.ajax({
     url: url,
     type: 'PATCH',
