@@ -14,6 +14,11 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  top_bloggers_query = where id: Blog.published.group(:user_id)
+    .limit(5).pluck(:user_id)
+
+  scope :top_bloggers, ->{top_bloggers_query}
+
   def load_suggest_book_to_users
     User.where.not(id: self.id).order id: :asc
   end
