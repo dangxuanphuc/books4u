@@ -13,7 +13,7 @@ en:
       new:
         page_title: "Create book"
         link1: "Book management"
-        link2: "Create book"
+        link2: "Or create book"
       book:
         add_book: "Add book"
         search: "Search"
@@ -55,6 +55,9 @@ en:
         choose_tags: "Choose some tags"
         image_field: "Change image"
         choose_book: "Choose books"
+        edit_publisher: "Or replace with new publisher"
+        edit_series: "Or replace with new series"
+        error: "Please choose an image!"
       show:
         page_title: "Book information"
         link1: "Book management"
@@ -101,6 +104,7 @@ en:
       update_success: "Updated book item successfully!"
       destroy_success: "Deleted book item successfully!"
       delete_success: "Deleted book item successfully!"
+      delete_success: "Deleted author's book successfully!"
       destroy_fail: "Failed. Something's wrong."
   button:
     close: "close"

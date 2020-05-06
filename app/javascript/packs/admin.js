@@ -9,3 +9,7 @@ require('@rails/ujs').start()
 require('turbolinks').start()
 require('@rails/activestorage').start()
 require('channels')
+
+$(document).ready(function() {
+  $('.flash-push').fadeOut(5000);
+});
