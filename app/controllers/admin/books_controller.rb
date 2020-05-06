@@ -1,7 +1,7 @@
 class Admin
   class BooksController < AdminController
-    before_action :find_book, except: %i(index new create)
-    before_action :load_support, except: %i(update create destroy)
+    before_action :find_book, only: %i(show edit update destroy)
+    before_action :load_support, only: %i(index show new edit destroy)
 
     def index; end
 
@@ -43,19 +43,23 @@ class Admin
     end
 
     def destroy
-      if @book.destroy
-        flash[:success] = t "flash.book.destroy_success"
-      else
-        flash[:danger] = t "flash.book.destroy_fail"
+      author = @supports.find_author
+      author_book = author.books
+      if author
+        if (author_book.include? @book) && (author_book.delete @book)
+          flash[:success] = t "flash.book.delete_success"
+        else
+          flash[:danger] = t "flash.book.destroy_fail"
+        end
+        redirect_back fallback_location: admin_books_path
       end
-      redirect_back fallback_location: admin_books_path
     end
 
     private
 
     def book_params
       params.require(:book).permit :title, :pages, :weight, :dimension, :isbn,
-        :publisher_id, :language_id, :series_id, category_ids: [],
+        :description, :publisher_id, :language_id, :series_id, category_ids: [],
         images_attributes: [:id, :url, :url_cache, :_destroy], author_ids: [],
         publisher_attributes: [:id, :name], series_attributes: [:id, :title],
         language_attributes: [:id, :full_name],

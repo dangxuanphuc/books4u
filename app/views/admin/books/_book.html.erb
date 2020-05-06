@@ -58,8 +58,7 @@
                   </td>
                   <td>
                     <% book.categories.each do |cate| %>
-                      <%= link_to cate.title,
-                        admin_category_path(cate) %>
+                      <%= cate.try :title %>
                       <% unless cate == book.categories.last %>&#44;<% end %>
                     <% end %>
                   </td>
