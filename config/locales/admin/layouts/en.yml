@@ -1,4 +1,6 @@
 en:
+  static_pages:
+    dashboard: "Administrator"
   sidebar:
     users_manager: "Users Manager"
     authors_manager: "Authors Manager"

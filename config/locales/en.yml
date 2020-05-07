@@ -28,6 +28,8 @@ en:
       flash:
         danger:
           not_found_ebook: "Ebook not found"
+    show:
+      profile: "Profile"
   author:
     show:
       author: "Author"

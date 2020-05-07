@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.min';
 import 'propellerkit/components/datetimepicker/js/bootstrap-datetimepicker';
 import 'owl.carousel/dist/owl.carousel.min';
 import * as SimpleMDE from 'simplemde';

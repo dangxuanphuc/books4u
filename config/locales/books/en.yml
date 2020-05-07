@@ -1,6 +1,7 @@
 en:
   books:
     show:
+      books: "Books"
       comments: "Comments"
       comment: "Comment"
       cancel: "Cancel"

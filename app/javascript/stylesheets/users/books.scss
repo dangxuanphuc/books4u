@@ -126,6 +126,7 @@
 
     &:hover {
       background: $main-color-primary;
+      text-decoration: none;
     }
   }
 
@@ -166,21 +167,23 @@
     .nav-tabs {
       background: $main-color-lighter;
 
-      a {
-        color: $white-opacity-50;
-        border: 0;
-        border-radius: 2px;
-        font-size: 1.1em;
-        margin: 10px;
-        opacity: 1;
-        padding: 8px 12px 6px;
-        transition: .4s;
+      li {
+        a {
+          color: $white-opacity-50;
+          border: 0;
+          border-radius: 2px;
+          font-size: 1.1em;
+          margin: 10px;
+          opacity: 1;
+          padding: 8px 12px 6px;
+          transition: .4s;
 
-        &:hover {
-          background: $main-color-light;
+          &:hover {
+            background: $main-color-light;
+          }
         }
 
-        .active {
+        &.active {
           background: transparent;
           color: $white;
 
@@ -188,6 +191,7 @@
             background: transparent;
             color: $white;
             border: 0;
+            border-bottom: 3px solid $main-color-dark;
           }
         }
       }
@@ -567,6 +571,7 @@
       background: $main-color-primary;
       box-shadow: 0 4px 8px $shadow-light, 0 4px 8px $shadow-normal;
       margin-top: -2px;
+      text-decoration: none;
     }
   }
 

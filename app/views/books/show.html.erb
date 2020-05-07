@@ -22,11 +22,9 @@
         <div class="end-triangle"></div>
       </div>
     </div>
-
     <div class="row">
       <%= render "related_book", book: @book %>
     </div>
-
     <div class="row social-field">
       <ul class="nav nav-tabs">
         <li class="active">
@@ -58,10 +56,8 @@
       <%= render "social", book: @book %>
     </div>
   </div>
-
   <div class="modal-send-req-result"></div>
   <div class="modal-suggest-result"></div>
 </div>
-
 <%= render "suggest_books/form", book: @book,
   suggest_book: @suggest_book, users: @users %>

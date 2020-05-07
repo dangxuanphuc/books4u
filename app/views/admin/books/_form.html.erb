@@ -2,31 +2,31 @@
   <div class="book-form pmd-card pmd-z-depth pmd-card-custom-form col-xs-12">
     <div class="pmd-card-body">
       <%= form_for [:admin, book] do |f| %>
-        <%= f.label :title, class:"form-label" %>
-        <%= f.text_field :title, class:"form-control" %>
+        <%= f.label :title, class: "form-label" %>
+        <%= f.text_field :title, class: "form-control" %>
         <div class="row">
           <div class="col-xs-3">
-            <%= f.label :pages, class:"form-label" %>
-            <%= f.number_field :pages, class:"form-control", min: 1 %>
+            <%= f.label :pages, class: "form-label" %>
+            <%= f.number_field :pages, class: "form-control", min: 1 %>
           </div>
           <div class="col-xs-3">
-            <%= f.label :weight, class:"form-label" %>
-            <%= f.text_field :weight, class:"form-control" %>
+            <%= f.label :weight, class: "form-label" %>
+            <%= f.text_field :weight, class: "form-control" %>
           </div>
           <div class="col-xs-3">
-            <%= f.label :dimension, class:"form-label" %>
-            <%= f.text_field :dimension, class:"form-control" %>
+            <%= f.label :dimension, class: "form-label" %>
+            <%= f.text_field :dimension, class: "form-control" %>
           </div>
           <div class="col-xs-3">
-            <%= f.label :isbn, class:"form-label" %>
-            <%= f.text_field :isbn, class:"form-control" %>
+            <%= f.label :isbn, class: "form-label" %>
+            <%= f.text_field :isbn, class: "form-control" %>
           </div>
         </div>
-        <%= f.label :description, class:"form-label" %>
-        <%= f.text_area :description, class:"form-control" %>
+        <%= f.label :description, class: "form-label" %>
+        <%= f.text_area :description, class: "form-control" %>
         <%= f.label :categories %><br>
         <%= f.collection_select :category_ids, supports.categories, :id, :title,
-          {}, {multiple: true, size: 1, class:"chosen-select pmd-select2-tags form-control",
+          {}, {multiple: true, size: 1, class: "chosen-select pmd-select2-tags form-control",
           data: {placeholder: t(".choose_categories")}} %>
         <%= f.label :publisher %>
         <%= f.select :publisher_id, supports.publishers,
@@ -49,7 +49,7 @@
         <%= f.label :series %>
         <%= f.select :series_id, supports.series,
           {include_blank: t(".choose_series")},
-          {class:"form-control hide-select2"} %>
+          {class: "form-control hide-select2"} %>
         <div class="add-authors">
           <%= link_to_add_association f, :series do %>
             <i id="change-series" class="fa fa-plus-square hide-select2">
@@ -63,7 +63,7 @@
         </div>
         <%= f.label :authors %><br>
         <%= f.collection_select :author_ids, supports.authors, :id, :name,
-          {}, {multiple: true, size: 1, class:"form-control pmd-select2-tags chosen-select",
+          {}, {multiple: true, size: 1, class: "form-control pmd-select2-tags chosen-select",
           data: {placeholder: t(".choose_authors")}} %>
         <div class="add-authors">
           <%= link_to_add_association f, :author_books, "data-turbolinks": false,
@@ -73,7 +73,7 @@
         </div>
         <%= f.label :tags %><br/>
         <%= f.collection_select :tag_ids, supports.tags, :id, :title,
-          {}, {multiple: true, size: 1, class:"form-control pmd-select2-tags chosen-select",
+          {}, {multiple: true, size: 1, class: "form-control pmd-select2-tags chosen-select",
           data: {placeholder: t(".choose_tags")}} %>
         <%= f.label :images %><br/>
         <div class="row">
@@ -94,10 +94,10 @@
         <div class="text-center col-xs-12">
           <% if book.new_record? %>
             <%= f.submit class: "btn btn-info add-book" %>
-            <%= f.submit t("button.clear"), type: :reset, class:"btn btn-danger" %>
+            <%= f.submit t("button.clear"), type: :reset, class: "btn btn-danger" %>
           <% else %>
-            <%= f.submit class:"btn btn-success"%>
-            <%= f.submit t("button.clear"), type: :reset, class:"btn btn-danger" %>
+            <%= f.submit class: "btn btn-success"%>
+            <%= f.submit t("button.clear"), type: :reset, class: "btn btn-danger" %>
           <% end %>
         </div>
       <% end %>

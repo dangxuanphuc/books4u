@@ -2,21 +2,21 @@
   <div class="pmd-card pmd-z-depth pmd-card-custom-form col-xs-12 author-form">
     <div class="pmd-card-body">
       <%= form_for [:admin, author] do |f| %>
-        <%= f.label :name, t(".name"), class:"label2" %>
+        <%= f.label :name, t(".name"), class: "label2" %>
         <%= f.text_field :name, class: "form-control" %><br>
-        <%= f.label :description, t(".description"), class:"form-label" %>
+        <%= f.label :description, t(".description"), class: "form-label" %>
         <%= f.text_area :description, class: "form-control" %><br>
         <%= f.label :avatar, class: "form-label" %><br>
         <div class="file-container">
           <%= t "admin.books.form.image_field" %>
-          <%= f.file_field :avatar, class: "upload-image", id:"filePhoto" %>
+          <%= f.file_field :avatar, class: "upload-image", id: "filePhoto" %>
         </div><br><br>
         <img id="previewHolder" class="avatar-preview">
         <div id="error" value="<%= t 'admin.books.form.error' %>" class="hidden"></div>
         <img id="old-avatar" class="avatar-preview" src="<%= author.try :avatar %>"><br>
-        <%= f.label :books, t(".books"), class:"form-label" %>
+        <%= f.label :books, t(".books"), class: "form-label" %>
         <%= f.collection_select :book_ids, books, :id, :title,
-          {}, {multiple: true, size: 1, class:"form-controll pmd-select2-tags select-books",
+          {}, {multiple: true, size: 1, class: "form-controll pmd-select2-tags select-books",
           data: {placeholder: t("admin.books.form.choose_book")}} %>
         <div class="col-xs-12 text-center">
           <% if author.new_record? %>

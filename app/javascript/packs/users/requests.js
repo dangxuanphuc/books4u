@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.min';
+
 $(document).ready(function() {
   $(document).on('click', '.btn-cancel-request', function() {
     var id = $(this).data('id');
