@@ -41,7 +41,7 @@ class Admin
     end
 
     def find_book_item
-      @book_item = @book.book_items.find_by id: params[:id]
+      @book_item = @book.book_items.friendly.find(params[:id])
 
       return if @book_item
       flash[:danger] = t "flash.book_items.find_fail"
@@ -49,7 +49,7 @@ class Admin
     end
 
     def find_book
-      @book = Book.find_by id: params[:book_id]
+      @book = Book.friendly.find(params[:book_id])
     end
 
     def load_books

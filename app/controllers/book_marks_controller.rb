@@ -33,7 +33,7 @@ class BookMarksController < ApplicationController
   end
 
   def find_book
-    @book = Book.find_by id: params[:book_id]
+    @book = Book.friendly.find(params[:book_id])
 
     return if @book
     flash[:danger] = "book not found"

@@ -82,7 +82,7 @@ class Admin
     end
 
     def find_book
-      @book = Book.find_by id: params[:id]
+      @book = Book.friendly.find(params[:id])
 
       return if @book
       flash[:danger] = t "flash.book.find_fail"

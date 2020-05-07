@@ -17,7 +17,7 @@ class TagsController < ApplicationController
   private
 
   def find_tag
-    @tag = Tag.find_by id: params[:id]
+    @tag = Tag.friendly.find(params[:id])
 
     return if @tag
     redirect_to tags_path
