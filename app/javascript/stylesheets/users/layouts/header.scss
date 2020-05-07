@@ -285,6 +285,11 @@ body {
   .search-toggle svg {
     fill: $navbar-search-svg;
   }
+
+  .icon-gray {
+    color: $navbar-search-svg !important;
+    margin-top: -3px;
+  }
 }
 
 .pmd-navbar .navbar-toggle {

@@ -7,10 +7,10 @@ default: &default
   pool: 5
 development:
   <<: *default
-  database: book_management_development
+  database: books4u_development
 test:
   <<: *default
-  database: book_management_test
+  database: books4u_test
 production:
   <<: *default
-  database: book_management_production
+  database: books4u_production

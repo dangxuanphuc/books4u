@@ -35,7 +35,7 @@ $(document).on('click', '.delete-user', function() {
   var newhref = location.pathname + '?page=' + currentPage;
 
   $.ajax({
-    type:'DELETE',
+    type: 'DELETE',
     url: url,
     data: {
       user: {
@@ -58,7 +58,7 @@ $(document).on('click', '.create-user', function() {
   var url = '/admin/users';
 
   $.ajax({
-    type:'POST',
+    type: 'POST',
     url: url,
     data: {
       user: {

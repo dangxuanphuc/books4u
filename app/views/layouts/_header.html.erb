@@ -38,13 +38,13 @@
                 class: "pmd-ripple-effect" %>
             </li>
             <li><%= link_to t("blog.posts.index.my_blog"),
-              blog_posts_path, "data-turbolinks": "false",
+              blog_posts_path, "data-turbolinks": false,
               class: "pmd-ripple-effect" %></li>
             <li><%= link_to t("requests.index.request_title"),
-              requests_path, "data-turbolinks": "false",
+              requests_path, "data-turbolinks": false,
               class: "pmd-ripple-effect" %></li>
-            <li><%= link_to t("layouts.header.feedback"), '',
-              "data-turbolinks": "false", class: "pmd-ripple-effect",
+            <li><%= link_to t("layouts.header.feedback"), "",
+              "data-turbolinks": false, class: "pmd-ripple-effect",
               "data-target": "#complete-dialog", "data-toggle": "modal",
               id: "feedback-button" %></li>
             <li class="divider"></li>
@@ -63,7 +63,7 @@
               <% if unread_notifications_count > 0 %>
                 data-badge="<%= unread_notifications_count %>"
               <% end %>
-              class="material-icons pmd-sm pmd-badge pmd-badge-overlap notifi-count">
+              class="material-icons pmd-sm pmd-badge icon-gray pmd-badge-overlap notifi-count">
               notifications_none
             </div>
           </a>
@@ -109,7 +109,7 @@
           <a href="javascript:void(0)" title="<%= t "layouts.header.announcements" %>"
             class="dropdown-toggle pmd-ripple-effect btn-user"
             data-toggle="dropdown" role="button" aria-expanded="true">
-            <div class="material-icons pmd-sm">
+            <div class="material-icons pmd-sm icon-gray">
               info_outline
             </div>
           </a>

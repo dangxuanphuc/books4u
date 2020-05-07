@@ -343,19 +343,23 @@
   padding: 30px 10px;
   text-align: center;
 
-  li {
-    border: 0;
-    color: $white;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 2px 8px;
-    padding: 8px 12px;
-    text-transform: capitalize;
+  a {
+    text-decoration: none;
 
-    &:hover {
+    li {
       border: 0;
-      color: $black;
+      color: $white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 2px 8px;
+      padding: 8px 12px;
+      text-transform: capitalize;
+
+      &:hover {
+        border: 0;
+        color: $black;
+      }
     }
   }
 
