@@ -1,4 +1,7 @@
 class Book < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :publisher, optional: true
   belongs_to :series, optional: true
   belongs_to :language, optional: true

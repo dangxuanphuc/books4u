@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
   private
 
   def find_category
-    @category = Category.find_by id: params[:id]
+    @category = Category.friendly.find(params[:id])
 
     return if @category
     redirect_to not_found_index_path

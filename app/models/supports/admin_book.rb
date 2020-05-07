@@ -25,7 +25,7 @@ class Supports::AdminBook
 
   def item_search
     params = @params[:param]
-    book = Book.find_by id: params[:id]
+    book = Book.friendly.find(params[:id])
     item_search = book.book_items.ransack params[:q]
     item_search.sorts = %w(created_at\ desc) if item_search.sorts.empty?
     item_search

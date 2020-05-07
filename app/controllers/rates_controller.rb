@@ -10,7 +10,7 @@ class RatesController < ApplicationController
   private
 
   def find_book
-    @book = Book.find_by id: params[:book_id]
+    @book = Book.friendly.find(params[:book_id])
     @rate = @book.rates.find_by user_id: current_user.id
 
     @rate.destroy if @rate

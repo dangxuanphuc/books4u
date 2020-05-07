@@ -7,7 +7,7 @@ class Rate < ApplicationRecord
   private
 
   def update_book
-    book = Book.find_by id: self.book_id
+    book = Book.friendly.find(self.book_id)
     rates = book.rates
     size = rates.size
     book.rate_count = size

@@ -1,4 +1,7 @@
 class Category < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :parent_category, class_name: Category.name,
     foreign_key: :parent_id, optional: true
   has_many :book_categories

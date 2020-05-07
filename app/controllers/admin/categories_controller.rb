@@ -37,7 +37,7 @@ class Admin
     private
 
     def find_category
-      @category = Category.find_by id: params[:id]
+      @category = Category.friendly.find(params[:id])
 
       return if @category
       flash[:danger] = t "admin.categories.index.not_exist"
