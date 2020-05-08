@@ -45,7 +45,8 @@ class Admin
     end
 
     def user_params
-      params.require(:user).permit :id, :name, :email, :role
+      params.require(:user).permit :id, :name, :email,
+        :staff_code, :role
     end
   end
 end

@@ -39,7 +39,6 @@ en:
       send_me: "Get reset password link"
       forgot: "Forgot your password?"
       already_account: "Already have an account?"
-      sign_up: "New user account?"
       change_my_pass: "Change my password"
       confirm_pass: "Confirm new password"
       change_pass_heading: "Change your password"

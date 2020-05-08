@@ -1,15 +1,18 @@
 User.create! name: "Dang Xuan Phuc",
   email: "admin@books4u.com",
   role: "admin",
+  staff_code: "20201200",
   password: "admin123",
   password_confirmation: "admin123",
   confirmed_at: Time.zone.now
 
 20.times do |n|
   name = Faker::Name.name
+  staff_code = n < 9 ? "2020120#{n+1}" : "202012#{n+1}"
   User.create! name: name,
     email: "user#{n}@gmail.com",
     role: "user",
+    staff_code: staff_code,
     password: "A@1234567",
     password_confirmation: "A@1234567",
     confirmed_at: Time.zone.now
