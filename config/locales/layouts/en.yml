@@ -99,6 +99,7 @@ en:
         title: "Profile"
         info: "Personal Information"
         role: "Role"
+        staff_code: "Staff Code"
         need_current_pass: "(we need your current password to confirm your changes)"
         change_pass: "Change password"
         repeat_pass: "Repeat password"

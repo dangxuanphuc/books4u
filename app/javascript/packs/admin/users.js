@@ -3,9 +3,11 @@ $(document).on('click', '.save-user', function() {
   var idEmailTextField = '#text-field-mail-' + userId;
   var idNameTextField = '#text-field-name-' + userId;
   var idRoleTextField = '#role-user-id-' + userId;
+  var idStaffCodeTextField = '#text-field-staff-code-' + userId;
   var newEmail = $(idEmailTextField).val();
   var newName = $(idNameTextField).val();
   var newRole = $(idRoleTextField).val();
+  var newStaffCode = $(idStaffCodeTextField).val();
   var url = '/admin/users/' + userId;
   var currentPage = $(this).data('current-page');
   var newhref = location.pathname + '?page=' + currentPage;
@@ -18,7 +20,8 @@ $(document).on('click', '.save-user', function() {
         id: userId,
         email: newEmail,
         name: newName,
-        role: newRole
+        role: newRole,
+        staff_code: newStaffCode
       }
     },
     success: function() {
@@ -52,9 +55,11 @@ $(document).on('click', '.create-user', function() {
   var idEmailTextField = '#text-field-mail-';
   var idNameTextField = '#text-field-name-';
   var idRoleTextField = '#role-user-id-';
+  var idStaffCodeTextField = '#text-field-staff-code-';
   var newEmail = $(idEmailTextField).val();
   var newName = $(idNameTextField).val();
   var newRole = $(idRoleTextField).val();
+  var newStaffCode = $(idStaffCodeTextField).val();
   var url = '/admin/users';
 
   $.ajax({
@@ -64,7 +69,8 @@ $(document).on('click', '.create-user', function() {
       user: {
         email: newEmail,
         name: newName,
-        role: newRole
+        role: newRole,
+        staff_code: newStaffCode
       }
     },
     success: function() {

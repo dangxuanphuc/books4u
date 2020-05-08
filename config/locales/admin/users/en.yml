@@ -31,5 +31,6 @@ en:
       users:
         id: "ID"
         name: "Name"
+        staff_code: "Staff code:"
         email: "Email"
         role: "Role"
