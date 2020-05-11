@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_152758) do
+ActiveRecord::Schema.define(version: 2020_05_10_024250) do
 
   create_table "announcements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "title"
@@ -152,6 +152,16 @@ ActiveRecord::Schema.define(version: 2020_05_07_152758) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "recipient_id"
+    t.integer "sender_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
   create_table "ebooks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "format", null: false
     t.string "link", null: false
@@ -203,6 +213,16 @@ ActiveRecord::Schema.define(version: 2020_05_07_152758) do
     t.string "full_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "body"
+    t.bigint "user_id", null: false
+    t.bigint "conversation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -349,6 +369,8 @@ ActiveRecord::Schema.define(version: 2020_05_07_152758) do
   add_foreign_key "feedbacks", "users"
   add_foreign_key "follows", "authors"
   add_foreign_key "follows", "users"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
   add_foreign_key "notifications", "users"
   add_foreign_key "rates", "books"
   add_foreign_key "rates", "users"

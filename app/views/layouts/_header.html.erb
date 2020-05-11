@@ -201,6 +201,13 @@
               <span class="sr-only">(current)</span>
             <% end %>
           </li>
+          <li>
+            <%= link_to chat_index_path, class: "pmd-ripple-effect",
+              "data-turbolinks": false do %>
+              <%= t "layouts.header.chat" %>
+              <span class="sr-only">(current)</span>
+            <% end %>
+          </li>
         </ul>
       <% else %>
         <%= link_to new_user_session_path, "data-turbolinks": false,
