@@ -1,5 +1,5 @@
 en:
-  chat:
+  messages:
     index:
       chat: "Chat"
       list_user: "User list"
