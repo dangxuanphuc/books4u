@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :books, through: :book_marks, dependent: :destroy
   has_many :borrows, dependent: :destroy
   has_many :feedbacks, dependent: :destroy
+  has_many :messages, dependent: :destroy
+  has_many :conversations, foreign_key: :sender_id, dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
 

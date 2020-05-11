@@ -2,42 +2,42 @@ import * as SimpleMDE from 'simplemde/dist/simplemde.min';
 import 'select2/dist/js/select2.min';
 import 'propellerkit/components/select2/js/pmd-select2';
 
-// var editors = {};
+var editors = {};
 
-// var editorOptions = {
-//   element: $('#comment-0')[0],
-//   status: false,
-//   toolbar: false,
-//   forceSync: true,
-//   spellChecker: false
-// };
+var editorOptions = {
+  element: $('#comment-0')[0],
+  status: false,
+  toolbar: false,
+  forceSync: true,
+  spellChecker: false
+};
 
-// editors['comment-0'] = new SimpleMDE(editorOptions);
+editors['comment-0'] = new SimpleMDE(editorOptions);
 
-// $('li.load-html').click(function() {
-//   var id = $(this).attr('data');
-//   $('#preview-' + id).html(editors['comment-' + id]
-//     .options.previewRender(editors['comment-' + id].value()));
-// });
+$('li.load-html').click(function() {
+  var id = $(this).attr('data');
+  $('#preview-' + id).html(editors['comment-' + id]
+    .options.previewRender(editors['comment-' + id].value()));
+});
 
-// $('.fa-reply').click(function () {
-//   var id = $(this).attr('data');
+$('.fa-reply').click(function () {
+  var id = $(this).attr('data');
 
-//   if(editors['comment-' + id] === undefined){
-//     editorOptions.element = $('#comment-' + id)[0];
-//     editors['comment-' + id] = new SimpleMDE(editorOptions);
-//   }
+  if(editors['comment-' + id] === undefined){
+    editorOptions.element = $('#comment-' + id)[0];
+    editors['comment-' + id] = new SimpleMDE(editorOptions);
+  }
 
-//   setTimeout(function() {
-//     $('.reply-' + id).removeClass('hidden');
-//   }, 200);
-// });
+  setTimeout(function() {
+    $('.reply-' + id).removeClass('hidden');
+  }, 200);
+});
 
-// $('.btn-cancel').click(function (e) {
-//   e.preventDefault();
-//   var id = $(this).attr('data');
-//   $('.reply-' + id).addClass('hidden');
-// });
+$('.btn-cancel').click(function (e) {
+  e.preventDefault();
+  var id = $(this).attr('data');
+  $('.reply-' + id).addClass('hidden');
+});
 
 $(document).on('click', '.fa-thumbs-o-up', function() {
   var comment = $(this).attr('data');
