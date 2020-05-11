@@ -1,6 +1,6 @@
 class ConversationChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "conversations-#{current_user.id}"
+    stream_from "conversation-with-user-#{params['user_id']}-channel"
   end
 
   def unsubscribed
@@ -12,6 +12,6 @@ class ConversationChannel < ApplicationCable::Channel
       hash[el.values.first] = el.values.last
     end
 
-    Message.create(message_params)
+    current_user.messages.create(message_params)
   end
 end

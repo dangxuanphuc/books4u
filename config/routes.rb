@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   resources :notifications, only: %i(index update)
   patch "/make_all_as_read" => "make_all_as_read#update"
   resources :feedback, only: %i(index new create show update)
-  resources :chat, only: :index
+  resources :messages, only: :index
   resources :conversations, only: :create do
     resources :messages, only: :create
     member do

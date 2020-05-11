@@ -16,7 +16,8 @@
       local: true do |f| %>
       <div class="tab-content">
         <div class="active tab-pane fade in" id="write-<%= comment.id %>">
-          <%= f.text_area :content, id: "comment-#{comment.id}" %>
+          <%= f.text_area :content, id: "comment-#{comment.id}",
+            class: "text-area" %>
           <%= f.hidden_field :parent_id, value: comment.id%>
         </div>
         <div class="tab-pane fade pmd-z-depth preview" id="preview-<%= comment.id %>">

@@ -23,7 +23,7 @@
           </div>
         </div>
         <%= f.label :description, class: "form-label" %>
-        <%= f.text_area :description, class: "form-control" %>
+        <%= f.text_area :description, class: "form-control text-area" %>
         <%= f.label :categories %><br>
         <%= f.collection_select :category_ids, supports.categories, :id, :title,
           {}, {multiple: true, size: 1, class: "chosen-select pmd-select2-tags form-control",
