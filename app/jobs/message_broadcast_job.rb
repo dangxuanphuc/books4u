@@ -2,43 +2,26 @@ class MessageBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform message
-    sender = message.user
-    recipient = message.conversation.opposed_user(sender)
-
-    broadcast_to_sender(sender, message)
-    broadcast_to_recipient(recipient, message)
+    recipient = message.recipient
+    broadcast_to_user(message, recipient)
   end
 
   private
 
-  def broadcast_to_sender user, message
+  def broadcast_to_user message, user
+    suffix_str = [message.sender.id, message.recipient.id].sort.join("-")
     ActionCable.server.broadcast(
-      "conversation-with-user-#{user.id}-channel",
-      message: render_message(message, user),
-      conversation_id: message.conversation_id
+      "conversation-with-user-#{suffix_str}",
+      message: render_message(message),
+      message_id: message.id,
+      sender_id: message.sender_id
     )
   end
 
-  def broadcast_to_recipient user, message
-    ActionCable.server.broadcast(
-      "conversation-with-user-#{user.id}-channel",
-      window: render_window(message.conversation, user),
-      message: render_message(message, user),
-      conversation_id: message.conversation_id
-    )
-  end
-
-  def render_message message, user
+  def render_message message
     ApplicationController.render(
       partial: "messages/message",
-      locals: { message: message, user: user }
-    )
-  end
-
-  def render_window conversation, user
-    ApplicationController.render(
-      partial: "conversations/conversation",
-      locals: { conversation: conversation, user: user }
+      locals: { message: message }
     )
   end
 end

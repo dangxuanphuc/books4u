@@ -53,13 +53,7 @@ Rails.application.routes.draw do
   resources :notifications, only: %i(index update)
   patch "/make_all_as_read" => "make_all_as_read#update"
   resources :feedback, only: %i(index new create show update)
-  resources :messages, only: :index
-  resources :conversations, only: :create do
-    resources :messages, only: :create
-    member do
-      post :close
-    end
-  end
 
   mount ActionCable.server => "/cable"
+  resources :messages
 end

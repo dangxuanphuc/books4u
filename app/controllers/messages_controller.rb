@@ -1,25 +1,18 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    session[:conversations] ||= []
-
-    @users = User.all.where.not(id: current_user)
-    @conversations = Conversation.includes(:recipient, :messages)
-      .find(session[:conversations])
-  end
-
-  def create
-    @conversation = Conversation.includes(:recipient)
-      .find params[:conversation_id]
-    @message = @conversation.messages.build message_params
+    if params[:user_id].present?
+      @messages = Message.find_by_recipient_and_sender(params[:user_id], current_user.id)
+      @user = User.find_by id: params[:user_id]
+      @users = User.where.not(id: current_user.id)
+    else
+      @users = User.where.not(id: current_user.id)
+    end
 
     respond_to do |format|
-      format.js
+      format.html
+      format.json
     end
-  end
-
-  private
-
-  def message_params
-    params.require(:message).permit :user_id, :body
   end
 end
