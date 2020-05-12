@@ -4,25 +4,36 @@
     <%= t ".chat" %>
   </h1>
 </div>
-<div class="container">
+<div class="container" id="container-chat">
   <div class="row">
-    <div class="col-md-3">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= t ".list_user" %></h3>
-        </div>
-        <div class="panel-body list-user">
-          <ul>
-            <% @users.each do |user| %>
-              <li><%= link_to user.name, "#",
-                id: "user-id-#{user.id}",
-                class: "current-user-#{current_user.id}" %></li>
-            <% end %>
-          </ul>
-        </div>
+    <div class="col-md-3" id="people-list">
+      <div class="search-msg">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="list">
+        <ul>
+          <% @users.each do |user| %>
+            <li class="clearfix">
+              <img src="<%= user.avatar.thum40.url %>"
+                width="40" height="40" alt="avatar" class="avatar-msg">
+              <div class="about">
+                <%= link_to user.name, "#", id: "user-id-#{user.id}",
+                  class: "current-user-#{current_user.id}" %>
+                <div class="status">
+                  <% if user.online %>
+                    <div class="fa fa-circle online" id="user-<%= user.id %>-status"> <span>online</span></div>
+                  <% else %>
+                    <div class="fa fa-circle offline" id="user-<%= user.id %>-status"> <span>offline</span></div>
+                  <% end %>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9" id="chat-msg">
       <div id="conversation"></div>
     </div>
   </div>
