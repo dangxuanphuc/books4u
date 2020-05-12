@@ -7,8 +7,14 @@ ul {
   text-decoration: none !important;
 }
 
-.messages-list {
-  max-height: 200px;
+.list-user {
+  max-height: 441px;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+#messages-list {
+  max-height: 350px;
   overflow-y: auto;
   overflow-x: hidden;
 }
