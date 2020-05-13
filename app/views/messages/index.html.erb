@@ -14,12 +14,11 @@
       <div class="list">
         <ul>
           <% @users.each do |user| %>
-            <li class="clearfix">
+            <li class="clearfix" id="user-id-<%= user.id %>">
               <img src="<%= user.avatar.thum40.url %>"
                 width="40" height="40" alt="avatar" class="avatar-msg">
               <div class="about">
-                <%= link_to user.name, "#", id: "user-id-#{user.id}",
-                  class: "current-user-#{current_user.id}" %>
+                <%= link_to user.name, "#", class: "current-user-#{current_user.id}" %>
                 <div class="status">
                   <% if user.online %>
                     <div class="fa fa-circle online" id="user-<%= user.id %>-status"> <span>online</span></div>
@@ -34,7 +33,10 @@
       </div>
     </div>
     <div class="col-md-9" id="chat-msg">
-      <div id="conversation"></div>
+      <div id="conversation">
+        <%= render "messages/conversation", messages: @messages_first,
+          user: @users.first %>
+      </div>
     </div>
   </div>
 </div>
