@@ -2,7 +2,8 @@ class AppearanceBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform user
-    ActionCable.server.broadcast "appearance-user", render_json(user)
+    ActionCable.server.broadcast "appearance-user",
+      user: render_json(user), time: user.set_online_time
   end
 
   private

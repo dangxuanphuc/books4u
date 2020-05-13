@@ -41,11 +41,29 @@
   }
 
   ul {
-    padding: 15px;
     height: 500px;
+    margin-bottom: 0;
 
     li {
-      padding-bottom: 20px;
+      padding: 10px 0 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $bg-list-user-item;
+        transition: 0.3s;
+      }
+
+      .avatar-msg {
+        float: left;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .active {
+      background-color: $bg-list-user-item;
+      transition: 0.3s;
     }
   }
 
@@ -55,6 +73,7 @@
 
     a {
       color: $white;
+      text-decoration: none;
     }
   }
 
@@ -89,14 +108,27 @@
     padding: 20px;
     border-bottom: 2px solid $white;
 
+    .avatar-msg {
+      float: left;
+      border-radius: 50%;
+    }
+
     .chat-about {
       float: left;
       padding-left: 10px;
+
+      .online, .offline {
+        font-size: 11px;
+      }
     }
 
     .chat-with {
       font-weight: bold;
       font-size: 16px;
+    }
+
+    .chat-status {
+      color: $search-msg;
     }
   }
 
@@ -151,10 +183,4 @@ ul {
 
 .btn-close {
   text-decoration: none !important;
-}
-
-.avatar-msg {
-  float: left;
-  margin-right: 10px;
-  border-radius: 50%;
 }
