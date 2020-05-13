@@ -5,6 +5,8 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable,
     :confirmable, :lockable, :trackable
 
+  after_update_commit :appearance_broadcast
+
   has_many :blogs, dependent: :destroy
   has_many :requests, dependent: :destroy
   has_many :notifications, dependent: :destroy
@@ -33,5 +35,11 @@ class User < ApplicationRecord
 
   def book_marked? book
     self.book_marks.find_by(book: book).present? ? true : false
+  end
+
+  private
+
+  def appearance_broadcast
+    AppearanceBroadcastJob.perform_later(self)
   end
 end
