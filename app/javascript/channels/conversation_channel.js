@@ -11,17 +11,30 @@ var conversation_function = function(current_user_id, user_id) {
     disconnected() {},
     received: function(data) {
       const conversation = $('#conversation').find("[data-user-id='" + user_id + "']");
-      conversation.find('#messages-list').find('ul').append(data['message']);
-      const message_id = data['message_id'];
-      if(data['sender_id'] == parseInt(current_user_id)) {
-        $("#message-" + message_id).addClass('message-sent');
-      } else {
-        $("#message-" + message_id).addClass('message-received');
-      }
+      const conversation_visible = conversation.is(':visible');
+      if(conversation_visible) {
+        conversation.find('#messages-list').find('ul').append(data['message']);
+        const message_id = data['message_id'];
+        if(data['sender_id'] == parseInt(current_user_id)) {
+          $("#message-" + message_id).addClass('message-sent');
+        } else {
+          $("#message-" + message_id).addClass('message-received');
+        }
 
-      const messages_list = conversation.find('#messages-list');
-      const height = messages_list[0].scrollHeight;
-      messages_list.scrollTop(height);
+        const messages_list = conversation.find('#messages-list');
+        const height = messages_list[0].scrollHeight;
+        messages_list.scrollTop(height);
+      } else {
+        const count_message = $('#count-message').is(':visible');
+        var val_div = parseInt($('#count-message').text());
+        if(!count_message) {
+          $('#count-message').css('display', 'inline-block');
+          $('#count-message').text(val_div + 1);
+        } else {
+          val_div += 1;
+          $('#count-message').text(val_div);
+        }
+      }
     },
     speak: function(message, user_id) {
       return this.perform('speak', {
@@ -61,6 +74,8 @@ var send_message = function(current_user_id, user_id) {
         current_active.removeClass('active');
       }
       $("#user-id-" + user_id).addClass('active');
+      $('#count-message').css('display', 'none');
+      $('#count-message').text(0);
 
       const conversation = $('#conversation').find("[data-user-id='" + user_id + "']");
       const messages_list = conversation.find('#messages-list');
