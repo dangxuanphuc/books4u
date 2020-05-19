@@ -22,5 +22,9 @@ module BookManagementSystem
     config.generators.system_tests = nil
 
     config.i18n.load_path += Dir["#{Rails.root.to_s}/config/locales/**/*.{rb,yml}"]
+
+    config.time_zone = 'Hanoi'
+
+    config.active_record.default_timezone = :local
   end
 end

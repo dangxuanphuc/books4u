@@ -155,11 +155,21 @@
       color: $white;
       position: relative;
       float: right;
+
+      .message-created-at {
+        float: right;
+        font-size: 13px;
+      }
     }
 
     .message-received {
       background-color: $bg-message-received;
       float: left;
+
+      .message-created-at {
+        float: left;
+        font-size: 13px;
+      }
     }
   }
 
@@ -185,7 +195,7 @@ ul {
   text-decoration: none !important;
 }
 
-#count-message {
+.count-message {
   background-color: $bg-msg-count;
   color: $white;
   width: auto;

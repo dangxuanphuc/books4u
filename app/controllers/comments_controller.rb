@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
   end
 
   def load_book
-    @book = Book.find_by id: params[:book_id]
+    @book = Book.friendly.find(params[:book_id])
 
     return @book
     redirect_to not_found_index_path
