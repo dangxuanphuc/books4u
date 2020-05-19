@@ -6,7 +6,8 @@
 <li>
   <div class="row">
     <div id="message-<%= message.id %>" class="message-content <%= class_div %>">
-      <%= message.body %>
+      <%= message.body %><br>
+      <span class="message-created-at"><%= message.created_at.strftime("%d/%m/%Y %H:%M") %></span>
     </div>
   </div>
 </li>

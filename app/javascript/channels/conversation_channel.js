@@ -25,14 +25,14 @@ var conversation_function = function(current_user_id, user_id) {
         const height = messages_list[0].scrollHeight;
         messages_list.scrollTop(height);
       } else {
-        const count_message = $('#count-message').is(':visible');
-        var val_div = parseInt($('#count-message').text());
+        const count_message = $('#count-message-user-' + user_id).is(':visible');
+        var val_div = parseInt($('#count-message-user-' + user_id).text());
         if(!count_message) {
-          $('#count-message').css('display', 'inline-block');
-          $('#count-message').text(val_div + 1);
+          $('#count-message-user-' + user_id).css('display', 'inline-block');
+          $('#count-message-user-' + user_id).text(val_div + 1);
         } else {
           val_div += 1;
-          $('#count-message').text(val_div);
+          $('#count-message-user-' + user_id).text(val_div);
         }
       }
     },
@@ -74,8 +74,8 @@ var send_message = function(current_user_id, user_id) {
         current_active.removeClass('active');
       }
       $("#user-id-" + user_id).addClass('active');
-      $('#count-message').css('display', 'none');
-      $('#count-message').text(0);
+      $('#count-message-user-' + user_id).css('display', 'none');
+      $('#count-message-user-' + user_id).text(0);
 
       const conversation = $('#conversation').find("[data-user-id='" + user_id + "']");
       const messages_list = conversation.find('#messages-list');

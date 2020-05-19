@@ -2,12 +2,14 @@
   <div class="col-sm-12 comment reply reply-<%= comment.id %> hidden pmd-z-depth comment-input">
     <ul class="nav nav-tabs" role="tablist">
       <li class="active">
-        <a href="" data-target="#write-<%= comment.id %>" role="tab" data-toggle="tab">
+        <a data-target="#write-<%= comment.id %>" role="tab"
+          data-toggle="tab" class="btn-pointer">
           <%= t "books.show.write" %>
         </a>
       </li>
       <li class="load-html" data="<%= comment.id %>">
-        <a data-target="#preview-<%= comment.id %>" role="tab" data-toggle="tab">
+        <a data-target="#preview-<%= comment.id %>" role="tab"
+          data-toggle="tab" class="btn-pointer">
           <%= t "books.show.preview" %>
         </a>
       </li>
@@ -17,7 +19,7 @@
       <div class="tab-content">
         <div class="active tab-pane fade in" id="write-<%= comment.id %>">
           <%= f.text_area :content, id: "comment-#{comment.id}",
-            class: "text-area" %>
+            class: "text-area", placeholder: "Write a response..." %>
           <%= f.hidden_field :parent_id, value: comment.id%>
         </div>
         <div class="tab-pane fade pmd-z-depth preview" id="preview-<%= comment.id %>">
