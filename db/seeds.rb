@@ -170,7 +170,7 @@ Author.create!([
     authors of the Agile Manifesto. He and co-author Dave Thomas founded the
     Pragmatic Bookshelf publishing house, specializing in books for for software
     developers, testers, and managers.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-7.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-7.jpg"},
   {name: "Venkat Subramaniam",
     description: "Venkat Subramaniam, founder of Agile Developer, Inc., has trained
     and mentored thousands of software developers in the US, Canada, Europe, and Asia.
@@ -179,21 +179,21 @@ Author.create!([
     software conferences and user groups. He's author of .NET Gotchas (O'Reilly),
     coauthor of the 2007 Jolt Productivity award-winning book Practices of an Agile
     Developer (Pragmatic Bookshelf), and author of Programming Groovy (Pragmatic Bookshelf).",
-    avatar: File.open(Rails.root + "public/uploads/image/au-1.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-1.jpg"},
   {name: "Robert C. Martin",
     description: "Robert C. Martin has been a programmer since 1970. He is founder of
     Uncle Bob Consulting, LLC, and cofounder with his son Micah Martin of The Clean
     Coders LLC. Martin has published dozens of articles in various trade journals and
     is a regular speaker at international conferences and trade shows. He has
     authored and edited many books.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-2.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-2.jpg"},
   {name: "Steve McConnell",
     description: "Steve McConnell is an award-winning, best selling CEO and author.
     His newest book is 'More Effective Agile: A Roadmap for Software Leaders. His
     first book, 'Code Complete, has been recognized as the best-selling, best-reviewed
     software development book of all time. His books have been translated into 20
     languages and sold more than one million copies worldwide.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-3.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-3.jpg"},
   {name: "Frederick P. Brooks Jr.",
     description: "Frederick P. Brooks Jr., is Kenan Professor of Computer Science at
     the University of North Carolina at Chapel Hill. He was an architect of the IBM
@@ -209,14 +209,14 @@ Author.create!([
     His focus began early to turn toward writing, with stops along the way in software
     methods, organizational design, litigation consulting, and even a stint teaching
     undergraduate Ethics at the University of Maine.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-4.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-4.jpg"},
   {name: "Mark Mitchell",
     description: "Mark Mitchell received a bachelor of arts degree in computer science
     from Harvard in 1994 and a master of science degree from Stanford in 1999. His
     research interests centered on computational complexity and computer security. Mark
     has participated substantially in the development of the GNU Compiler Collection,
     and he has a strong interest in developing quality software.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-5.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-5.jpg"},
   {name: "Alex Samuel",
     description: "Alex Samuel graduated from Harvard in 1995 with a degree in physics.
     He worked as a software engineer at BBN before returning to study physics at Caltech
@@ -242,7 +242,7 @@ Author.create!([
     documentation. He is also the creator of LinuxCommand.org, a Linux education
     and advocacy site featuring news, reviews, and extensive support for using the
     Linux command line.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-6.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-6.jpg"},
   {name: "Jonathan Corbet",
     description: "Jonathan Corbet got his first look at the BSD Unix source back
     in 1981, when an instructor at the University of Colorado let him fix the paging
@@ -251,7 +251,7 @@ Author.create!([
     He got his first Linux system in 1993, and has never looked back. Mr. Corbet is
     currently the co-founder and executive editor of Linux Weekly News, he lives in
     Boulder, Colorado with his wife and two children.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-8.jpeg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-8.jpeg"},
   {name: "Alessandro Rubini",
     description: "Alessandro installed Linux 0.99.14 soon after getting his degree as
     electronic engineer. He then received a Ph.D. in computer science at the University
@@ -260,7 +260,7 @@ Author.create!([
     lancer writing device drivers and, um...articles. He used to be a young hacker before
     his babies were born; he's now an old advocate of Free Software who developed a bias
     for non-PC computer platforms.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-9.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-9.jpg"},
   {name: "David M. Geary",
     description: "David M. Geary: A long-time best-selling author with the utmost
     respect for his readers' time, David's books all have a single purpose: To help
@@ -269,7 +269,7 @@ Author.create!([
     examples until they reveal the essence of a particular technique. David also
     iterates obsessively over his writing until discussions are succinct and
     crystal clear.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-10.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-10.jpg"},
   {name: "Sam Ruby",
     description: "Sam Ruby is president of the Apache Software Foundation, previously
     co-chaired the W3C HTML Working Group, and has made significant contributions to
@@ -279,14 +279,14 @@ Author.create!([
     He's the author of Build Awesome Command-Line Applications in Ruby 2 and Rails,
     Angular, Postgres, and Bootstrap. He has worked at LivingSocial and Opower,
     and is the Chief Software Architect at Stitch Fix.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-11.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-11.jpg"},
   {name: "Jeff Sutherland",
     description: "Jeff Sutherland: Jeff is the co-creator of Scrum and a leading
     expert on how this way of working has evolved to meet the needs of today's
     business. The framework he developed in 1993 and formalized in 1995 with
     Ken Schwaber has since been adopted by the vast majority of software
     development companies around the world.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-12.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-12.jpg"},
   {name: "JJ Sutherland",
     description: "JJ Sutherland is the CEO of Scrum Inc., a consulting and
     training firm that uses Scrum to rapidly deliver results in companies
@@ -294,7 +294,7 @@ Author.create!([
     on Accelerating Performance, Getting Results, and Defining the Future,
     and coauthor of Scrum: The Art of Doing Twice the Work in Half the Time,
     written with his father, Jeff Sutherland, the co-creator of Scrum.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-13.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-13.jpg"},
   {name: "Harvard Business Review",
     description: "Harvard Business Review is the leading destination for smart
     management thinking. Through its flagship magazine, 12 international
@@ -303,7 +303,7 @@ Author.create!([
     professionals around the world with rigorous insights and best practices
     to lead themselves and their organizations more effectively and to make
     a positive impact.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-14.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-14.jpg"},
   {name: "Adrian Kaehler",
     description: "Adrian Kaehler is a senior scientist at Applied Minds
     Corporation. His current research includes topics in machine learning,
@@ -313,7 +313,7 @@ Author.create!([
     and was a member of the winning Stanley race team in the DARPA Grand Challenge.
     He has a variety of published papers and patents in physics, electrical
     engineering, computer science, and robotics.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-15.jpeg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-15.jpeg"},
   {name: "Gary Rost Bradski",
     description: "Gary Rost Bradski is a consulting professor in the CS
     department at Stanford University AI Lab where he mentors robotics, machine
@@ -321,7 +321,7 @@ Author.create!([
     Garage http://www.willowgarage.com, a recently founded robotics research
     institute/incubator. He has a BS degree in EECS from U.C. Berkeley and a
     PhD from Boston University.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-16.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-16.jpg"},
   {name: "Prateek Joshi",
     description: "Prateek Joshi is a published author of 8 books (including a
     #1 best seller), an Artificial Intelligence researcher, and a TEDx speaker.
@@ -332,7 +332,7 @@ Author.create!([
     papers at major IEEE conferences. He has been an invited speaker at technology
     and entrepreneurship conferences including TEDx, Global Big Data Conference,
     Machine Learning Developers Conference, and Sensors Expo.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-17.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-17.jpg"},
   {name: "Simon J.D. Prince",
     description: "Dr Simon J.D. Prince is a faculty member in the Department of
     Computer Science at University College London. He has taught courses on machine
@@ -340,7 +340,7 @@ Author.create!([
     background in biological and computing sciences and has published papers across
     the fields of computer vision, biometrics, psychology, physiology, medical
     imaging, computer graphics, and HCI.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-18.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-18.jpg"},
   {name: "Mark Lutz",
     description: "Mark Lutz is the world leader in Python training, the author of
     Python's earliest and best-selling texts, and a pioneering figure in the Python
@@ -353,7 +353,7 @@ Author.create!([
     and Parquet projects within the Apache Software Foundation. I was the co-founder
     and CEO of DataPad. I later spent a couple years leading efforts to bring Python
     and Hadoop together at Cloudera. I'm now working for Two Sigma in New York.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-19.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-19.jpg"},
   {name: "John Kelleher",
     description: "John Kelleher is the Academic Leader of the Information, Communication
     and Entertainment research institute at the Technological University Dublin.
@@ -362,7 +362,7 @@ Author.create!([
     analytics. John has worked in a number of different academic and research
     focused institutes, including Dublin City University, Media Lab Europe, and
     DFKI (the German Centre for Artificial Intelligence Research).",
-    avatar: File.open(Rails.root + "public/uploads/image/au-20.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-20.jpg"},
   {name: "Nayan B. Ruparelia",
     description: "Nayan B. Ruparelia is an entrepreneur in London. He has more
     than thirty years of experience in technology, and from 2007 to 2015 he was
@@ -384,7 +384,7 @@ Author.create!([
     contributed to an anthology of Science Fiction by Scientists, and he wrote
     two science fiction novels, The Philodendrist Heresy and The Entropy Heresy.
     He was once pecked in the eye by a bird while doing yoga outside.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-21.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-21.jpg"},
   {name: "Ethem Alpaydin",
     description: "Ethem Alpaydin is Professor in the Department of Computer
     Engineering, Özyeğin University, Istanbul Turkey and is a member of the
@@ -393,7 +393,7 @@ Author.create!([
     Computer Science Institute, Berkeley in 1991. He was a Fulbright scholar in 1997.
     He was a visiting researcher at MIT, USA in 1994, IDIAP, Switzerland in 1998 and
     TU Delft, The Netherlands in 2014.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-22.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-22.jpg"},
   {name: "Jonathan Haber",
     description: "Jonathan Haber is an educational researcher, writer and
     recovering entrepreneur working in the field of technology-enabled learning
@@ -404,7 +404,7 @@ Author.create!([
     The Wall Street Journal and other major media sources. His writing on
     education-related topics has also appeared in Slate, EdSurge and other
     publications.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-23.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-23.jpg"},
   {name: "Peter J. Denning",
     description: "Peter J. Denning is Distinguished Professor of Computer Science
     at the Naval Postgraduate School, Monterey, California. He is the coauthor of
@@ -435,7 +435,7 @@ Author.create!([
     writing and developing RailsSpace, an extremely obsolete Rails tutorial book,
     and developing Insoshi, a once-popular and now-obsolete social networking
     platform in Ruby on Rails.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-24.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-24.jpg"},
   {name: "Russ Olsen",
     description: "Russ Olsen has been building software for more than twenty-five
     years. He has led projects through several generations of programming
@@ -478,7 +478,7 @@ Author.create!([
     high-risk projects for massive companies like Daimler, John Deere, and Sony
     Ericsson, delivering some of the world’s first successful enterprise Ruby
     on Rails systems.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-25.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-25.jpg"},
   {name: "Sandi Metz",
     description: "Sandi Metz has thirty years of experience working on projects
     that survived to grow and change. She now writes code every day as a software
@@ -486,7 +486,7 @@ Author.create!([
     customers who have large object-oriented applications that have been evolving
     for more than fifteen years. She has spoken at Ruby Nation and speaks
       regularly at the Gotham Ruby Users Conference.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-26.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-26.jpg"},
   {name: "Barrett Clark",
     description: "Barrett Clark is a Rubyist turned polyglot software developer.
     Now at Sabre Labs, an emerging travel technology incubator and research lab,
@@ -494,7 +494,7 @@ Author.create!([
     extensively with mapping, geolocation, indoor location, and proximity. His
     recent speaking engagements include Mountain West Ruby Conference, API World,
     Lone Star Ruby Conference, RailsConf, and Abstractions.",
-    avatar: File.open(Rails.root + "public/uploads/image/au-27.jpg")},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-27.jpg"},
   {name: "Moheb Costandi",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
     gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
@@ -582,15 +582,15 @@ Category.create!([
     states the code is also tested against a release candidate of Java SE6. Fairly
     new topics like Generics, Concurrency and Annotations are covered so well that
     it gives the reader fundamental to deep knowledge of each concept.",
-    image: File.open(Rails.root + "public/uploads/categories/java.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/java.jpg"},
   {title: "Mobile", description: "The Mobile Book features the most important
     things that you need to know as a designer, developer or mobile strategist
     for your websites.",
-    image: File.open(Rails.root + "public/uploads/categories/mobile.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/mobile.jpg"},
   {title: "Android", parent_id: 2, description: "See what's new with Android
     - from phones to watches and more. Visit the official site to
     explore and learn.",
-    image: File.open(Rails.root + "public/uploads/categories/android.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/android.jpg"},
   {title: "iOS", parent_id: 2, description: "If there is one piece of
     technology that is ubiquitous in the blind community today, it would
     have to be the iPhone. Ever since the release of the iPhone 3GS, people
@@ -598,50 +598,50 @@ Category.create!([
     piece of glass and doing things they never thought possible. Whether
     it's setting calendar appointments, looking at restaurant menus, or reading
     movie reviews, the iPhone has been a big part of it all.",
-    image: File.open(Rails.root + "public/uploads/categories/ios.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/ios.jpg"},
   {title: "Web", description: "We develop cross-platform Web app for reading
     ebooks, and also publish high- quality ebooks, especially textbooks.",
-    image: File.open(Rails.root + "public/uploads/categories/web.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/web.jpg"},
   {title: "PHP", parent_id: 6, description: "PHP Book includes 250+ functions,
     2 indexes, MySQL, and Regular Expressions. Also available: free PDF of the
     PHP reference book.",
-    image: File.open(Rails.root + "public/uploads/categories/php.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/php.jpg"},
   {title: "AI", description: "Are you searching for some best books to get
     acquainted with the basics of AI? Here is a list of 20 free books on
     Artificial Intelligence.",
-    image: File.open(Rails.root + "public/uploads/categories/ai.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/ai.jpg"},
   {title: "Python", parent_id: 7, description: "Learn python and how to use it
     to analyze, visualize and present data! On-Demand Courses · 30-Day
     Guarantee · Lifetime Accessaffordable prices & classes on virtually
     every topic.",
-    image: File.open(Rails.root + "public/uploads/categories/python.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/python.jpg"},
   {title: "Design", description: "We asked some of the world's top design
     schools to share their favorite books. Here's what they ... A history
     book and design philosophy book in one.",
-    image: File.open(Rails.root + "public/uploads/categories/design.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/design.jpg"},
   {title: "UI", parent_id: 10, description: "While not a short read, this book
     is a solid resource for UX and interaction designers at all experience levels
     and I definitely think it's worth.",
-    image: File.open(Rails.root + "public/uploads/categories/ui.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/ui.jpg"},
   {title: "UX", parent_id: 10, description: "Free UX Consultation · SF Bay
     Area Based · 13 Yrs and 400+ Projects · Award Winning UX Agency Types: UX
     Strategy, UI Design, Frontend Developement",
-    image: File.open(Rails.root + "public/uploads/categories/ux.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/ux.jpg"},
   {title: "Agile", description: "Discover the best Agile Project Management
     in Best Sellers. Find the top 100 most popular items in Amazon Books
     Best Sellers.",
-    image: File.open(Rails.root + "public/uploads/categories/agile.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/agile.jpg"},
   {title: "Linux", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi.",
-    image: File.open(Rails.root + "public/uploads/categories/linux.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/linux.jpg"},
   {title: "Other", description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi."},
   {title: "Ruby on Rails", parent_id: 6, description: "Lorem ipsum dolor sit amet, consectetur adipiscing
     elit. Sed condimentum pretium laoreet. Pellentesque tempus metus justo, nec
     ullamcorper risus suscipit mollis. Phasellus a magna mi.",
-    image: File.open(Rails.root + "public/uploads/categories/rails.jpg")},
+    remote_image_url: "https://res.cloudinary.com/phucdx/image/upload/v1588644365/Books4U/categories/rails.jpg"},
 ])
 puts "Created #{Category.count} categories!"
 
@@ -1197,131 +1197,131 @@ puts "Created #{Book.count} books!"
 
 Image.create!([
   {target_id: 1, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/1.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/1.jpg"},
   {target_id: 1, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/1.1.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/1.1.jpg"},
   {target_id: 2, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/2.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/2.jpg"},
   {target_id: 3, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/3.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/3.jpg"},
   {target_id: 4, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/4.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/4.jpg"},
   {target_id: 5, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/5.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/5.jpg"},
   {target_id: 6, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/6.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/6.jpg"},
   {target_id: 7, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/7.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/7.jpg"},
   {target_id: 8, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/8.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/8.jpg"},
   {target_id: 9, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/9.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/9.jpg"},
   {target_id: 10, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/10.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/10.jpg"},
   {target_id: 10, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/10.1.jpeg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/10.1.jpeg"},
   {target_id: 11, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/11.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/11.jpg"},
   {target_id: 12, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/12.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/12.jpg"},
   {target_id: 13, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/13.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/13.jpg"},
   {target_id: 14, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/14.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/14.jpg"},
   {target_id: 15, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/15.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/15.jpg"},
   {target_id: 16, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/16.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/16.jpg"},
   {target_id: 17, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/17.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/17.jpg"},
   {target_id: 18, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/18.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/18.jpg"},
   {target_id: 19, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/19.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/19.jpg"},
   {target_id: 20, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/20.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/20.jpg"},
   {target_id: 21, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/21.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/21.jpg"},
   {target_id: 22, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/22.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/22.jpg"},
   {target_id: 23, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/23.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/23.jpg"},
   {target_id: 24, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/24.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/24.jpg"},
   {target_id: 25, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/25.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/25.jpg"},
   {target_id: 26, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/26.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/26.jpg"},
   {target_id: 27, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/27.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/27.jpg"},
   {target_id: 28, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/28.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/28.jpg"},
   {target_id: 29, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/29.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/29.jpg"},
   {target_id: 30, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/30.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/30.jpg"},
   {target_id: 31, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/31.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/31.jpg"},
   {target_id: 32, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/32.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/32.jpg"},
   {target_id: 33, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/33.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/33.jpg"},
   {target_id: 34, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/34.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/34.jpg"},
   {target_id: 35, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/35.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/35.jpg"},
   {target_id: 36, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/36.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/36.jpg"},
   {target_id: 37, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/37.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/37.jpg"},
   {target_id: 38, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/38.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/38.jpg"},
   {target_id: 39, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/39.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/39.jpg"},
   {target_id: 40, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/40.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/40.jpg"},
   {target_id: 41, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/41.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/41.jpg"},
   {target_id: 42, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/42.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/42.jpg"},
   {target_id: 43, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/43.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/43.jpg"},
   {target_id: 44, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/44.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/44.jpg"},
   {target_id: 45, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/45.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/45.jpg"},
   {target_id: 46, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/46.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/46.jpg"},
   {target_id: 47, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/47.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/47.jpg"},
   {target_id: 48, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/48.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/48.jpg"},
   {target_id: 49, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/49.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/49.jpg"},
   {target_id: 50, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/50.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/50.jpg"},
   {target_id: 51, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/51.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/51.jpg"},
   {target_id: 52, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/52.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/52.jpg"},
   {target_id: 53, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/53.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/53.jpg"},
   {target_id: 54, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/54.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/54.jpg"},
   {target_id: 55, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/55.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/55.jpg"},
   {target_id: 56, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/56.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/56.jpg"},
   {target_id: 57, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/57.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/57.jpg"},
   {target_id: 58, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/58.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/58.jpg"},
   {target_id: 59, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/59.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/59.jpg"},
   {target_id: 60, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/60.jpg")},
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/60.jpg"},
   {target_id: 61, target_type: "Book",
-    url: File.open(Rails.root + "public/uploads/image/61.jpg")}
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/61.jpg"}
 ])
 puts "Created #{Image.count} images!"
 

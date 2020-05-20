@@ -11,12 +11,12 @@ gem "carrierwave", "~> 2.0"
 gem "cocoon"
 gem "config"
 gem "devise"
+gem "faker"
 gem "figaro"
 gem "friendly_id", "~> 5.2.4"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
 gem "mini_magick"
-gem "mysql2"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.2", ">= 6.0.2.2"
 gem "rails_param"
@@ -32,12 +32,17 @@ end
 
 group :development do
   gem "bullet"
-  gem "faker"
   gem "listen", ">= 3.0.5", "< 3.2"
+  gem "mysql2"
   gem "pry"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
+end
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
