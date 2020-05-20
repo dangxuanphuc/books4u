@@ -12,5 +12,9 @@ test:
   <<: *default
   database: books4u_test
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: books4u_production
+  username: postgres
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
