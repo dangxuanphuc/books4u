@@ -2,9 +2,11 @@ development:
   adapter: async
 
 test:
-  adapter: test
+  adapter: async
 
 production:
-  adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: books4u_production
+  :url: redis://redistogo:aa8fd57b56bd0649fbfbcdda9515f4fe@pike.redistogo.com:10920/
+  :host: dory.redistogo.com
+  :port: 11403
+  :inline: true
+  :timeout: 1
