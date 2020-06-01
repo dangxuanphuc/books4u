@@ -5,6 +5,8 @@ test:
   adapter: async
 
 production:
+  adapter: redis
+  channel_prefix: books4u_production
   :url: redis://redistogo:aa8fd57b56bd0649fbfbcdda9515f4fe@pike.redistogo.com:10920/
   :host: dory.redistogo.com
   :port: 11403
