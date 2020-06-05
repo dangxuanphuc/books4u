@@ -203,6 +203,27 @@
   }
 }
 
+.header-block-no-border {
+  background: $black url("https://res.cloudinary.com/phucdx/image/upload/v1587092629/Books4U/background.png") no-repeat left top / cover;
+  color: $white;
+  align-items: center;
+  display: flex;
+  height: 45vh;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  h1, h2 {
+    text-shadow: 2px 2px 0 $black;
+  }
+}
+
 :focus {
   outline: none;
 }

@@ -2,6 +2,7 @@ User.create! name: "Dang Xuan Phuc",
   email: "admin@books4u.com",
   role: "admin",
   staff_code: "20201200",
+  remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1591198889/Books4U/mitsuha.jpg",
   password: "admin123",
   password_confirmation: "admin123",
   confirmed_at: Time.zone.now
@@ -157,6 +158,60 @@ Publisher.create!([
     ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
     imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
     enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "McGraw-Hill Education", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Basic Books", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Genever Benning", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Wiley", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Springer-Verlag", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Science Engineering & Math", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "MITP Verlags GmbH & Co. KG", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "Now Publishers Inc", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
+    libero vitae, auctor tellus."},
+  {name: "KIT Scientific Publishing", description: "Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Duis gravida ipsum vitae libero feugiat mattis. Nullam et
+    ornare purus. Aenean sit amet placerat nisi. Quisque at turpis venenatis,
+    imperdiet est id, dignissim ligula. Morbi non neque lacinia, tincidunt
+    enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus
     libero vitae, auctor tellus."}
 ])
 puts "Created #{Publisher.count} publishers!"
@@ -171,22 +226,20 @@ Author.create!([
     Pragmatic Bookshelf publishing house, specializing in books for for software
     developers, testers, and managers.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-7.jpg"},
-  {name: "Venkat Subramaniam",
-    description: "Venkat Subramaniam, founder of Agile Developer, Inc., has trained
-    and mentored thousands of software developers in the US, Canada, Europe, and Asia.
-    Venkat helps his clients effectively apply and succeed with agile practices on
-    their software projects. He is a frequent invited speaker at international
-    software conferences and user groups. He's author of .NET Gotchas (O'Reilly),
-    coauthor of the 2007 Jolt Productivity award-winning book Practices of an Agile
-    Developer (Pragmatic Bookshelf), and author of Programming Groovy (Pragmatic Bookshelf).",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-1.jpg"},
+  {name: "Jeff Sutherland",
+    description: "Jeff Sutherland: Jeff is the co-creator of Scrum and a leading
+    expert on how this way of working has evolved to meet the needs of today's
+    business. The framework he developed in 1993 and formalized in 1995 with
+    Ken Schwaber has since been adopted by the vast majority of software
+    development companies around the world.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-12.jpg"},
   {name: "Robert C. Martin",
     description: "Robert C. Martin has been a programmer since 1970. He is founder of
     Uncle Bob Consulting, LLC, and cofounder with his son Micah Martin of The Clean
     Coders LLC. Martin has published dozens of articles in various trade journals and
     is a regular speaker at international conferences and trade shows. He has
     authored and edited many books.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-2.jpg"},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1591067415/Books4U/image/au-2.1.png"},
   {name: "Steve McConnell",
     description: "Steve McConnell is an award-winning, best selling CEO and author.
     His newest book is 'More Effective Agile: A Roadmap for Software Leaders. His
@@ -194,14 +247,47 @@ Author.create!([
     software development book of all time. His books have been translated into 20
     languages and sold more than one million copies worldwide.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-3.jpg"},
-  {name: "Frederick P. Brooks Jr.",
-    description: "Frederick P. Brooks Jr., is Kenan Professor of Computer Science at
-    the University of North Carolina at Chapel Hill. He was an architect of the IBM
-    Stretch and Harvest computers. He was Corporate Project Manager for the System/360,
-    including development of the System/360 computer family hardware and the decision
-    to switch computer byte size from 6 to 8 bits. He then managed the initial
-    development of the Operating System/360 software suite: operating system, 16
-    compilers, communications, and utilities."},
+  {name: "Herbert Schildt",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-28.jpeg"},
+  {name: "Prateek Joshi",
+    description: "Prateek Joshi is a published author of 8 books (including a
+    #1 best seller), an Artificial Intelligence researcher, and a TEDx speaker.
+    He has been featured on Forbes 30 Under 30, CNBC, TechCrunch, Silicon Valley
+    Business Journal, and many more publications. He is the founder of Pluto AI,
+    a venture-funded Silicon Valley startup building an intelligence platform for
+    water facilities. His work in this field has led to patents, demos, and research
+    papers at major IEEE conferences. He has been an invited speaker at technology
+    and entrepreneurship conferences including TEDx, Global Big Data Conference,
+    Machine Learning Developers Conference, and Sensors Expo.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-17.jpg"},
+  {name: "Harvard Business Review",
+    description: "Harvard Business Review is the leading destination for smart
+    management thinking. Through its flagship magazine, 12 international
+    licensed editions, books from Harvard Business Review Press, and digital
+    content and tools published on HBR.org, Harvard Business Review provides
+    professionals around the world with rigorous insights and best practices
+    to lead themselves and their organizations more effectively and to make
+    a positive impact.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-14.jpg"},
+  {name: "Robert Nystrom",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-66.jpg"},
+  {name: "Marc Peter Deisenroth",
+    description: "Marc Peter Deisenroth is DeepMind Chair in Artificial Intelligence
+    at the Department of Computer Science, University College London. Prior to this,
+    he was a faculty member in the Department of Computing, Imperial College London.
+    His research areas include data-efficient learning, probabilistic modeling, and
+    autonomous decision making.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-29.jpg"},
   {name: "Tom DeMarco",
     description: "Tom DeMarco is the author of fifteen books, including novels, business
     books and a collection of short stories. He began his career as a software engineer
@@ -209,32 +295,7 @@ Author.create!([
     His focus began early to turn toward writing, with stops along the way in software
     methods, organizational design, litigation consulting, and even a stint teaching
     undergraduate Ethics at the University of Maine.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-4.jpg"},
-  {name: "Mark Mitchell",
-    description: "Mark Mitchell received a bachelor of arts degree in computer science
-    from Harvard in 1994 and a master of science degree from Stanford in 1999. His
-    research interests centered on computational complexity and computer security. Mark
-    has participated substantially in the development of the GNU Compiler Collection,
-    and he has a strong interest in developing quality software.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-5.jpg"},
-  {name: "Alex Samuel",
-    description: "Alex Samuel graduated from Harvard in 1995 with a degree in physics.
-    He worked as a software engineer at BBN before returning to study physics at Caltech
-    and the Stanford Linear Accelerator Center. Alex administers the Software Carpentry
-    project and works on various other projects, such as optimizations in GCC."},
-  {name: "Neil Matthew",
-    description: "Neil Matthew has been interested in and has programmed computers since
-    1974. A mathematics graduate from the University of Nottingham, Neil is just plain
-    keen on programming languages and likes to explore new ways of solving computing
-    problems. He’s written systems to program in BCPL, FP (Functional Programming),
-    Lisp, Prolog, and a structured BASIC. He even wrote a 6502 microprocessor emulator
-    to run BBC microcomputer programs on UNIX systems."},
-  {name: "Rick Stones",
-    description: "Rick Stones started programming at school (more years ago than he
-    cares to remember) on a 6502-powered BBC micro, which, with the help of a few
-    spare parts, continued to function for the next 15 years. He graduated from
-    Nottingham University with a degree in Electronic Engineering, but decided
-    software was more fun."},
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-4.1.jpg"},
   {name: "William Shotts",
     description: "William Shotts has been a software professional for more than 30
     years and an avid Linux user for more than 20 years. He has an extensive background
@@ -280,13 +341,15 @@ Author.create!([
     Angular, Postgres, and Bootstrap. He has worked at LivingSocial and Opower,
     and is the Chief Software Architect at Stitch Fix.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-11.jpg"},
-  {name: "Jeff Sutherland",
-    description: "Jeff Sutherland: Jeff is the co-creator of Scrum and a leading
-    expert on how this way of working has evolved to meet the needs of today's
-    business. The framework he developed in 1993 and formalized in 1995 with
-    Ken Schwaber has since been adopted by the vast majority of software
-    development companies around the world.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-12.jpg"},
+  {name: "Venkat Subramaniam",
+    description: "Venkat Subramaniam, founder of Agile Developer, Inc., has trained
+    and mentored thousands of software developers in the US, Canada, Europe, and Asia.
+    Venkat helps his clients effectively apply and succeed with agile practices on
+    their software projects. He is a frequent invited speaker at international
+    software conferences and user groups. He's author of .NET Gotchas (O'Reilly),
+    coauthor of the 2007 Jolt Productivity award-winning book Practices of an Agile
+    Developer (Pragmatic Bookshelf), and author of Programming Groovy (Pragmatic Bookshelf).",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-1.jpg"},
   {name: "JJ Sutherland",
     description: "JJ Sutherland is the CEO of Scrum Inc., a consulting and
     training firm that uses Scrum to rapidly deliver results in companies
@@ -295,15 +358,11 @@ Author.create!([
     and coauthor of Scrum: The Art of Doing Twice the Work in Half the Time,
     written with his father, Jeff Sutherland, the co-creator of Scrum.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-13.jpg"},
-  {name: "Harvard Business Review",
-    description: "Harvard Business Review is the leading destination for smart
-    management thinking. Through its flagship magazine, 12 international
-    licensed editions, books from Harvard Business Review Press, and digital
-    content and tools published on HBR.org, Harvard Business Review provides
-    professionals around the world with rigorous insights and best practices
-    to lead themselves and their organizations more effectively and to make
-    a positive impact.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-14.jpg"},
+  {name: "Alex Samuel",
+    description: "Alex Samuel graduated from Harvard in 1995 with a degree in physics.
+    He worked as a software engineer at BBN before returning to study physics at Caltech
+    and the Stanford Linear Accelerator Center. Alex administers the Software Carpentry
+    project and works on various other projects, such as optimizations in GCC."},
   {name: "Adrian Kaehler",
     description: "Adrian Kaehler is a senior scientist at Applied Minds
     Corporation. His current research includes topics in machine learning,
@@ -322,17 +381,13 @@ Author.create!([
     institute/incubator. He has a BS degree in EECS from U.C. Berkeley and a
     PhD from Boston University.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-16.jpg"},
-  {name: "Prateek Joshi",
-    description: "Prateek Joshi is a published author of 8 books (including a
-    #1 best seller), an Artificial Intelligence researcher, and a TEDx speaker.
-    He has been featured on Forbes 30 Under 30, CNBC, TechCrunch, Silicon Valley
-    Business Journal, and many more publications. He is the founder of Pluto AI,
-    a venture-funded Silicon Valley startup building an intelligence platform for
-    water facilities. His work in this field has led to patents, demos, and research
-    papers at major IEEE conferences. He has been an invited speaker at technology
-    and entrepreneurship conferences including TEDx, Global Big Data Conference,
-    Machine Learning Developers Conference, and Sensors Expo.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-17.jpg"},
+  {name: "Mark Mitchell",
+    description: "Mark Mitchell received a bachelor of arts degree in computer science
+    from Harvard in 1994 and a master of science degree from Stanford in 1999. His
+    research interests centered on computational complexity and computer security. Mark
+    has participated substantially in the development of the GNU Compiler Collection,
+    and he has a strong interest in developing quality software.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-5.jpg"},
   {name: "Simon J.D. Prince",
     description: "Dr Simon J.D. Prince is a faculty member in the Department of
     Computer Science at University College London. He has taught courses on machine
@@ -410,12 +465,12 @@ Author.create!([
     at the Naval Postgraduate School, Monterey, California. He is the coauthor of
     The Innovator's Way: Essential Practices for Successful Innovation and Great
     Principles of Computing, both published by the MIT Press."},
-  {name: "Marc Peter Deisenroth",
-    description: "Marc Peter Deisenroth is DeepMind Chair in Artificial Intelligence
-    at the Department of Computer Science, University College London. Prior to this,
-    he was a faculty member in the Department of Computing, Imperial College London.
-    His research areas include data-efficient learning, probabilistic modeling, and
-    autonomous decision making."},
+  {name: "Rick Stones",
+    description: "Rick Stones started programming at school (more years ago than he
+    cares to remember) on a 6502-powered BBC micro, which, with the help of a few
+    spare parts, continued to function for the next 15 years. He graduated from
+    Nottingham University with a degree in Electronic Engineering, but decided
+    software was more fun."},
   {name: "A. Aldo Faisal",
     description: "A. Aldo Faisal leads the Brain and Behaviour Lab at Imperial
     College London, where he is faculty at the Departments of Bioengineering and
@@ -536,6 +591,45 @@ Author.create!([
     gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
     amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
     ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {name: "Bert Bates",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {name: "Kathy Sierra",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {name: "Frederick P. Brooks Jr.",
+    description: "Frederick P. Brooks Jr., is Kenan Professor of Computer Science at
+    the University of North Carolina at Chapel Hill. He was an architect of the IBM
+    Stretch and Harvest computers. He was Corporate Project Manager for the System/360,
+    including development of the System/360 computer family hardware and the decision
+    to switch computer byte size from 6 to 8 bits. He then managed the initial
+    development of the Operating System/360 software suite: operating system, 16
+    compilers, communications, and utilities."},
+  {name: "Don Norman",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {name: "Neil Matthew",
+    description: "Neil Matthew has been interested in and has programmed computers since
+    1974. A mathematics graduate from the University of Nottingham, Neil is just plain
+    keen on programming languages and likes to explore new ways of solving computing
+    problems. He’s written systems to program in BCPL, FP (Functional Programming),
+    Lisp, Prolog, and a structured BASIC. He even wrote a 6502 microprocessor emulator
+    to run BBC microcomputer programs on UNIX systems."},
+  {name: "Addy Osmani",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
     Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."}
 ])
 puts "Created #{Author.count} authors!"
@@ -571,6 +665,16 @@ Series.create!([
     Duis gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus.
     Aenean sit amet placerat nisi. Quisque at turpis venenatis, imperdiet est id,
     dignissim ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {title: "Head First",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus.
+    Aenean sit amet placerat nisi. Quisque at turpis venenatis, imperdiet est id,
+    dignissim ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."},
+  {title: "Beginner's Guide",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus.
+    Aenean sit amet placerat nisi. Quisque at turpis venenatis, imperdiet est id,
+    dignissim ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris. Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus."}
 ])
 puts "Created #{Series.count} series!"
 
@@ -1191,6 +1295,258 @@ Book.create!([
     dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
     faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
     cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Head First Java, 2nd Edition",
+    isbn: "0596009208", publisher_id: 10, series_id: 5,
+    language_id: 2, pages: 688, rate: 4, rate_count: 12,
+    dimension: "8 x 1.5 x 9.2 inches", public_date: "2005/22/02",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Java: A Beginner's Guide, Eighth Edition",
+    isbn: "1260440214", publisher_id: 24, series_id: 7,
+    language_id: 2, pages: 720, rate: 4, rate_count: 12,
+    dimension: "7.3 x 1.4 x 9.1 inches", public_date: "2018/11/02",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Java: The Complete Reference, Eleventh Edition",
+    isbn: "1260440230", publisher_id: 24,
+    language_id: 2, pages: 1248, rate: 4, rate_count: 12,
+    dimension: "7.2 x 1.8 x 9 inches", public_date: "2018/12/12",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "The Design of Everyday Things: Revised and Expanded Edition",
+    isbn: "9780465050659", publisher_id: 25,
+    language_id: 2, pages: 368, rate: 4, rate_count: 12,
+    dimension: "5.5 x 1 x 8.3 inches", public_date: "2013/11/05",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Game Programming Patterns",
+    isbn: "0990582906", publisher_id: 26,
+    language_id: 2, pages: 354, rate: 4, rate_count: 12,
+    dimension: "7.5 x 0.8 x 9.2 inches", public_date: "2014/11/02",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Learning JavaScript Design Patterns",
+    isbn: "9781449331818", publisher_id: 10,
+    language_id: 2, pages: 254, rate: 4, rate_count: 12,
+    dimension: "7 x 0.6 x 9.2 inches", public_date: "2012/08/30",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Pragmatic Thinking and Learning: Refactor Your Wetware",
+    isbn: "1934356050", publisher_id: 2,
+    language_id: 2, pages: 252, rate: 4, rate_count: 12,
+    dimension: "7 x 0.6 x 9.2 inches", public_date: "2012/11/05",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers' Guide",
+    isbn: "1937785491", publisher_id: 2,
+    language_id: 2, pages: 888, rate: 4, rate_count: 12,
+    dimension: "7.5 x 1.8 x 9.2 inches", public_date: "2013/06/07",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Pragmatic Unit Testing in Java 8 with JUnit",
+    isbn: "1941222595", publisher_id: 2,
+    language_id: 2, pages: 236, rate: 4, rate_count: 12,
+    dimension: "7.5 x 0.5 x 9.2 inches", public_date: "2015/03/19",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Learn to Program with Minecraft Plugins",
+    isbn: "1941222943", publisher_id: 2,
+    language_id: 2, pages: 284, rate: 4, rate_count: 12,
+    dimension: "7.5 x 0.6 x 9.2 inches", public_date: "2014/11/08",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Software Estimation",
+    isbn: "1941222943", publisher_id: 4,
+    language_id: 2, pages: 308, rate: 4, rate_count: 12,
+    dimension: "7.5 x 0.6 x 9.2 inches", public_date: "2006/02/22",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Rapid Development",
+    isbn: "9781556159008", publisher_id: 4,
+    language_id: 2, pages: 672, rate: 4, rate_count: 12,
+    dimension: "7.4 x 1.6 x 9 inches", public_date: "1996/06/12",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Software Project Survival Guide",
+    isbn: "1572316217", publisher_id: 4,
+    language_id: 2, pages: 306, rate: 4, rate_count: 12,
+    dimension: "7.4 x 0.7 x 9.2 inches", public_date: "1997/10/25",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "A Scrum Book: The Spirit of the Game",
+    isbn: "1680506714", publisher_id: 2,
+    language_id: 2, pages: 574, rate: 4, rate_count: 12,
+    dimension: "7.4 x 0.7 x 9.2 inches", public_date: "209/08/16",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Software in 30 Days",
+    isbn: "1118206665", publisher_id: 27,
+    language_id: 2, pages: 216, rate: 4, rate_count: 12,
+    dimension: "7.3 x 0.7 x 9.2 inches", public_date: "2012/05/01",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Business Object Design and Implementation II",
+    isbn: "1852331089", publisher_id: 4,
+    language_id: 2, pages: 212, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "1998/12/10",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "C++: The Complete Reference, 4th Edition",
+    isbn: "0072226803", publisher_id: 24,
+    language_id: 2, pages: 1056, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2002/12/10",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Swing: A Beginner's Guide",
+    isbn: "0072263148", publisher_id: 24,
+    language_id: 2, pages: 590, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2006/09/29",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Java Programming: A Comprehensive Introduction, First edition",
+    isbn: "007802207X", publisher_id: 27,
+    language_id: 2, pages: 1184, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2012/07/01",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Artificial Intelligence with Python",
+    isbn: "183921953X", publisher_id: 20,
+    language_id: 2, pages: 618, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2020/01/31",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Learn OpenCV 4 by Building Projects",
+    isbn: "1789341221", publisher_id: 20,
+    language_id: 2, pages: 312, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2018/11/30",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "OpenCV By Example",
+    isbn: "1785280945", publisher_id: 20,
+    language_id: 2, pages: 298, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2016/01/22",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Python Machine Learning Cookbook",
+    isbn: "1786464470", publisher_id: 20,
+    language_id: 2, pages: 304, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2016/06/23",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Design Patterns für die Spieleprogrammierung",
+    isbn: "3958450903", publisher_id: 30,
+    language_id: 2, pages: 400, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2015/08/31",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Game Programming Patterns ソフトウェア開発の問題解決メニュー",
+    isbn: "4844338900", publisher_id: 15,
+    language_id: 3, pages: 304, rate: 4, rate_count: 12,
+    dimension: "9.1 x 7.2 x 1.1 inches", public_date: "2016/06/23",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Programowanie gier Wzorce",
+    isbn: "8301210370", publisher_id: 31,
+    language_id: 2, pages: 304, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.5 x 9.2 inches", public_date: "2020/01/01",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Efficient Reinforcement Learning Using Gaussian Processes",
+    isbn: "3866445695", publisher_id: 31,
+    language_id: 2, pages: 224, rate: 4, rate_count: 12,
+    dimension: "7.1 x 0.5 x 9.4 inches", public_date: "2010/11/22",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "A Survey on Policy Search for Robotics",
+    isbn: "1601987021", publisher_id: 20,
+    language_id: 2, pages: 160, rate: 4, rate_count: 12,
+    dimension: "6.1 x 0.3 x 9.2 inches", public_date: "2013/08/15",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
     urna mattis in. Pellentesque ut lorem arcu."}
 ])
 puts "Created #{Book.count} books!"
@@ -1321,15 +1677,70 @@ Image.create!([
   {target_id: 60, target_type: "Book",
     remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/60.jpg"},
   {target_id: 61, target_type: "Book",
-    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/61.jpg"}
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/61.jpg"},
+  {target_id: 62, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591020812/Books4U/image/62.jpg"},
+  {target_id: 63, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591021590/Books4U/image/63.jpg"},
+  {target_id: 64, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1588236078/Books4U/image/64.jpg"},
+  {target_id: 65, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591022505/Books4U/image/65.jpg"},
+  {target_id: 66, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591022505/Books4U/image/66.jpg"},
+  {target_id: 67, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591025124/Books4U/image/67.jpg"},
+  {target_id: 68, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591025100/Books4U/image/68.jpg"},
+  {target_id: 69, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591025100/Books4U/image/69.jpg"},
+  {target_id: 70, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591025100/Books4U/image/70.jpg"},
+  {target_id: 71, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591025100/Books4U/image/71.jpg"},
+  {target_id: 72, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/72.jpg"},
+  {target_id: 73, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/73.jpg"},
+  {target_id: 74, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/74.jpg"},
+  {target_id: 75, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/75.jpg"},
+  {target_id: 76, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/76.jpg"},
+  {target_id: 77, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/77.jpg"},
+  {target_id: 78, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/78.jpg"},
+  {target_id: 79, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/79.jpg"},
+  {target_id: 80, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/80.jpg"},
+  {target_id: 81, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/81.jpg"},
+  {target_id: 82, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/82.jpg"},
+  {target_id: 83, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/83.jpg"},
+  {target_id: 84, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591063808/Books4U/image/84.jpg"},
+  {target_id: 85, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075405/Books4U/image/85.jpg"},
+  {target_id: 86, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075406/Books4U/image/86.jpg"},
+  {target_id: 87, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075405/Books4U/image/87.jpg"},
+  {target_id: 88, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075642/Books4U/image/88.jpg"},
+  {target_id: 89, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075642/Books4U/image/89.jpg"},
 ])
 puts "Created #{Image.count} images!"
 
 AuthorBook.create!([
   {author_id: 1, book_id: 1},
   {author_id: 1, book_id: 2},
-  {author_id: 2, book_id: 2},
-  {author_id: 2, book_id: 3},
+  {author_id: 2, book_id: 23},
   {author_id: 3, book_id: 4},
   {author_id: 3, book_id: 5},
   {author_id: 3, book_id: 6},
@@ -1340,31 +1751,35 @@ AuthorBook.create!([
   {author_id: 3, book_id: 11},
   {author_id: 4, book_id: 12},
   {author_id: 4, book_id: 13},
-  {author_id: 5, book_id: 14},
-  {author_id: 6, book_id: 15},
-  {author_id: 6, book_id: 16},
-  {author_id: 7, book_id: 17},
-  {author_id: 8, book_id: 17},
-  {author_id: 9, book_id: 18},
-  {author_id: 10, book_id: 18},
+  {author_id: 5, book_id: 63},
+  {author_id: 5, book_id: 64},
+  {author_id: 6, book_id: 24},
+  {author_id: 6, book_id: 25},
+  {author_id: 6, book_id: 26},
+  {author_id: 6, book_id: 27},
+  {author_id: 6, book_id: 28},
+  {author_id: 6, book_id: 29},
+  {author_id: 6, book_id: 30},
+  {author_id: 6, book_id: 31},
+  {author_id: 6, book_id: 32},
+  {author_id: 6, book_id: 33},
+  {author_id: 7, book_id: 42},
+  {author_id: 8, book_id: 85},
+  {author_id: 8, book_id: 86},
+  {author_id: 8, book_id: 87},
+  {author_id: 9, book_id: 54},
+  {author_id: 10, book_id: 15},
+  {author_id: 10, book_id: 16},
   {author_id: 11, book_id: 19},
   {author_id: 12, book_id: 20},
   {author_id: 13, book_id: 20},
   {author_id: 14, book_id: 21},
   {author_id: 15, book_id: 22},
   {author_id: 16, book_id: 22},
-  {author_id: 17, book_id: 23},
+  {author_id: 17, book_id: 2},
+  {author_id: 17, book_id: 3},
   {author_id: 18, book_id: 23},
-  {author_id: 19, book_id: 24},
-  {author_id: 19, book_id: 25},
-  {author_id: 19, book_id: 26},
-  {author_id: 19, book_id: 27},
-  {author_id: 19, book_id: 28},
-  {author_id: 19, book_id: 29},
-  {author_id: 19, book_id: 30},
-  {author_id: 19, book_id: 31},
-  {author_id: 19, book_id: 32},
-  {author_id: 19, book_id: 33},
+  {author_id: 19, book_id: 17},
   {author_id: 13, book_id: 34},
   {author_id: 46, book_id: 35},
   {author_id: 47, book_id: 36},
@@ -1375,7 +1790,7 @@ AuthorBook.create!([
   {author_id: 52, book_id: 40},
   {author_id: 20, book_id: 41},
   {author_id: 21, book_id: 41},
-  {author_id: 22, book_id: 42},
+  {author_id: 22, book_id: 17},
   {author_id: 23, book_id: 43},
   {author_id: 24, book_id: 44},
   {author_id: 25, book_id: 45},
@@ -1388,7 +1803,7 @@ AuthorBook.create!([
   {author_id: 31, book_id: 51},
   {author_id: 32, book_id: 52},
   {author_id: 26, book_id: 53},
-  {author_id: 33, book_id: 54},
+  {author_id: 33, book_id: 18},
   {author_id: 34, book_id: 54},
   {author_id: 35, book_id: 54},
   {author_id: 36, book_id: 55},
@@ -1400,7 +1815,36 @@ AuthorBook.create!([
   {author_id: 42, book_id: 58},
   {author_id: 43, book_id: 59},
   {author_id: 44, book_id: 60},
-  {author_id: 45, book_id: 61}
+  {author_id: 45, book_id: 61},
+  {author_id: 53, book_id: 62},
+  {author_id: 54, book_id: 62},
+  {author_id: 55, book_id: 14},
+  {author_id: 56, book_id: 65},
+  {author_id: 57, book_id: 66},
+  {author_id: 58, book_id: 67},
+  {author_id: 1, book_id: 68},
+  {author_id: 1, book_id: 69},
+  {author_id: 1, book_id: 70},
+  {author_id: 1, book_id: 71},
+  {author_id: 4, book_id: 72},
+  {author_id: 4, book_id: 73},
+  {author_id: 4, book_id: 74},
+  {author_id: 2, book_id: 75},
+  {author_id: 2, book_id: 76},
+  {author_id: 2, book_id: 77},
+  {author_id: 5, book_id: 78},
+  {author_id: 5, book_id: 79},
+  {author_id: 5, book_id: 80},
+  {author_id: 7, book_id: 81},
+  {author_id: 7, book_id: 82},
+  {author_id: 7, book_id: 83},
+  {author_id: 7, book_id: 84},
+  {author_id: 9, book_id: 85},
+  {author_id: 9, book_id: 86},
+  {author_id: 9, book_id: 87},
+  {author_id: 9, book_id: 18},
+  {author_id: 10, book_id: 88},
+  {author_id: 10, book_id: 89}
 ])
 
 BookCategory.create!([
@@ -1416,8 +1860,7 @@ BookCategory.create!([
   {category_id: 12, book_id: 7},
   {category_id: 14, book_id: 8},
   {category_id: 14, book_id: 9},
-  {category_id: 3, book_id: 10},
-  {category_id: 12, book_id: 10},
+  {category_id: 14, book_id: 10},
   {category_id: 5, book_id: 11},
   {category_id: 12, book_id: 11},
   {category_id: 14, book_id: 12},
@@ -1485,7 +1928,36 @@ BookCategory.create!([
   {category_id: 12, book_id: 60},
   {category_id: 15, book_id: 60},
   {category_id: 5, book_id: 61},
-  {category_id: 15, book_id: 61}
+  {category_id: 15, book_id: 61},
+  {category_id: 1, book_id: 62},
+  {category_id: 1, book_id: 63},
+  {category_id: 1, book_id: 64},
+  {category_id: 9, book_id: 65},
+  {category_id: 9, book_id: 66},
+  {category_id: 9, book_id: 67},
+  {category_id: 14, book_id: 68},
+  {category_id: 6, book_id: 69},
+  {category_id: 1, book_id: 70},
+  {category_id: 1, book_id: 71},
+  {category_id: 14, book_id: 72},
+  {category_id: 14, book_id: 73},
+  {category_id: 14, book_id: 74},
+  {category_id: 14, book_id: 75},
+  {category_id: 14, book_id: 76},
+  {category_id: 14, book_id: 77},
+  {category_id: 14, book_id: 78},
+  {category_id: 1, book_id: 79},
+  {category_id: 1, book_id: 80},
+  {category_id: 7, book_id: 81},
+  {category_id: 8, book_id: 81},
+  {category_id: 14, book_id: 82},
+  {category_id: 14, book_id: 83},
+  {category_id: 8, book_id: 84},
+  {category_id: 9, book_id: 85},
+  {category_id: 14, book_id: 86},
+  {category_id: 14, book_id: 87},
+  {category_id: 14, book_id: 88},
+  {category_id: 14, book_id: 89}
 ])
 
 Tag.create!([
@@ -1612,7 +2084,36 @@ BookTag.create!([
   {book_id: 60, tag_id: 25},
   {book_id: 61, tag_id: 1},
   {book_id: 61, tag_id: 23},
-  {book_id: 61, tag_id: 32}
+  {book_id: 61, tag_id: 32},
+  {book_id: 62, tag_id: 11},
+  {book_id: 63, tag_id: 11},
+  {book_id: 64, tag_id: 11},
+  {book_id: 67, tag_id: 11},
+  {book_id: 67, tag_id: 1},
+  {book_id: 68, tag_id: 17},
+  {book_id: 69, tag_id: 24},
+  {book_id: 70, tag_id: 11},
+  {book_id: 71, tag_id: 14},
+  {book_id: 72, tag_id: 17},
+  {book_id: 73, tag_id: 17},
+  {book_id: 74, tag_id: 17},
+  {book_id: 75, tag_id: 26},
+  {book_id: 76, tag_id: 26},
+  {book_id: 77, tag_id: 17},
+  {book_id: 78, tag_id: 30},
+  {book_id: 79, tag_id: 11},
+  {book_id: 80, tag_id: 11},
+  {book_id: 81, tag_id: 15},
+  {book_id: 81, tag_id: 18},
+  {book_id: 82, tag_id: 29},
+  {book_id: 82, tag_id: 30},
+  {book_id: 83, tag_id: 29},
+  {book_id: 84, tag_id: 15},
+  {book_id: 85, tag_id: 17},
+  {book_id: 86, tag_id: 17},
+  {book_id: 87, tag_id: 17},
+  {book_id: 88, tag_id: 17},
+  {book_id: 89, tag_id: 17}
 ])
 
 Book.all.each do |book|
@@ -1827,6 +2328,8 @@ Ebook.create!([
   {format: "pdf", book_id: 57,
     link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/57.pdf"},
   {format: "pdf", book_id: 58,
-    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/58.pdf"}
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1588236143/Books4U/ebooks/58.pdf"},
+  {format: "pdf", book_id: 89,
+    link: "https://res.cloudinary.com/phucdx/image/upload/v1591244157/Books4U/ebooks/89.pdf"}
 ])
 puts "Created #{Ebook.count} ebooks!"
