@@ -91,7 +91,7 @@ Here's how to get yourself set up to develop the app:
 
 1. Make sure you have Ruby 2.7 installed. Check with `ruby -v`. If you need to install or upgrade Ruby
 2. Make sure you have Bundler installed: Try `bundle -v` and do `gem install bundler` if needed.
-3. Fork the repo at https://github.com/jasoncrawford/freeobjectivistbooks, then clone it with `git clone`.
+3. Fork the repo at https://github.com/dangxuanphuc/books4u, then clone it with `git clone`.
 4. Once you have the repo locally, you should be able to run `bundle` in the project directory, and it will install all the dependencies (including Rails 6.0.2 if you don't already have it).
 5. After running the bundle, you will need to run `rails db:migrate` to add new tables to your database. You can start your app with `rails server` and install your app by visiting `http://localhost:3000` in your web browser.
 
