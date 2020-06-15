@@ -274,13 +274,6 @@ Author.create!([
     to lead themselves and their organizations more effectively and to make
     a positive impact.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-14.jpg"},
-  {name: "Robert Nystrom",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
-    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
-    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
-    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus.",
-    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-66.jpg"},
   {name: "Marc Peter Deisenroth",
     description: "Marc Peter Deisenroth is DeepMind Chair in Artificial Intelligence
     at the Department of Computer Science, University College London. Prior to this,
@@ -288,6 +281,13 @@ Author.create!([
     His research areas include data-efficient learning, probabilistic modeling, and
     autonomous decision making.",
     remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-29.jpg"},
+  {name: "Robert Nystrom",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+    gravida ipsum vitae libero feugiat mattis. Nullam et ornare purus. Aenean sit
+    amet placerat nisi. Quisque at turpis venenatis, imperdiet est id, dignissim
+    ligula. Morbi non neque lacinia, tincidunt enim id, venenatis mauris.
+    Pellentesque vitae libero aliquam, faucibus libero vitae, auctor tellus.",
+    remote_avatar_url: "https://res.cloudinary.com/phucdx/image/upload/v1587973368/Books4U/image/au-66.jpg"},
   {name: "Tom DeMarco",
     description: "Tom DeMarco is the author of fifteen books, including novels, business
     books and a collection of short stories. He began his career as a software engineer
@@ -637,7 +637,8 @@ puts "Created #{Author.count} authors!"
 Language.create!([
   {alias: "vi", full_name: "Vietnamese"},
   {alias: "en", full_name: "English"},
-  {alias: "jp", full_name: "Japanese"}
+  {alias: "jp", full_name: "Japanese"},
+  {alias: "dt", full_name: "Dutch"}
 ])
 puts "Created #{Language.count} languages!"
 
@@ -1547,6 +1548,15 @@ Book.create!([
     dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
     faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
     cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
+    urna mattis in. Pellentesque ut lorem arcu."},
+  {title: "Scrum: tweemaal zoveel doen in de helft van de tijd",
+    isbn: "9491845373", publisher_id: 32,
+    language_id: 4, pages: 253, rate: 4, rate_count: 12,
+    dimension: "5.7 x 0.9 x 8.3 inches", public_date: "2014/12/01",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+    dictum imperdiet commodo. Integer nunc sem, mollis vitae tincidunt sed,
+    faucibus in est. Proin porta commodo nunc ut sodales. In luctus tempus ex a
+    cursus. Sed a semper neque. Vestibulum fringilla augue nunc, sed pellentesque
     urna mattis in. Pellentesque ut lorem arcu."}
 ])
 puts "Created #{Book.count} books!"
@@ -1734,6 +1744,8 @@ Image.create!([
     remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075642/Books4U/image/88.jpg"},
   {target_id: 89, target_type: "Book",
     remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075642/Books4U/image/89.jpg"},
+  {target_id: 90, target_type: "Book",
+    remote_url_url: "https://res.cloudinary.com/phucdx/image/upload/v1591075642/Books4U/image/90.jpg"}
 ])
 puts "Created #{Image.count} images!"
 
@@ -1753,21 +1765,21 @@ AuthorBook.create!([
   {author_id: 4, book_id: 13},
   {author_id: 5, book_id: 63},
   {author_id: 5, book_id: 64},
-  {author_id: 6, book_id: 24},
-  {author_id: 6, book_id: 25},
-  {author_id: 6, book_id: 26},
-  {author_id: 6, book_id: 27},
-  {author_id: 6, book_id: 28},
-  {author_id: 6, book_id: 29},
-  {author_id: 6, book_id: 30},
-  {author_id: 6, book_id: 31},
-  {author_id: 6, book_id: 32},
-  {author_id: 6, book_id: 33},
-  {author_id: 7, book_id: 42},
-  {author_id: 8, book_id: 85},
-  {author_id: 8, book_id: 86},
-  {author_id: 8, book_id: 87},
-  {author_id: 9, book_id: 54},
+  {author_id: 7, book_id: 24},
+  {author_id: 7, book_id: 25},
+  {author_id: 7, book_id: 26},
+  {author_id: 7, book_id: 27},
+  {author_id: 7, book_id: 28},
+  {author_id: 7, book_id: 29},
+  {author_id: 7, book_id: 30},
+  {author_id: 7, book_id: 31},
+  {author_id: 7, book_id: 32},
+  {author_id: 7, book_id: 33},
+  {author_id: 6, book_id: 42},
+  {author_id: 8, book_id: 54},
+  {author_id: 9, book_id: 85},
+  {author_id: 9, book_id: 86},
+  {author_id: 9, book_id: 87},
   {author_id: 10, book_id: 15},
   {author_id: 10, book_id: 16},
   {author_id: 11, book_id: 19},
@@ -1835,16 +1847,17 @@ AuthorBook.create!([
   {author_id: 5, book_id: 78},
   {author_id: 5, book_id: 79},
   {author_id: 5, book_id: 80},
-  {author_id: 7, book_id: 81},
-  {author_id: 7, book_id: 82},
-  {author_id: 7, book_id: 83},
-  {author_id: 7, book_id: 84},
-  {author_id: 9, book_id: 85},
-  {author_id: 9, book_id: 86},
-  {author_id: 9, book_id: 87},
-  {author_id: 9, book_id: 18},
+  {author_id: 6, book_id: 81},
+  {author_id: 6, book_id: 82},
+  {author_id: 6, book_id: 83},
+  {author_id: 6, book_id: 84},
+  {author_id: 8, book_id: 85},
+  {author_id: 8, book_id: 86},
+  {author_id: 8, book_id: 87},
+  {author_id: 8, book_id: 18},
   {author_id: 10, book_id: 88},
-  {author_id: 10, book_id: 89}
+  {author_id: 10, book_id: 89},
+  {author_id: 2, book_id: 90}
 ])
 
 BookCategory.create!([
@@ -1957,7 +1970,8 @@ BookCategory.create!([
   {category_id: 14, book_id: 86},
   {category_id: 14, book_id: 87},
   {category_id: 14, book_id: 88},
-  {category_id: 14, book_id: 89}
+  {category_id: 14, book_id: 89},
+  {category_id: 14, book_id: 90}
 ])
 
 Tag.create!([
@@ -2113,7 +2127,8 @@ BookTag.create!([
   {book_id: 86, tag_id: 17},
   {book_id: 87, tag_id: 17},
   {book_id: 88, tag_id: 17},
-  {book_id: 89, tag_id: 17}
+  {book_id: 89, tag_id: 17},
+  {book_id: 90, tag_id: 26}
 ])
 
 Book.all.each do |book|
